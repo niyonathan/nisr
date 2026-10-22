@@ -50,3 +50,23 @@ observations.
 
 AI assistants (Claude) were used to help write the data pipeline code and documentation.
 The team reviewed, ran and validated all outputs and is responsible for the submission.
+
+## Yield model
+
+```bash
+.venv/bin/python analysis/yield_model.py
+```
+
+Fits two models on the crop × plot table and writes `reports/yield_model.md`:
+
+- **Practice associations**: one regression per crop (district and season fixed effects, errors
+  clustered by survey cluster) estimating how much higher yields are on plots using each practice →
+  `data/public/practice_associations.csv`.
+- **Yield predictor**: gradient-boosted trees for 20 major crops, validated with cluster-grouped
+  cross-validation against a crop × district median benchmark → `models/yield_model.joblib`,
+  `data/public/model_metrics.json`, `model_metrics_by_crop.csv`, `feature_importance.csv`.
+- **Scenarios and gaps**: model-estimated yield if non-users adopted improved seed and fertilizer
+  (`input_scenario_district.csv`) and each district's gap to the national 75th-percentile yield
+  (`district_yield_gaps.csv`).
+
+Every leaf of the saved model summarises at least 50 plots, so it holds no individual household's answers.

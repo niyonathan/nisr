@@ -82,6 +82,7 @@ def build_plots(df: pd.DataFrame, labels: dict) -> pd.DataFrame:
             "hhid": df["hhid"],
             "plot_no": df["s2q1"].astype("int64"),
             "season_code": df["Season"],
+            "cluster": df["clust"].astype("int64"),
             "season": decode(df["Season"], labels["Season"]).str.replace("Season ", "", regex=False),
             "province": decode(df["province"], labels["province"]),
             "district": decode(df["district"], labels["district"]),
