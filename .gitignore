@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# NISR microdata and anything derived at household/plot level must not be published.
+data/raw/
+data/processed/
