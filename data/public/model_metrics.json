@@ -10,6 +10,6 @@
   "baseline_crop_district_median": {
     "r2_log": 0.42707576754945586,
     "mae_log": 0.7717659905560993,
-    "median_abs_pct_error": 0.5532657385688435
+    "median_abs_pct_error": 0.5532657385688436
   }
 }
