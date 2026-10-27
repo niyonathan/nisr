@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.streamlit/secrets.toml
+.env
+# Raw and row-level survey microdata are included in the local ZIP only.
+data/raw/*.dta
+data/processed/*.csv.gz
+# Keep the aggregated crop-plot dataset private; public app uses summaries/metadata.
+# Temporary editor and operating-system files.
+.DS_Store
+Thumbs.db

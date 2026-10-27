@@ -1,0 +1,733 @@
+source_file,variable,variable_label
+AHS2024_Credits.dta,hhid,Household Identification
+AHS2024_Credits.dta,clust,Clust
+AHS2024_Credits.dta,pid,Loan recipient Id Number
+AHS2024_Credits.dta,s10aq1,Household member tried to obtain a loan
+AHS2024_Credits.dta,s10aq2,Main reason why loan was denied
+AHS2024_Credits.dta,s10aq3,Household members owe money
+AHS2024_Credits.dta,s10aq4,Loan Id Number
+AHS2024_Credits.dta,s10q6,source of loan
+AHS2024_Credits.dta,s10aq6_other,Specify Other origin  of the loan
+AHS2024_Credits.dta,s10aq7,Main purpose of loan
+AHS2024_Credits.dta,s10aq7_o,Main purpose of loan
+AHS2024_Credits.dta,loan,does any household member requested any loan?
+AHS2024_Saving.dta,hhid,Household Identification
+AHS2024_Saving.dta,clust,Clust
+AHS2024_Saving.dta,pid,ID number of person saving
+AHS2024_Saving.dta,district,District
+AHS2024_Saving.dta,province,Province
+AHS2024_Saving.dta,s10cq1,Ownership of bank account(Financial Institution/momo/Tontine)
+AHS2024_Saving.dta,s10cq3,Id Number of account
+AHS2024_Saving.dta,s10cq4,Does ... have account (bank account/momo)?
+AHS2024_Saving.dta,s10q5,type of financial institutions in which they have a bank account
+AHS2024_Saving.dta,s10cq6,Which type of account does ... own?
+AHS2024_Saving.dta,s10cq7,Does the account generate interest?
+AHS2024_Saving.dta,s10cq8,Does ... participate in a tontine
+AHS2024_Saving.dta,account,does any household member have any bank acount?
+AHS2024_Saving.dta,saving,
+AHS2024_Section0.dta,hhid,Household Identification
+AHS2024_Section0.dta,clust,Clust
+AHS2024_Section0.dta,province,Province
+AHS2024_Section0.dta,district,District
+AHS2024_Section0.dta,s0q13,0. 13 Relationship of respondent to the Household head
+AHS2024_Section0.dta,s0q14,0.14 The main livelihood activity of your household
+AHS2024_Section0.dta,s0q15,0.15 What is the agricultural activity of the Household?
+AHS2024_Section0.dta,s0q16,0.16 No agricultural activities
+AHS2024_Section0.dta,weight,Final Season A weight
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,hhid,Household Identification
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,clust,Clust
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,province,Province
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,district,District
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s10q1_0,10.1.1 Did your household produce milk during the last 6 months?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_1,11.1.3   Cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_2,11.1.2   Month
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_3,11.1.3   Cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_4_1,11.1.4   Number (Exotic) of cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_5_1,11.1.5   Number (Exotic) of days that cattle were lactating in this/that month o
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_6_1,11.1.6   quantity (Exotic) produced(liter) per day
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_7_1,11.1.7   Quantity (Exotic) consumed (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_8_1,11.1.8   Quantity (Exotic) sold (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_9_1,11.1.9   Price (Exotic) per/ liter
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_10_1,11.1.10  Quantity (Exotic) given as gift (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_11_1,11.1.11  Quantity (Exotic) used in any other way (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_4_2,11.2.4   Number (Cross) of cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_5_2,11.2.5   Number (Cross) of days that cattle were lactating in this/that month of
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_6_2,11.2.6   quantity (Cross) produced(liter) per day
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_7_2,11.2.7   Quantity (Cross) consumed (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_8_2,11.2.8   Quantity (Cross) sold (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_9_2,11.2.9   Price (Cross) per/ liter
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_10_2,11.2.10  Quantity (Cross) given as gift (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_11_2,11.2.11  Quantity (Cross) used in any other way (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_4_3,11.3.4   Number (Local) of cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_5_3,11.3.5   Number (Local) of days that cattle were lactating in this/that month of
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_6_3,11.3.6   quantity (Local) produced(liter) per day
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_7_3,11.3.7   Quantity (Local) consumed (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_8_3,11.3.8   Quantity (Local) sold (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_9_3,11.3.9   Price (Local) per/ liter
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_10_3,11.3.10  Quantity (Local) given as gift (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_11_3,11.3.11  Quantity (Local) used in any other way (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_4, Total Number of cattle that were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_5, Total Number of days that cattle were lactating in this/that month of ?
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_6, Total quantity produced(liter) per day
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_7, Total Quantity consumed (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_8, Total Quantity sold (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_10, Total Quantity given as gift (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,s11q1_11, Total Quantity used in any other way (liter)
+AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta,weight,Agricultural household weight
+AHS2024_Section11_2_EGG PRODUCTION.dta,hhid,Household Identification
+AHS2024_Section11_2_EGG PRODUCTION.dta,clust,Clust
+AHS2024_Section11_2_EGG PRODUCTION.dta,province,Province
+AHS2024_Section11_2_EGG PRODUCTION.dta,district,District
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_1,11.2.1 did your household produce eggs during the last 6 months
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_2,11.2.2 Month
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_0,Yield
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_3,11.2.3 Number of laying hen in the month of ?
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_4,11.2.4 Number of eggs produced in the month of ?
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_5,11.2.5 Number of eggs consumed at home in the month of
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_6,11.2.6 Number of eggs sold in the month of ?
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_7,11.2.7 Price per egg (price for last sold eggs)
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_8,11.2.8 Quantity used in hatching in the month of?
+AHS2024_Section11_2_EGG PRODUCTION.dta,s11q2_9,11.2.9 Quantity used in any other way in the month of?
+AHS2024_Section11_2_EGG PRODUCTION.dta,weight,Agricultural household weight
+AHS2024_Section11_2_EGG PRODUCTION.dta,owner,owner
+AHS2024_Section11_2_EGG PRODUCTION.dta,_merge,Matching result from merge
+AHS2024_Section11_3_HONEY PRODUCTION.dta,hhid,Household Identification
+AHS2024_Section11_3_HONEY PRODUCTION.dta,clust,Clust
+AHS2024_Section11_3_HONEY PRODUCTION.dta,province,Province
+AHS2024_Section11_3_HONEY PRODUCTION.dta,district,District
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_1,11.3.1 Have you done bee keeping in last Six months?
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_2,11.3.2 Number of traditional bee hives owned now
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_3,11.3.3 Number of modern bee hives owned now
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_4,11.3.4 Quantity of honey produced from traditional bee hives during 6 last month
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_5,11.3.5 Quantity of honey produced from modern bee hive during 6 last months (kg)
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_6,11.3.6 Quantity consumed by your household during last 6 months (kg)
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_7,11.3.7 Quantity sold during last 6 months (kg)
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_8,11.3.8 Average saling price per kg (Rwf) (price for last sold honey)
+AHS2024_Section11_3_HONEY PRODUCTION.dta,s11q3_9,11.3.9 Quantity used in any other way during last 6 months (kg)?
+AHS2024_Section11_3_HONEY PRODUCTION.dta,weight,Agricultural household weight
+AHS2024_Section11_3_HONEY PRODUCTION.dta,owner,owner
+AHS2024_Section11_3_HONEY PRODUCTION.dta,_merge,Matching result from merge
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,hhid,Household Identification
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,clust,Clust
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,pid,Person ID Number(EICV7)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,province,Province
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,district,District
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q1,Sex
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q2,Relation with the head of household
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q3y,Age (Years)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q3m,Age (Months)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q4,Marital status
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q5a,country of birth
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q5b,District of birth
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q6,Nationality
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q7a,Absent during past 12 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q7,how many months has been away from this household during past 12 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q8,primary  reason of absence from household in the last 12 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q9,Resident of another household in the last 12 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q10,Will be resident in the household during the period of enumeration
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q11,primary n reason for absence during enumeration
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q12,Father still alive
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q13,Mother still alive
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s1q14,Household membership
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q2,Always lived in the district
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q3y,Duration since last move (years)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q3m,Duration since last move (months)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q4a,country  lived prior to current place
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q4b,District lived prior to current place
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q5,Kind of place lived prior to current place
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q6,Duration lived in the previuos location years
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q7,Primary reason for moving
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s2q8,Move alone or with other members of your household
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q2,In the last 12 Months was covered by any health insurance?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q3,Main health insurance carry
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q4,Suffer from an illness or injury over the last 4weeks
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q5,Medical consultation in the over last 4 weeks
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q5a,why not consult any Medical profession
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q6,Main reason for medical consultation
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q7,Difficulty in seeing
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q8,Difficulty hearing
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q9,Difficulty in moving
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q10,Difficulty in remembering or concentrating
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q11,Difficulty communicating
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s3q12,Difficulty in self-care (such as: washing all over or dressing)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq1,Ever been to school or organized learning
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq1a,Main reason of never attended school
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq2,Highest class succesfully attended in school
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq2a,years of school  complete successfully at that level?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq3,Highest diploma/certificate/ degree you have ever obtained
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq6a,Class attended in 2022/2023
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq6b,Class attended in 2023/2024
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq6c,Class attended in 2024/2025
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq6d,Cause of repeat the 2023 class in 2024
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq7,Attended school in the last 12 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq8,Highest level of education attended in last 12 months 
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq8a,Highest class attended in last 12 months 
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq8b,Boarding School
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq9,Age when studying in the Reported class
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq10,Reason for delaying start the school?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq11,Type of school
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14a,Registration and school fees
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14b,Parent contributions
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14c,School uniforms
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14d,Books and school supplies
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14e,Transport to and from school
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14f,Room and board (or board only)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14g,Other schooling expenditures
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq14h,Total education expenses (non-distributed option)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4aq20,Reason for leaving school
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq1,attended any vocational training
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq2,"Expense of this training including fees, expenses and accommodation"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq3,Have you attended a literacy course?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq4,Able to read a simple note
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq5,Can read proposed a sentence
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq6,Able to write a simple note
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq7,Able to do a written calculation
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq8,Have a mobile telephone
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq9,Phone functionalities. Owned by ...
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq10,type of phone do you own?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq11,reasons for not having a smartphone
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq12,Why does not have a mobile telephone
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq13a,Own a computer
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq13b,Computer literacy
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq13c,How often did use a computer in the last three months?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14a,Copying or moving a file or a folder
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14b,Using copy and paste tools to duplicate or move information
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14c,Sending e-mails with attached files
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14d,Using basic arithmetic formula in a spreadsheet
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14e,Connecting and installing new devices
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14f,"Finding, downloading, installing and configuring software"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14g,Creating electronic presentations with presentation software
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14h,Transferring files between a computer and other devices
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq14i,Writing a computer program using a specialized programming language
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq15,Used of internet in the last 3 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq16,Reason for not using internet in the last three months?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq17,How often did use the internet in the last three months?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq18,Use of the internet in the last three months for finding information about goods
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq19,Use of internet in the last three months for reading or downloading online news/
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq20,Use of the internet in the last three months for obtaining information from webs
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq21,Use of the internet in the last three months for seeking health information
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq22,Use of internet on social media in the last 3 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23,able to apply any of the following digital skills
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23a,Use only USSD code  to access E-services or information
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23b,Use application based system  to access E-services or information
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23c,Use mobile financial services(MOMO/AIRTEL MONEY/MOCASH/PUSH AND PULL)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23d," Use any social media (whatsapp or facebook, or instagram or youtube or twitter "
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23e,Access information through web browser
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23f,Access IREMBO services
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23g,Use any E-commerce plaforms
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq23h,Access E-learning platforms
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq25,Use the internet from  in the last 3 months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s4bq26,Type of device used in accessing social media in the last three months
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq2,Worked on own farm no payment
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq3,products obtained from this agricultural  activity for
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq4,Carry out any agricultural activity
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq5,Worked for salary or wages in non-farm sector
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq6,Run a non-farm business for cash or profit
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq7,Worked in a non-fam business
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq8,work as an unpaid trainee worker or as a volunteer worker in any economic activi
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq9,"any economic activity (job, business or agriculture) from which he/she was tempo"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq10,Main reason not working over the last 7 days
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq11,Receiving an income from his/her economic activity during absence?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6aq12,to work for a period less than 3 months?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq1,Hours usually work in the all economic activities over a week
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq2,Hours  actually work in all economic activities last 7 days
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq3a,ISCO code description from table
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq5,What is [NAME]?s institutional sector of the main economic activity?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq6,perform this main economic activity overnight from 6pm to 6 am?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq7,What is [NAME]?s status in economic activity
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq8,nature of ???s? economic activity contract?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq9a,usually earn in this main job (Amount)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6bq9b,usually earn in this main job (Unit)
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq2,Number of hours spend fetching water over the last 7 days
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq3,"Over the last 7 days,   forage for firewood for the household"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq4,How many hours    spend foraging for wood over the last 7 days
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq5,"Over the last 7 days, searching for  fodder or grazing for the household?s anima"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq6,How many hours spend  caring for or searching for fodder over the last 7 days?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq7,"Over the last 7 days, did go to the market for the household for shopping?"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq8,How many hours did spend going to market for shopping the last 7 days (to and fr
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq9,"Over the last 7 days, did cook for the household?"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq10,How many hours did spend cooking over the last 7 days?
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq11,"Over the last 7 days, did spend any time on other household chores such as laund"
+AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta,s6cq12,How many hours did spend on other household chores over the last 7 days?
+AHS2024_Section2_LAND TENURE.dta,hhid,Household Identification
+AHS2024_Section2_LAND TENURE.dta,clust,Clust
+AHS2024_Section2_LAND TENURE.dta,district,District
+AHS2024_Section2_LAND TENURE.dta,province,Province
+AHS2024_Section2_LAND TENURE.dta,s2q1,2.1 Plot No.
+AHS2024_Section2_LAND TENURE.dta,s2q2,Area in sqm
+AHS2024_Section2_LAND TENURE.dta,s2q2a,Plot land use
+AHS2024_Section2_LAND TENURE.dta,s2q3,2.3 Owners/users of this plot
+AHS2024_Section2_LAND TENURE.dta,s2q4,2.4 How did the owners/users get access to this plot?
+AHS2024_Section2_LAND TENURE.dta,s2q5,2.5 How much did you pay in cash for renting this plot this season?
+AHS2024_Section2_LAND TENURE.dta,s2q6,2.6 What is the value of the products you shared as a payment of the rent of thi
+AHS2024_Section2_LAND TENURE.dta,s2q7,2.7 Is this plot belong in household parcels that have a land title?
+AHS2024_Section2_LAND TENURE.dta,s2q8,2.8 Household members with the right to sell/use the land as a guarantee for a l
+AHS2024_Section2_LAND TENURE.dta,s2q9,2.9 Household members with the right to bequeath the land.
+AHS2024_Section2_LAND TENURE.dta,weight,Final Season A weight
+AHS2024_Section2_LAND TENURE.dta,Season,
+AHS2024_Section2_LAND TENURE.dta,quintile,Quintiles of real consumption per ae
+AHS2024_Section2_LAND TENURE.dta,epov_jan,Extreme Poverty
+AHS2024_Section2_LAND TENURE.dta,pov_jan,Poverty Rate
+AHS2024_Section2_LAND TENURE.dta,total_agr_land,Total agriculture land/household in ha
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",hhid,Household Identification
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",clust,Clust
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",Cluster_ID,Cluster Number
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",province,Province
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",district,District
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",Season,Season
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q1,2.1 Plot No.
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q2,area_sqm
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q3,3.3 Number of crops to be surveyed on during this season in the plot.
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_1,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o1,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_1a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_1b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_1,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_1,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_1,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_1a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_1b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_1,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_1,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_1,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o1,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_1,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_1,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_1,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_1,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_1,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_1,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_1,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_1,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_1,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_1,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_1,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_1,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_1,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_1,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_1,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_1,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_1,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o1,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_2,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o2,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_2a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_2b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_2,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_2,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_2,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_2a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_2b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_2,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_2,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_2,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o2,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_2,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_2,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_2,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_2,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_2,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_2,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_2,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_2,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_2,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_2,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_2,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_2,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_2,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_2,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_2,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_2,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",ss3_q21_1_2,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o2,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_3,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o3,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_3a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_3b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_3,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_3,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_3,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_3a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_3b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_3,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_3,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_3,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o3,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_3,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_3,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_3,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_3,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_3,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_3,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_3,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_3,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_3,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_3,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_3,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_3,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_3,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_3,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_3,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_3,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_3,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o3,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_4,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o4,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_4a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_4b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_4,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_4,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_4,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_4a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_4b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_4,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_4,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_4,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o4,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_4,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_4,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_4,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_4,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_4,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_4,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_4,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_4,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_4,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_4,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_4,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_4,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_4,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_4,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_4,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_4,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_4,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o4,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_5,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o5,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_5a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_5b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_5,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_5,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_5,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_5a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_5b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_5,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_5,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_5,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o5,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_5,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_5,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_5,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_5,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_5,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_5,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_5,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_5,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_5,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_5,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_5,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_5,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_5,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_5,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_5,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_5,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_5,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o5,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_6,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o6,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_6a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_6b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_6,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_6,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_6,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_6a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_6b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_6,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_6,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_6,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o6,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_6,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_6,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_6,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_6,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_6,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_6,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_6,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_6,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_6,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_6,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_6,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_6,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_6,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_6,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_6,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_6,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_6,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o6,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_7,3.4 Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q4_o7,3.4 Other Crop name
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_7a,Crop proportion (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q4_7b,Crop density (in %)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q5_7,3.5  Number of plants in this plot (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q6_7,3.6 Number of plants to be harvested in this season (for perennial crops)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_7,3. 7 Sowing date
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_7a,Was this crop planted in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q7_7b,Will this crop be harvested in this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q8_7,3.8 Expected period for crop harvesting
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q9_7,3.9 Type of seeds sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_7,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q10_o7,3.10 Where did improved seeds sown come from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11_7,3.11 Quantity of traditional seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q11b_7,3.11 Quantity of traditional seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q12_7,3.12 Quantity of traditional seeds purchased and sown in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q13_7,3.13 Amount spent for the purchase of traditional seeds for this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14_7,3.14 Quantity of improved seeds sown in this plot-Unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q14b_7,3.14 Quantity of improved seeds sown in this plot-Quantity
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q15_7,3.15 Quantity of improved seeds purchased and sown in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q16_7,3.16 Amount spent for the purchase of improved seeds sown in this plot (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_7,3.17 Unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q17_o_7,3.17 Other unit measurement (in used local recipient)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q18_7,3.18 Quantity already harvested in this season for this plot-Quantity harvested 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q18_3_7,3.18 Quantity already harvested in this season for this plot-Estimate of harvest
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q19_7,3.19 Remaining quantity to be harvested in this season for this plot-Quantity to
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3q19_3_7,3.19 Remaining quantity to be harvested in this season for this plot-Estimates o
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q20_7,3.20 Total quantity of harvest for this season in this plot (in Kg)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s2q23_7,2.22 How do you compare the production of this crop in this season and its produ
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_7,3.21. Explanation on crop production status(Order the explanations starting by t
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s3_q21_1_o7,3.21. Other explanation on crop production status
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q1,4.1 Have you used organic fertilizer in this plot during this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q2,4.2 Where did organic fertilizer used came from?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q2_1,q.4.2 Where did organic fertilizer used came from?_source 1
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q2_2,q.4.2 Where did organic fertilizer used came from?_source 2
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q2_3,q.4.2 Where did organic fertilizer used came from?_source 3
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q2_o,4.2 Where did organic fertilizer used came from-Other
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q3,4.3 Total cost of organic fertilizer purchased (Frw)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q4,4.4 Have you used inorganic fertilizer in this plot during this season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q5,4.5 What is the main source of fertilizer used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q5_o,4.5 Other main source of fertilizer used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6,4.6 Type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_o,4.6 Other type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q7,4.7 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q8,4.8 Total quantity used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q9,4.9 Quantity purchased and used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q10,4.10 Unit price (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11,4.11 Main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_o,4.11 Other main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_2,4.6 Type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_o2,4.6 Other type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q7_2,4.7 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q8_2,4.8 Total quantity used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q9_2,4.9 Quantity purchased and used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q10_2,4.10 Unit price (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_2,4.11 Main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_o2,4.11 Other main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_3,4.6 Type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_o3,4.6 Other type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q7_3,4.7 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q8_3,4.8 Total quantity used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q9_3,4.9 Quantity purchased and used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q10_3,4.10 Unit price (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_3,4.11 Main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_o3,4.11 Other main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_4,4.6 Type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q6_o4,4.6 Other type of inorganic fertilizer used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q7_4,4.7 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q8_4,4.8 Total quantity used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q9_4,4.9 Quantity purchased and used in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q10_4,4.10 Unit price (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_4,4.11 Main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q11_o4,4.11 Other main crops to be fertilized?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q12,4.12 Have you used pesticide/Fungicide in this plot during this current season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13,4.13 Type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_o,4.13 Other type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q14,4.14 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q15,4.15 Total quantity used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q16,4.16 Quantity purchased and used in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q17,4.17 Total amount spent on quantity purchased (Frw)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_2,4.13 Type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_o2,4.13 Other type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q14_2,4.14 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q15_2,4.15 Total quantity used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q16_2,4.16 Quantity purchased and used in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q17_2,4.17 Total amount spent on quantity purchased (Frw)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_3,4.13 Type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_o3,4.13 Other type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q14_3,4.14 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q15_3,4.15 Total quantity used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q16_3,4.16 Quantity purchased and used in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q17_3,4.17 Total amount spent on quantity purchased (Frw)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_4,4.13 Type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q13_o4,4.13 Other type of pesticide/fungicide used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q14_4,4.14 Measurement unit
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q15_4,4.15 Total quantity used
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q16_4,4.16 Quantity purchased and used in the plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q17_4,4.17 Total amount spent on quantity purchased (Frw)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q18,4.18 Have you experienced any of the following soil degradation threats on this 
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q18_1,Have you experienced any of the following soil degradation threats on this
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q18_2,Have you experienced any of the following soil degradation threats on this
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q18_3,Have you experienced any of the following soil degradation threats on this
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q18_o,4.18 Other soil degradation threats on this plot?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19,Anti-erosion activity on this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19_a,Anti-erosion activities existing on this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19_a_o,Other anti-erosion activities existing on this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19_a1,Anti-erosion activities existing on this plot type 1
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19_a2,Anti-erosion activities existing on this plot type 2
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q19_a3,Anti-erosion activities existing on this plot type 3
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q20,4.20 Were these anti-erosion activities done during the current agricultural sea
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q21,4.21 What is the total cost of anti-erosion activities done during this season (
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q22,4.22 Has this plot been irrigated during this agricultural season?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q23,4.23 What is irrigation technique used on this plot?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q24,4.24 What is the source of water for irrigation?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q24_1,What is the source of water for irrigation?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q24_2,What is the source of water for irrigation?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q24_3,What is the source of water for irrigation?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q24_o,4.24 Other source of water for irrigation?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q25,4.25 What is the irrigation tool have you used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q25_1,What is the irrigation tool have you used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q25_2,What is the irrigation tool have you used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q25_o,4.25 Other irrigation tool have you used?
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q26,4.26 What is the cost spent for irrigation activities? (Rwf)
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q27,4.27 Did you use any mechanical equipment for agriculture activities on this plo
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q28,4.28 Type of mechanical equipment used.
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q28_o,4.28 Other type of mechanical equipment used.
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q29,4.29 Amount paid for use of mechanical equipment on this plot during this season
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q30,4.30 Amount spent on any other agricultural related activities including hired l
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q31,agroforestry practice on this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q32,Agroforestry trees planted in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q32_o,Other agroforestry trees planted in this plot
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q33,Agroforestry trees planted in this plot-type 1
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q34,Agroforestry trees planted in this plot-type 2
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q35,Agroforestry trees planted in this plot-type 3
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",s4_q36,Agroforestry trees planted in this plot-type 4
+"AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",weight,Final Season A weight
+AHS2024_Section5_FRUITS PRODUCTION.dta,hhid,Household Identification
+AHS2024_Section5_FRUITS PRODUCTION.dta,clust,Clust
+AHS2024_Section5_FRUITS PRODUCTION.dta,Cluster_ID,Cluster Number
+AHS2024_Section5_FRUITS PRODUCTION.dta,province,Province
+AHS2024_Section5_FRUITS PRODUCTION.dta,district,District
+AHS2024_Section5_FRUITS PRODUCTION.dta,Season,Season
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q1,Did your household have fruits trees scattered in any of your plot during th
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q2,Fuits Name
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q3,Nber of fruits trees
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q4,Nber of fruits trees to be harvested
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q5,Total Production in Kg
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q6,On the total production of this fruit what is the quantity that has been sol
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q7,What was the selling price per kilogram? (Rwf/Kg)
+AHS2024_Section5_FRUITS PRODUCTION.dta,s5_q8,what is the quantity that has been used/ to be used as household consumption
+AHS2024_Section5_FRUITS PRODUCTION.dta,s6_q9,what is the quantity that has been used /to be used in any other way?  (Kg)
+AHS2024_Section5_FRUITS PRODUCTION.dta,weight,Final Season A weight
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,hhid,Household Identification
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,clust,Clust
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,province,Province
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,district,District
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q1,Extension service code and name
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q2,Household members who ever received extension/advisory services.
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q3,Household members who received extension/advisory services in this season
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q4,Source of extension/advisory services?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q4_1,Source of extension services (1)
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q4_2,Source of extension services (2)
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q4_3,Source of extension services (3)
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q5,Does any household member belong to ?Twigire muhinzi/mworozi? group?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q5_a,Household member belong to ?Twigire muhinzi/mworozi? group?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q6,Does any household member belong to ?Farmer field school??
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q6_a,Does any household member belong to ?Farmer field school??
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q7,Is there any household member who benefited from contract farming in this s
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q7_a,Is there any household member who benefited from contract farming in this s
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q8,Is there any household member who took crop insurance in this season?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q8_a,Is there any household member who took crop insurance in this season?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q9,Is there any household member who took livestock insurance in this season?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q9_a,Is there any household member who took livestock insurance in this season?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q10, Does any member of this household belong to agricultural cooperatives/Asso
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q10_a, Does any member of this household belong to agricultural cooperatives/Asso
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q11, Type of cooperative
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q12, What types of services do you get from these cooperative/or associations?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q13, Do you have a kitchen garden at your home?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q14, Have you received any support/ fund for grant for agricultural purpose in
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q15, What types of support/funds received?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,s6q16, What is the origin of that support?
+AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta,weight,Final Season A weight
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,hhid,Household Identification
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,clust,Clust
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,province,Province
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,district,District
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7qa,did your household purchased and used any tool during this season?
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q1,tool_name
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q1_o,other tool
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q2,7.2 Has any member of your household purchased and used this tool during this se
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q3,7.3 Number of tools purchased and used during this season?
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q4,7.4 What was the average unit price for the purchased tools? (RwF)
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q5,7.5 What is the number of the tool that any member of your household has rented 
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q6,7.6 Amount paid for rented small tools
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q7,tool_name
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q7_o,other tool
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q8,7.8 Has any member of your household purchased this equipment during this season
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q9,7.9 What was the number of this equipment purchased by your household in this se
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q10,7.10 What was the unit price for the purchased equipment? (RwF)
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q11,7.11 Number of the equipment that any member of your household has rented in thi
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,s7q12,7.12 Amount paid for rented durable tools
+AHS2024_Section7_AGRICULTURAL TOOLS.dta,weight,Final Season A weight
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,hhid,Household Identification
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,clust,Clust
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,province,Province
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,district,District
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q1,8.1 Are you aware of the environmental risks associated with the excessive use o
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q2,8.2 Did your household take specific measures to mitigate the environmental risk
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q3,8.3 Among the following specific measures to mitigate the environmental risks as
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q4,8.4 Are you aware of the environmental and health risks associated with the use 
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q5,"8.5 In this season, which of the following measures did your household adopt to "
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,s8q6,"8.6 To avoid environment-related risk, which of the following measures did your "
+AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta,weight,Final Season A weight
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",hhid,Household Identification
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",clust,Clust
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",province,Province
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",district,District
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q1,Did your household rear any domestic animals during last 6 months?
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q2,Animal reared in last 6 months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q4_male,Total male animals all ages
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q4_female,Total female animals all ages
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q4,Number of animals reared now
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_1,Male Animal [0-6]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_2,Female Animal [0-6]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_3,Male Animal [7-12]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_4,Female Animal [7-12]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_5,Male Animal [13-24]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_6,Female Animal [13-24]months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_7,Male Animal above 24 months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s9q5_8,Female Animal above 24 months
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q2_1,10.2 How many animals born-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q2_2,10.2 How many animals born-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q3_1,"10.3 How many animals bought If male=0 and female=0, skip to 13.5-Male"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q3_2,"10.3 How many animals bought If male=0 and female=0, skip to 13.5-Female"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q4,10.4 Amount paid (Frw)
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q5_1,10.5 How many animals received as gift-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q5_2,10.5 How many animals received as gift-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q6_1,"10.6 How many animals Sold to farmers If male=0 and female=0, skip to 13.8-Male"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q6_2,"10.6 How many animals Sold to farmers If male=0 and female=0, skip to 13.8-Femal"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q7,10.7 Amount received (Frw)
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q8_1,"10.8 How many animals Sold to consumers (abbatoirs, hotels, resto,etc..) If male"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q8_2,"10.8 How many animals Sold to consumers (abbatoirs, hotels, resto,etc..) If male"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q9,10.9 Total Amount received (Frw)
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q10_1,10.10 How many animals slaughtered for own consumption-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q10_2,10.10 How many animals slaughtered for own consumption-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q11_1,10.11 How many animals given as gift-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q11_2,10.11 How many animals given as gift-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q12_1,10.12 How many animals given to others for keeping at a given period-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q12_2,10.12 How many animals given to others for keeping at a given period-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q13_1,10.13 How many animals? dead-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q13_2,10.13 How many animals? dead-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q14_1,10.14 How many animals stolen-Male
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s10q14_2,10.14 How many animals stolen-Female
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q2, 12.2 Amount spent on rent for land grazing/ kraal/ renting animal shelter
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q3, 12.3 Amount spent on purchasing fodder crop
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q4, 12.4 Amount spent on purchasing feeds/water
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q5, 12.5 Amount spent on purchasing salt and minerals
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q6, 12.6 Amount spent on purchasing artificial insemination
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q7," 12.7 Amount spent on purchasing vaccines, dips, sprays and medicine"
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q8, 12.8 Amount spent on paying veterinary services
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q9, 12.9 Amount spent on setting new fences/sheds or repairs of fencing/ sheds
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q10, 12.10 Amount spent on farm maintenance activities
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q11, 12.11 Amount spent on payment of shepherds
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",s12q12, 12.12 Other expenditures in livestock
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",weight,Agricultural household weight
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",owner,owner
+"AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",_merge,Matching result from merge

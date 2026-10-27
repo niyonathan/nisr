@@ -1,0 +1,5350 @@
+{
+  "AHS2024_Credits.dta": {
+    "rows_before": 5224,
+    "rows_after": 5224,
+    "columns": 12,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 19455,
+    "missing_percent_cells": 31.035,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "pid",
+        "dtype": "float64",
+        "missing_count": 1060,
+        "missing_percent": 20.291,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s10aq1",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10aq2",
+        "dtype": "float64",
+        "missing_count": 4929,
+        "missing_percent": 94.353,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s10aq3",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10aq4",
+        "dtype": "float64",
+        "missing_count": 1060,
+        "missing_percent": 20.291,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s10q6",
+        "dtype": "float32",
+        "missing_count": 1074,
+        "missing_percent": 20.559,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s10aq6_other",
+        "dtype": "string",
+        "missing_count": 5224,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s10aq7",
+        "dtype": "float64",
+        "missing_count": 1060,
+        "missing_percent": 20.291,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s10aq7_o",
+        "dtype": "string",
+        "missing_count": 5048,
+        "missing_percent": 96.631,
+        "unique_nonmissing": 155
+      },
+      {
+        "column": "loan",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      }
+    ],
+    "source_file": "AHS2024_Credits.dta",
+    "cleaned_file": "data/processed/AHS2024_Credits.csv.gz",
+    "source_shape": [
+      5224,
+      12
+    ]
+  },
+  "AHS2024_Saving.dta": {
+    "rows_before": 10342,
+    "rows_after": 10342,
+    "columns": 14,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 27174,
+    "missing_percent_cells": 18.768,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "pid",
+        "dtype": "float64",
+        "missing_count": 182,
+        "missing_percent": 1.76,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s10cq1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10cq3",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 18
+      },
+      {
+        "column": "s10cq4",
+        "dtype": "float64",
+        "missing_count": 182,
+        "missing_percent": 1.76,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10q5",
+        "dtype": "float32",
+        "missing_count": 6716,
+        "missing_percent": 64.939,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s10cq6",
+        "dtype": "float32",
+        "missing_count": 6710,
+        "missing_percent": 64.881,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10cq7",
+        "dtype": "float32",
+        "missing_count": 10144,
+        "missing_percent": 98.085,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s10cq8",
+        "dtype": "float64",
+        "missing_count": 3240,
+        "missing_percent": 31.329,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "account",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "saving",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      }
+    ],
+    "source_file": "AHS2024_Saving.dta",
+    "cleaned_file": "data/processed/AHS2024_Saving.csv.gz",
+    "source_shape": [
+      10342,
+      14
+    ]
+  },
+  "AHS2024_Section0.dta": {
+    "rows_before": 3724,
+    "rows_after": 3724,
+    "columns": 9,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 6266,
+    "missing_percent_cells": 18.696,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s0q13",
+        "dtype": "float64",
+        "missing_count": 2550,
+        "missing_percent": 68.475,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s0q14",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s0q15",
+        "dtype": "float64",
+        "missing_count": 420,
+        "missing_percent": 11.278,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s0q16",
+        "dtype": "float64",
+        "missing_count": 3296,
+        "missing_percent": 88.507,
+        "unique_nonmissing": 14
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      }
+    ],
+    "source_file": "AHS2024_Section0.dta",
+    "cleaned_file": "data/processed/AHS2024_Section0.csv.gz",
+    "source_shape": [
+      3724,
+      9
+    ]
+  },
+  "AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta": {
+    "rows_before": 12209,
+    "rows_after": 12209,
+    "columns": 40,
+    "exact_duplicate_rows_flagged_not_removed": 3002,
+    "missing_cells_after_cleaning": 286923,
+    "missing_percent_cells": 58.752,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s10q1_0",
+        "dtype": "float32",
+        "missing_count": 21,
+        "missing_percent": 0.172,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s11q1_1",
+        "dtype": "float64",
+        "missing_count": 6497,
+        "missing_percent": 53.215,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s11q1_2",
+        "dtype": "float64",
+        "missing_count": 6497,
+        "missing_percent": 53.215,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s11q1_3",
+        "dtype": "float64",
+        "missing_count": 8574,
+        "missing_percent": 70.227,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s11q1_4_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s11q1_5_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s11q1_6_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 57
+      },
+      {
+        "column": "s11q1_7_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 70
+      },
+      {
+        "column": "s11q1_8_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 53
+      },
+      {
+        "column": "s11q1_9_1",
+        "dtype": "float64",
+        "missing_count": 12051,
+        "missing_percent": 98.706,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s11q1_10_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s11q1_11_1",
+        "dtype": "float64",
+        "missing_count": 11989,
+        "missing_percent": 98.198,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s11q1_4_2",
+        "dtype": "float64",
+        "missing_count": 9446,
+        "missing_percent": 77.369,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s11q1_5_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 31
+      },
+      {
+        "column": "s11q1_6_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 243
+      },
+      {
+        "column": "s11q1_7_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 188
+      },
+      {
+        "column": "s11q1_8_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 259
+      },
+      {
+        "column": "s11q1_9_2",
+        "dtype": "float64",
+        "missing_count": 10454,
+        "missing_percent": 85.625,
+        "unique_nonmissing": 32
+      },
+      {
+        "column": "s11q1_10_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 83
+      },
+      {
+        "column": "s11q1_11_2",
+        "dtype": "float64",
+        "missing_count": 9450,
+        "missing_percent": 77.402,
+        "unique_nonmissing": 36
+      },
+      {
+        "column": "s11q1_4_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s11q1_5_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 29
+      },
+      {
+        "column": "s11q1_6_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 92
+      },
+      {
+        "column": "s11q1_7_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 108
+      },
+      {
+        "column": "s11q1_8_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 81
+      },
+      {
+        "column": "s11q1_9_3",
+        "dtype": "float64",
+        "missing_count": 11911,
+        "missing_percent": 97.559,
+        "unique_nonmissing": 21
+      },
+      {
+        "column": "s11q1_10_3",
+        "dtype": "float64",
+        "missing_count": 11549,
+        "missing_percent": 94.594,
+        "unique_nonmissing": 36
+      },
+      {
+        "column": "s11q1_11_3",
+        "dtype": "float64",
+        "missing_count": 11550,
+        "missing_percent": 94.602,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s11q1_4",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s11q1_5",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 35
+      },
+      {
+        "column": "s11q1_6",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 260
+      },
+      {
+        "column": "s11q1_7",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 206
+      },
+      {
+        "column": "s11q1_8",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 285
+      },
+      {
+        "column": "s11q1_10",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 89
+      },
+      {
+        "column": "s11q1_11",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 589
+      }
+    ],
+    "source_file": "AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.dta",
+    "cleaned_file": "data/processed/AHS2024_Section11_1_CATTLE MILK PRODUCTION AND USE.csv.gz",
+    "source_shape": [
+      12209,
+      40
+    ]
+  },
+  "AHS2024_Section11_2_EGG PRODUCTION.dta": {
+    "rows_before": 19077,
+    "rows_after": 19077,
+    "columns": 17,
+    "exact_duplicate_rows_flagged_not_removed": 2779,
+    "missing_cells_after_cleaning": 121858,
+    "missing_percent_cells": 37.575,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5663
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 4854,
+        "missing_percent": 25.444,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "float64",
+        "missing_count": 161,
+        "missing_percent": 0.844,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 161,
+        "missing_percent": 0.844,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s11q2_1",
+        "dtype": "float32",
+        "missing_count": 40,
+        "missing_percent": 0.21,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s11q2_2",
+        "dtype": "float64",
+        "missing_count": 7695,
+        "missing_percent": 40.337,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s11q2_0",
+        "dtype": "float32",
+        "missing_count": 7695,
+        "missing_percent": 40.337,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s11q2_3",
+        "dtype": "float64",
+        "missing_count": 15695,
+        "missing_percent": 82.272,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s11q2_4",
+        "dtype": "float64",
+        "missing_count": 13609,
+        "missing_percent": 71.337,
+        "unique_nonmissing": 814
+      },
+      {
+        "column": "s11q2_5",
+        "dtype": "float64",
+        "missing_count": 13609,
+        "missing_percent": 71.337,
+        "unique_nonmissing": 170
+      },
+      {
+        "column": "s11q2_6",
+        "dtype": "float64",
+        "missing_count": 13609,
+        "missing_percent": 71.337,
+        "unique_nonmissing": 955
+      },
+      {
+        "column": "s11q2_7",
+        "dtype": "float64",
+        "missing_count": 15426,
+        "missing_percent": 80.862,
+        "unique_nonmissing": 61
+      },
+      {
+        "column": "s11q2_8",
+        "dtype": "float64",
+        "missing_count": 15695,
+        "missing_percent": 82.272,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s11q2_9",
+        "dtype": "float64",
+        "missing_count": 13609,
+        "missing_percent": 71.337,
+        "unique_nonmissing": 159
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 590
+      },
+      {
+        "column": "owner",
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "_merge",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      }
+    ],
+    "source_file": "AHS2024_Section11_2_EGG PRODUCTION.dta",
+    "cleaned_file": "data/processed/AHS2024_Section11_2_EGG PRODUCTION.csv.gz",
+    "source_shape": [
+      19077,
+      17
+    ]
+  },
+  "AHS2024_Section11_3_HONEY PRODUCTION.dta": {
+    "rows_before": 9387,
+    "rows_after": 9387,
+    "columns": 16,
+    "exact_duplicate_rows_flagged_not_removed": 3510,
+    "missing_cells_after_cleaning": 71157,
+    "missing_percent_cells": 47.377,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5663
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 1939,
+        "missing_percent": 20.656,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s11q3_1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s11q3_2",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 102
+      },
+      {
+        "column": "s11q3_3",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 64
+      },
+      {
+        "column": "s11q3_4",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 155
+      },
+      {
+        "column": "s11q3_5",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 118
+      },
+      {
+        "column": "s11q3_6",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 70
+      },
+      {
+        "column": "s11q3_7",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 200
+      },
+      {
+        "column": "s11q3_8",
+        "dtype": "float64",
+        "missing_count": 8815,
+        "missing_percent": 93.906,
+        "unique_nonmissing": 35
+      },
+      {
+        "column": "s11q3_9",
+        "dtype": "float64",
+        "missing_count": 8629,
+        "missing_percent": 91.925,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 590
+      },
+      {
+        "column": "owner",
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "_merge",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      }
+    ],
+    "source_file": "AHS2024_Section11_3_HONEY PRODUCTION.dta",
+    "cleaned_file": "data/processed/AHS2024_Section11_3_HONEY PRODUCTION.csv.gz",
+    "source_shape": [
+      9387,
+      16
+    ]
+  },
+  "AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta": {
+    "rows_before": 16292,
+    "rows_after": 16292,
+    "columns": 142,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 1345150,
+    "missing_percent_cells": 58.144,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "pid",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 14
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s1q1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s1q2",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s1q3y",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 102
+      },
+      {
+        "column": "s1q3m",
+        "dtype": "float64",
+        "missing_count": 14019,
+        "missing_percent": 86.048,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s1q4",
+        "dtype": "float64",
+        "missing_count": 4797,
+        "missing_percent": 29.444,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s1q5a",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s1q5b",
+        "dtype": "float64",
+        "missing_count": 197,
+        "missing_percent": 1.209,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s1q6",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s1q7a",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s1q7",
+        "dtype": "float64",
+        "missing_count": 14581,
+        "missing_percent": 89.498,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s1q8",
+        "dtype": "float64",
+        "missing_count": 14581,
+        "missing_percent": 89.498,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s1q9",
+        "dtype": "float64",
+        "missing_count": 14581,
+        "missing_percent": 89.498,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s1q10",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s1q11",
+        "dtype": "float64",
+        "missing_count": 15618,
+        "missing_percent": 95.863,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s1q12",
+        "dtype": "float64",
+        "missing_count": 8895,
+        "missing_percent": 54.597,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s1q13",
+        "dtype": "float64",
+        "missing_count": 8895,
+        "missing_percent": 54.597,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s1q14",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s2q2",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s2q3y",
+        "dtype": "float64",
+        "missing_count": 12735,
+        "missing_percent": 78.167,
+        "unique_nonmissing": 73
+      },
+      {
+        "column": "s2q3m",
+        "dtype": "float64",
+        "missing_count": 16043,
+        "missing_percent": 98.472,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s2q4a",
+        "dtype": "float64",
+        "missing_count": 12735,
+        "missing_percent": 78.167,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s2q4b",
+        "dtype": "float64",
+        "missing_count": 13356,
+        "missing_percent": 81.979,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s2q5",
+        "dtype": "float64",
+        "missing_count": 13356,
+        "missing_percent": 81.979,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s2q6",
+        "dtype": "float64",
+        "missing_count": 12735,
+        "missing_percent": 78.167,
+        "unique_nonmissing": 71
+      },
+      {
+        "column": "s2q7",
+        "dtype": "float64",
+        "missing_count": 12735,
+        "missing_percent": 78.167,
+        "unique_nonmissing": 17
+      },
+      {
+        "column": "s2q8",
+        "dtype": "float64",
+        "missing_count": 12735,
+        "missing_percent": 78.167,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q2",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q3",
+        "dtype": "float64",
+        "missing_count": 1973,
+        "missing_percent": 12.11,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3q4",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3q5",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q5a",
+        "dtype": "float64",
+        "missing_count": 15108,
+        "missing_percent": 92.733,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s3q6",
+        "dtype": "float64",
+        "missing_count": 12603,
+        "missing_percent": 77.357,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s3q7",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q8",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q9",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q10",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q11",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3q12",
+        "dtype": "float64",
+        "missing_count": 1891,
+        "missing_percent": 11.607,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4aq1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4aq1a",
+        "dtype": "float64",
+        "missing_count": 13724,
+        "missing_percent": 84.238,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4aq2",
+        "dtype": "float64",
+        "missing_count": 2568,
+        "missing_percent": 15.762,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4aq2a",
+        "dtype": "float64",
+        "missing_count": 2956,
+        "missing_percent": 18.144,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s4aq3",
+        "dtype": "float64",
+        "missing_count": 11772,
+        "missing_percent": 72.256,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4aq6a",
+        "dtype": "float64",
+        "missing_count": 5074,
+        "missing_percent": 31.144,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4aq6b",
+        "dtype": "float64",
+        "missing_count": 3859,
+        "missing_percent": 23.686,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4aq6c",
+        "dtype": "float64",
+        "missing_count": 15077,
+        "missing_percent": 92.542,
+        "unique_nonmissing": 14
+      },
+      {
+        "column": "s4aq6d",
+        "dtype": "float64",
+        "missing_count": 15310,
+        "missing_percent": 93.973,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4aq7",
+        "dtype": "float64",
+        "missing_count": 2568,
+        "missing_percent": 15.762,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4aq8",
+        "dtype": "float64",
+        "missing_count": 10026,
+        "missing_percent": 61.539,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4aq8a",
+        "dtype": "float64",
+        "missing_count": 11290,
+        "missing_percent": 69.298,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s4aq8b",
+        "dtype": "float64",
+        "missing_count": 15059,
+        "missing_percent": 92.432,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4aq9",
+        "dtype": "float64",
+        "missing_count": 11290,
+        "missing_percent": 69.298,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s4aq10",
+        "dtype": "float64",
+        "missing_count": 13113,
+        "missing_percent": 80.487,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s4aq11",
+        "dtype": "float64",
+        "missing_count": 10026,
+        "missing_percent": 61.539,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4aq14a",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 272
+      },
+      {
+        "column": "s4aq14b",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 152
+      },
+      {
+        "column": "s4aq14c",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 279
+      },
+      {
+        "column": "s4aq14d",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 597
+      },
+      {
+        "column": "s4aq14e",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 136
+      },
+      {
+        "column": "s4aq14f",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 283
+      },
+      {
+        "column": "s4aq14g",
+        "dtype": "float64",
+        "missing_count": 10334,
+        "missing_percent": 63.43,
+        "unique_nonmissing": 161
+      },
+      {
+        "column": "s4aq14h",
+        "dtype": "float64",
+        "missing_count": 15984,
+        "missing_percent": 98.11,
+        "unique_nonmissing": 167
+      },
+      {
+        "column": "s4aq20",
+        "dtype": "float64",
+        "missing_count": 13241,
+        "missing_percent": 81.273,
+        "unique_nonmissing": 19
+      },
+      {
+        "column": "s4bq1",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4bq2",
+        "dtype": "float64",
+        "missing_count": 16027,
+        "missing_percent": 98.373,
+        "unique_nonmissing": 84
+      },
+      {
+        "column": "s4bq3",
+        "dtype": "float64",
+        "missing_count": 15052,
+        "missing_percent": 92.389,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq4",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq5",
+        "dtype": "float64",
+        "missing_count": 6722,
+        "missing_percent": 41.26,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4bq6",
+        "dtype": "float64",
+        "missing_count": 6722,
+        "missing_percent": 41.26,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq7",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq8",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq9",
+        "dtype": "float64",
+        "missing_count": 10704,
+        "missing_percent": 65.701,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4bq10",
+        "dtype": "float64",
+        "missing_count": 10704,
+        "missing_percent": 65.701,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4bq11",
+        "dtype": "float64",
+        "missing_count": 11896,
+        "missing_percent": 73.017,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4bq12",
+        "dtype": "float64",
+        "missing_count": 9575,
+        "missing_percent": 58.771,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4bq13a",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq13b",
+        "dtype": "float64",
+        "missing_count": 3987,
+        "missing_percent": 24.472,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4bq13c",
+        "dtype": "float64",
+        "missing_count": 15625,
+        "missing_percent": 95.906,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4bq14a",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14b",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14c",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14d",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14e",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14f",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14g",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14h",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq14i",
+        "dtype": "float64",
+        "missing_count": 15912,
+        "missing_percent": 97.668,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq15",
+        "dtype": "float64",
+        "missing_count": 5232,
+        "missing_percent": 32.114,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq16",
+        "dtype": "float64",
+        "missing_count": 6533,
+        "missing_percent": 40.099,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4bq17",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4bq18",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq19",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq20",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq21",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq22",
+        "dtype": "float64",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4bq23",
+        "dtype": "string",
+        "missing_count": 14991,
+        "missing_percent": 92.014,
+        "unique_nonmissing": 75
+      },
+      {
+        "column": "s4bq23a",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23b",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23c",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23d",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23e",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23f",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23g",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq23h",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4bq25",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4bq26",
+        "dtype": "float64",
+        "missing_count": 15039,
+        "missing_percent": 92.309,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s6aq2",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq3",
+        "dtype": "float64",
+        "missing_count": 9761,
+        "missing_percent": 59.913,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s6aq4",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq5",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq6",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq7",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq8",
+        "dtype": "float64",
+        "missing_count": 2273,
+        "missing_percent": 13.952,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq9",
+        "dtype": "float64",
+        "missing_count": 10499,
+        "missing_percent": 64.443,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq10",
+        "dtype": "float64",
+        "missing_count": 16084,
+        "missing_percent": 98.723,
+        "unique_nonmissing": 10
+      },
+      {
+        "column": "s6aq11",
+        "dtype": "float64",
+        "missing_count": 16184,
+        "missing_percent": 99.337,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6aq12",
+        "dtype": "float64",
+        "missing_count": 16211,
+        "missing_percent": 99.503,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s6bq1",
+        "dtype": "float64",
+        "missing_count": 7875,
+        "missing_percent": 48.337,
+        "unique_nonmissing": 102
+      },
+      {
+        "column": "s6bq2",
+        "dtype": "float64",
+        "missing_count": 7875,
+        "missing_percent": 48.337,
+        "unique_nonmissing": 100
+      },
+      {
+        "column": "s6bq3a",
+        "dtype": "string",
+        "missing_count": 7875,
+        "missing_percent": 48.337,
+        "unique_nonmissing": 512
+      },
+      {
+        "column": "s6bq5",
+        "dtype": "float64",
+        "missing_count": 7875,
+        "missing_percent": 48.337,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s6bq6",
+        "dtype": "float64",
+        "missing_count": 15610,
+        "missing_percent": 95.814,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s6bq7",
+        "dtype": "float64",
+        "missing_count": 7875,
+        "missing_percent": 48.337,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s6bq8",
+        "dtype": "float64",
+        "missing_count": 14016,
+        "missing_percent": 86.03,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s6bq9a",
+        "dtype": "float64",
+        "missing_count": 13171,
+        "missing_percent": 80.843,
+        "unique_nonmissing": 240
+      },
+      {
+        "column": "s6bq9b",
+        "dtype": "float64",
+        "missing_count": 13171,
+        "missing_percent": 80.843,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s6cq2",
+        "dtype": "float64",
+        "missing_count": 12679,
+        "missing_percent": 77.823,
+        "unique_nonmissing": 23
+      },
+      {
+        "column": "s6cq3",
+        "dtype": "float64",
+        "missing_count": 11207,
+        "missing_percent": 68.788,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6cq4",
+        "dtype": "float64",
+        "missing_count": 14393,
+        "missing_percent": 88.344,
+        "unique_nonmissing": 23
+      },
+      {
+        "column": "s6cq5",
+        "dtype": "float64",
+        "missing_count": 11207,
+        "missing_percent": 68.788,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6cq6",
+        "dtype": "float64",
+        "missing_count": 14352,
+        "missing_percent": 88.092,
+        "unique_nonmissing": 33
+      },
+      {
+        "column": "s6cq7",
+        "dtype": "float64",
+        "missing_count": 11207,
+        "missing_percent": 68.788,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6cq8",
+        "dtype": "float64",
+        "missing_count": 15768,
+        "missing_percent": 96.784,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s6cq9",
+        "dtype": "float64",
+        "missing_count": 11207,
+        "missing_percent": 68.788,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6cq10",
+        "dtype": "float64",
+        "missing_count": 14312,
+        "missing_percent": 87.847,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s6cq11",
+        "dtype": "float64",
+        "missing_count": 11207,
+        "missing_percent": 68.788,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6cq12",
+        "dtype": "float64",
+        "missing_count": 13743,
+        "missing_percent": 84.354,
+        "unique_nonmissing": 31
+      }
+    ],
+    "source_file": "AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.dta",
+    "cleaned_file": "data/processed/AHS2024_Section1_HOUSEHOLD MEMBERS CHARACTERISTICS.csv.gz",
+    "source_shape": [
+      16292,
+      142
+    ]
+  },
+  "AHS2024_Section2_LAND TENURE.dta": {
+    "rows_before": 23266,
+    "rows_after": 23266,
+    "columns": 20,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 63193,
+    "missing_percent_cells": 13.581,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s2q1",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 36
+      },
+      {
+        "column": "s2q2",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 21850
+      },
+      {
+        "column": "s2q2a",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s2q3",
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 48
+      },
+      {
+        "column": "s2q4",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s2q5",
+        "dtype": "float64",
+        "missing_count": 21465,
+        "missing_percent": 92.259,
+        "unique_nonmissing": 125
+      },
+      {
+        "column": "s2q6",
+        "dtype": "float64",
+        "missing_count": 22511,
+        "missing_percent": 96.755,
+        "unique_nonmissing": 215
+      },
+      {
+        "column": "s2q7",
+        "dtype": "float64",
+        "missing_count": 4444,
+        "missing_percent": 19.101,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s2q8",
+        "dtype": "string",
+        "missing_count": 4445,
+        "missing_percent": 19.105,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s2q9",
+        "dtype": "string",
+        "missing_count": 4510,
+        "missing_percent": 19.385,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 587
+      },
+      {
+        "column": "Season",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "quintile",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "epov_jan",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "pov_jan",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "total_agr_land",
+        "dtype": "float32",
+        "missing_count": 5818,
+        "missing_percent": 25.006,
+        "unique_nonmissing": 3717
+      }
+    ],
+    "source_file": "AHS2024_Section2_LAND TENURE.dta",
+    "cleaned_file": "data/processed/AHS2024_Section2_LAND TENURE.csv.gz",
+    "source_shape": [
+      23266,
+      20
+    ]
+  },
+  "AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta": {
+    "rows_before": 32616,
+    "rows_after": 32616,
+    "columns": 331,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 8561342,
+    "missing_percent_cells": 79.302,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3717
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "Cluster_ID",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "Season",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s2q1",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 34
+      },
+      {
+        "column": "s2q2",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 32504
+      },
+      {
+        "column": "s3_q3",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q4_1",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 64
+      },
+      {
+        "column": "s3q4_o1",
+        "dtype": "string",
+        "missing_count": 32607,
+        "missing_percent": 99.972,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s3_q4_1a",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 92
+      },
+      {
+        "column": "s3_q4_1b",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 151
+      },
+      {
+        "column": "s3_q5_1",
+        "dtype": "float64",
+        "missing_count": 28359,
+        "missing_percent": 86.948,
+        "unique_nonmissing": 713
+      },
+      {
+        "column": "s3_q6_1",
+        "dtype": "float64",
+        "missing_count": 28359,
+        "missing_percent": 86.948,
+        "unique_nonmissing": 440
+      },
+      {
+        "column": "s3_q7_1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 26
+      },
+      {
+        "column": "s3_q7_1a",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_1b",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s3_q9_1",
+        "dtype": "float64",
+        "missing_count": 1407,
+        "missing_percent": 4.314,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_1",
+        "dtype": "float64",
+        "missing_count": 27688,
+        "missing_percent": 84.891,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3q10_o1",
+        "dtype": "string",
+        "missing_count": 32615,
+        "missing_percent": 99.997,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q11_1",
+        "dtype": "float64",
+        "missing_count": 10061,
+        "missing_percent": 30.847,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q11b_1",
+        "dtype": "float64",
+        "missing_count": 15561,
+        "missing_percent": 47.71,
+        "unique_nonmissing": 438
+      },
+      {
+        "column": "s3_q12_1",
+        "dtype": "float64",
+        "missing_count": 15561,
+        "missing_percent": 47.71,
+        "unique_nonmissing": 193
+      },
+      {
+        "column": "s3_q13_1",
+        "dtype": "float64",
+        "missing_count": 20625,
+        "missing_percent": 63.236,
+        "unique_nonmissing": 436
+      },
+      {
+        "column": "s3_q14_1",
+        "dtype": "float64",
+        "missing_count": 27643,
+        "missing_percent": 84.753,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q14b_1",
+        "dtype": "float64",
+        "missing_count": 27783,
+        "missing_percent": 85.182,
+        "unique_nonmissing": 127
+      },
+      {
+        "column": "s3_q15_1",
+        "dtype": "float64",
+        "missing_count": 27783,
+        "missing_percent": 85.182,
+        "unique_nonmissing": 125
+      },
+      {
+        "column": "s3_q16_1",
+        "dtype": "float64",
+        "missing_count": 27978,
+        "missing_percent": 85.78,
+        "unique_nonmissing": 367
+      },
+      {
+        "column": "s3_q17_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3_q17_o_1",
+        "dtype": "string",
+        "missing_count": 32610,
+        "missing_percent": 99.982,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s3_q18_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 969
+      },
+      {
+        "column": "s3q18_3_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 992
+      },
+      {
+        "column": "s3_q19_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 278
+      },
+      {
+        "column": "s3q19_3_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 284
+      },
+      {
+        "column": "s3_q20_1",
+        "dtype": "float64",
+        "missing_count": 3133,
+        "missing_percent": 9.606,
+        "unique_nonmissing": 1083
+      },
+      {
+        "column": "s2q23_1",
+        "dtype": "float64",
+        "missing_count": 1407,
+        "missing_percent": 4.314,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_1",
+        "dtype": "string",
+        "missing_count": 9573,
+        "missing_percent": 29.351,
+        "unique_nonmissing": 315
+      },
+      {
+        "column": "s3_q21_1_o1",
+        "dtype": "string",
+        "missing_count": 31976,
+        "missing_percent": 98.038,
+        "unique_nonmissing": 383
+      },
+      {
+        "column": "s3_q4_2",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 62
+      },
+      {
+        "column": "s3q4_o2",
+        "dtype": "string",
+        "missing_count": 32604,
+        "missing_percent": 99.963,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s3_q4_2a",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 91
+      },
+      {
+        "column": "s3_q4_2b",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 145
+      },
+      {
+        "column": "s3_q5_2",
+        "dtype": "float64",
+        "missing_count": 24540,
+        "missing_percent": 75.239,
+        "unique_nonmissing": 756
+      },
+      {
+        "column": "s3_q6_2",
+        "dtype": "float64",
+        "missing_count": 24540,
+        "missing_percent": 75.239,
+        "unique_nonmissing": 399
+      },
+      {
+        "column": "s3_q7_2",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 26
+      },
+      {
+        "column": "s3_q7_2a",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_2b",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_2",
+        "dtype": "float64",
+        "missing_count": 11947,
+        "missing_percent": 36.629,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s3_q9_2",
+        "dtype": "float64",
+        "missing_count": 14362,
+        "missing_percent": 44.034,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_2",
+        "dtype": "float64",
+        "missing_count": 31317,
+        "missing_percent": 96.017,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3q10_o2",
+        "dtype": "string",
+        "missing_count": 32614,
+        "missing_percent": 99.994,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q11_2",
+        "dtype": "float64",
+        "missing_count": 20144,
+        "missing_percent": 61.761,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q11b_2",
+        "dtype": "float64",
+        "missing_count": 23492,
+        "missing_percent": 72.026,
+        "unique_nonmissing": 553
+      },
+      {
+        "column": "s3_q12_2",
+        "dtype": "float64",
+        "missing_count": 23492,
+        "missing_percent": 72.026,
+        "unique_nonmissing": 151
+      },
+      {
+        "column": "s3_q13_2",
+        "dtype": "float64",
+        "missing_count": 26544,
+        "missing_percent": 81.383,
+        "unique_nonmissing": 274
+      },
+      {
+        "column": "s3_q14_2",
+        "dtype": "float64",
+        "missing_count": 31362,
+        "missing_percent": 96.155,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q14b_2",
+        "dtype": "float64",
+        "missing_count": 31395,
+        "missing_percent": 96.256,
+        "unique_nonmissing": 70
+      },
+      {
+        "column": "s3_q15_2",
+        "dtype": "float64",
+        "missing_count": 31395,
+        "missing_percent": 96.256,
+        "unique_nonmissing": 68
+      },
+      {
+        "column": "s3_q16_2",
+        "dtype": "float64",
+        "missing_count": 31437,
+        "missing_percent": 96.385,
+        "unique_nonmissing": 156
+      },
+      {
+        "column": "s3_q17_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3_q17_o_2",
+        "dtype": "string",
+        "missing_count": 32615,
+        "missing_percent": 99.997,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q18_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 639
+      },
+      {
+        "column": "s3q18_3_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 666
+      },
+      {
+        "column": "s3_q19_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 280
+      },
+      {
+        "column": "s3q19_3_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 286
+      },
+      {
+        "column": "s3_q20_2",
+        "dtype": "float64",
+        "missing_count": 16395,
+        "missing_percent": 50.267,
+        "unique_nonmissing": 770
+      },
+      {
+        "column": "s2q23_2",
+        "dtype": "float64",
+        "missing_count": 14362,
+        "missing_percent": 44.034,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "ss3_q21_1_2",
+        "dtype": "string",
+        "missing_count": 20869,
+        "missing_percent": 63.984,
+        "unique_nonmissing": 259
+      },
+      {
+        "column": "s3_q21_1_o2",
+        "dtype": "string",
+        "missing_count": 32217,
+        "missing_percent": 98.777,
+        "unique_nonmissing": 228
+      },
+      {
+        "column": "s3_q4_3",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 46
+      },
+      {
+        "column": "s3q4_o3",
+        "dtype": "string",
+        "missing_count": 32614,
+        "missing_percent": 99.994,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q4_3a",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 91
+      },
+      {
+        "column": "s3_q4_3b",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 138
+      },
+      {
+        "column": "s3_q5_3",
+        "dtype": "float64",
+        "missing_count": 24614,
+        "missing_percent": 75.466,
+        "unique_nonmissing": 701
+      },
+      {
+        "column": "s3_q6_3",
+        "dtype": "float64",
+        "missing_count": 24614,
+        "missing_percent": 75.466,
+        "unique_nonmissing": 309
+      },
+      {
+        "column": "s3_q7_3",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 26
+      },
+      {
+        "column": "s3_q7_3a",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_3b",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_3",
+        "dtype": "float64",
+        "missing_count": 21043,
+        "missing_percent": 64.517,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s3_q9_3",
+        "dtype": "float64",
+        "missing_count": 23319,
+        "missing_percent": 71.496,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_3",
+        "dtype": "float64",
+        "missing_count": 32306,
+        "missing_percent": 99.05,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3q10_o3",
+        "dtype": "string",
+        "missing_count": 32615,
+        "missing_percent": 99.997,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q11_3",
+        "dtype": "float64",
+        "missing_count": 27424,
+        "missing_percent": 84.081,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q11b_3",
+        "dtype": "float64",
+        "missing_count": 29589,
+        "missing_percent": 90.719,
+        "unique_nonmissing": 520
+      },
+      {
+        "column": "s3_q12_3",
+        "dtype": "float64",
+        "missing_count": 29589,
+        "missing_percent": 90.719,
+        "unique_nonmissing": 101
+      },
+      {
+        "column": "s3_q13_3",
+        "dtype": "float64",
+        "missing_count": 30074,
+        "missing_percent": 92.206,
+        "unique_nonmissing": 138
+      },
+      {
+        "column": "s3_q14_3",
+        "dtype": "float64",
+        "missing_count": 32341,
+        "missing_percent": 99.157,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q14b_3",
+        "dtype": "float64",
+        "missing_count": 32353,
+        "missing_percent": 99.194,
+        "unique_nonmissing": 40
+      },
+      {
+        "column": "s3_q15_3",
+        "dtype": "float64",
+        "missing_count": 32353,
+        "missing_percent": 99.194,
+        "unique_nonmissing": 41
+      },
+      {
+        "column": "s3_q16_3",
+        "dtype": "float64",
+        "missing_count": 32359,
+        "missing_percent": 99.212,
+        "unique_nonmissing": 62
+      },
+      {
+        "column": "s3_q17_3",
+        "dtype": "float64",
+        "missing_count": 24924,
+        "missing_percent": 76.416,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3_q17_o_3",
+        "dtype": "string",
+        "missing_count": 32613,
+        "missing_percent": 99.991,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3_q18_3",
+        "dtype": "float64",
+        "missing_count": 24924,
+        "missing_percent": 76.416,
+        "unique_nonmissing": 435
+      },
+      {
+        "column": "s3q18_3_3",
+        "dtype": "float64",
+        "missing_count": 24901,
+        "missing_percent": 76.346,
+        "unique_nonmissing": 467
+      },
+      {
+        "column": "s3_q19_3",
+        "dtype": "float64",
+        "missing_count": 24924,
+        "missing_percent": 76.416,
+        "unique_nonmissing": 225
+      },
+      {
+        "column": "s3q19_3_3",
+        "dtype": "float64",
+        "missing_count": 24924,
+        "missing_percent": 76.416,
+        "unique_nonmissing": 234
+      },
+      {
+        "column": "s3_q20_3",
+        "dtype": "float64",
+        "missing_count": 24924,
+        "missing_percent": 76.416,
+        "unique_nonmissing": 570
+      },
+      {
+        "column": "s2q23_3",
+        "dtype": "float64",
+        "missing_count": 23319,
+        "missing_percent": 71.496,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_3",
+        "dtype": "string",
+        "missing_count": 27855,
+        "missing_percent": 85.403,
+        "unique_nonmissing": 194
+      },
+      {
+        "column": "s3_q21_1_o3",
+        "dtype": "string",
+        "missing_count": 32406,
+        "missing_percent": 99.356,
+        "unique_nonmissing": 126
+      },
+      {
+        "column": "s3_q4_4",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 44
+      },
+      {
+        "column": "s3q4_o4",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q4_4a",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 89
+      },
+      {
+        "column": "s3_q4_4b",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 122
+      },
+      {
+        "column": "s3_q5_4",
+        "dtype": "float64",
+        "missing_count": 27444,
+        "missing_percent": 84.143,
+        "unique_nonmissing": 521
+      },
+      {
+        "column": "s3_q6_4",
+        "dtype": "float64",
+        "missing_count": 27444,
+        "missing_percent": 84.143,
+        "unique_nonmissing": 213
+      },
+      {
+        "column": "s3_q7_4",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s3_q7_4a",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_4b",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_4",
+        "dtype": "float64",
+        "missing_count": 26744,
+        "missing_percent": 81.997,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s3_q9_4",
+        "dtype": "float64",
+        "missing_count": 28187,
+        "missing_percent": 86.421,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_4",
+        "dtype": "float64",
+        "missing_count": 32531,
+        "missing_percent": 99.739,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3q10_o4",
+        "dtype": "string",
+        "missing_count": 32613,
+        "missing_percent": 99.991,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q11_4",
+        "dtype": "float64",
+        "missing_count": 30725,
+        "missing_percent": 94.202,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q11b_4",
+        "dtype": "float64",
+        "missing_count": 31845,
+        "missing_percent": 97.636,
+        "unique_nonmissing": 264
+      },
+      {
+        "column": "s3_q12_4",
+        "dtype": "float64",
+        "missing_count": 31845,
+        "missing_percent": 97.636,
+        "unique_nonmissing": 49
+      },
+      {
+        "column": "s3_q13_4",
+        "dtype": "float64",
+        "missing_count": 31568,
+        "missing_percent": 96.787,
+        "unique_nonmissing": 69
+      },
+      {
+        "column": "s3_q14_4",
+        "dtype": "float64",
+        "missing_count": 32550,
+        "missing_percent": 99.798,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q14b_4",
+        "dtype": "float64",
+        "missing_count": 32560,
+        "missing_percent": 99.828,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s3_q15_4",
+        "dtype": "float64",
+        "missing_count": 32560,
+        "missing_percent": 99.828,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s3_q16_4",
+        "dtype": "float64",
+        "missing_count": 32563,
+        "missing_percent": 99.838,
+        "unique_nonmissing": 29
+      },
+      {
+        "column": "s3_q17_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q17_o_4",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q18_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 333
+      },
+      {
+        "column": "s3q18_3_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 365
+      },
+      {
+        "column": "s3_q19_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 127
+      },
+      {
+        "column": "s3q19_3_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 139
+      },
+      {
+        "column": "s3_q20_4",
+        "dtype": "float64",
+        "missing_count": 28723,
+        "missing_percent": 88.064,
+        "unique_nonmissing": 412
+      },
+      {
+        "column": "s2q23_4",
+        "dtype": "float64",
+        "missing_count": 28187,
+        "missing_percent": 86.421,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_4",
+        "dtype": "string",
+        "missing_count": 30516,
+        "missing_percent": 93.561,
+        "unique_nonmissing": 132
+      },
+      {
+        "column": "s3_q21_1_o4",
+        "dtype": "string",
+        "missing_count": 32508,
+        "missing_percent": 99.669,
+        "unique_nonmissing": 63
+      },
+      {
+        "column": "s3_q4_5",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 31
+      },
+      {
+        "column": "s3q4_o5",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q4_5a",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 86
+      },
+      {
+        "column": "s3_q4_5b",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 104
+      },
+      {
+        "column": "s3_q5_5",
+        "dtype": "float64",
+        "missing_count": 30035,
+        "missing_percent": 92.087,
+        "unique_nonmissing": 278
+      },
+      {
+        "column": "s3_q6_5",
+        "dtype": "float64",
+        "missing_count": 30035,
+        "missing_percent": 92.087,
+        "unique_nonmissing": 111
+      },
+      {
+        "column": "s3_q7_5",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 18
+      },
+      {
+        "column": "s3_q7_5a",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_5b",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_5",
+        "dtype": "float64",
+        "missing_count": 29917,
+        "missing_percent": 91.725,
+        "unique_nonmissing": 19
+      },
+      {
+        "column": "s3_q9_5",
+        "dtype": "float64",
+        "missing_count": 30617,
+        "missing_percent": 93.871,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_5",
+        "dtype": "float64",
+        "missing_count": 32595,
+        "missing_percent": 99.936,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3q10_o5",
+        "dtype": "string",
+        "missing_count": 32615,
+        "missing_percent": 99.997,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q11_5",
+        "dtype": "float64",
+        "missing_count": 31893,
+        "missing_percent": 97.783,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q11b_5",
+        "dtype": "float64",
+        "missing_count": 32487,
+        "missing_percent": 99.604,
+        "unique_nonmissing": 79
+      },
+      {
+        "column": "s3_q12_5",
+        "dtype": "float64",
+        "missing_count": 32487,
+        "missing_percent": 99.604,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s3_q13_5",
+        "dtype": "float64",
+        "missing_count": 32145,
+        "missing_percent": 98.556,
+        "unique_nonmissing": 23
+      },
+      {
+        "column": "s3_q14_5",
+        "dtype": "float64",
+        "missing_count": 32599,
+        "missing_percent": 99.948,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3_q14b_5",
+        "dtype": "float64",
+        "missing_count": 32605,
+        "missing_percent": 99.966,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q15_5",
+        "dtype": "float64",
+        "missing_count": 32605,
+        "missing_percent": 99.966,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q16_5",
+        "dtype": "float64",
+        "missing_count": 32607,
+        "missing_percent": 99.972,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3_q17_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s3_q17_o_5",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q18_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 241
+      },
+      {
+        "column": "s3q18_3_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 276
+      },
+      {
+        "column": "s3_q19_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 89
+      },
+      {
+        "column": "s3q19_3_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 95
+      },
+      {
+        "column": "s3_q20_5",
+        "dtype": "float64",
+        "missing_count": 30734,
+        "missing_percent": 94.23,
+        "unique_nonmissing": 314
+      },
+      {
+        "column": "s2q23_5",
+        "dtype": "float64",
+        "missing_count": 30617,
+        "missing_percent": 93.871,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_5",
+        "dtype": "string",
+        "missing_count": 31641,
+        "missing_percent": 97.011,
+        "unique_nonmissing": 84
+      },
+      {
+        "column": "s3_q21_1_o5",
+        "dtype": "string",
+        "missing_count": 32558,
+        "missing_percent": 99.822,
+        "unique_nonmissing": 37
+      },
+      {
+        "column": "s3_q4_6",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s3q4_o6",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q4_6a",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 74
+      },
+      {
+        "column": "s3_q4_6b",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 82
+      },
+      {
+        "column": "s3_q5_6",
+        "dtype": "float64",
+        "missing_count": 31716,
+        "missing_percent": 97.241,
+        "unique_nonmissing": 148
+      },
+      {
+        "column": "s3_q6_6",
+        "dtype": "float64",
+        "missing_count": 31716,
+        "missing_percent": 97.241,
+        "unique_nonmissing": 70
+      },
+      {
+        "column": "s3_q7_6",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s3_q7_6a",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_6b",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_6",
+        "dtype": "float64",
+        "missing_count": 31697,
+        "missing_percent": 97.182,
+        "unique_nonmissing": 18
+      },
+      {
+        "column": "s3_q9_6",
+        "dtype": "float64",
+        "missing_count": 31922,
+        "missing_percent": 97.872,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3q10_6",
+        "dtype": "float64",
+        "missing_count": 32609,
+        "missing_percent": 99.979,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3q10_o6",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q11_6",
+        "dtype": "float64",
+        "missing_count": 32391,
+        "missing_percent": 99.31,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3_q11b_6",
+        "dtype": "float64",
+        "missing_count": 32598,
+        "missing_percent": 99.945,
+        "unique_nonmissing": 17
+      },
+      {
+        "column": "s3_q12_6",
+        "dtype": "float64",
+        "missing_count": 32598,
+        "missing_percent": 99.945,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s3_q13_6",
+        "dtype": "float64",
+        "missing_count": 32458,
+        "missing_percent": 99.516,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s3_q14_6",
+        "dtype": "float64",
+        "missing_count": 32610,
+        "missing_percent": 99.982,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3_q14b_6",
+        "dtype": "float64",
+        "missing_count": 32612,
+        "missing_percent": 99.988,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q15_6",
+        "dtype": "float64",
+        "missing_count": 32612,
+        "missing_percent": 99.988,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q16_6",
+        "dtype": "float64",
+        "missing_count": 32612,
+        "missing_percent": 99.988,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s3_q17_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q17_o_6",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q18_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 155
+      },
+      {
+        "column": "s3q18_3_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 176
+      },
+      {
+        "column": "s3_q19_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s3q19_3_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 53
+      },
+      {
+        "column": "s3_q20_6",
+        "dtype": "float64",
+        "missing_count": 31945,
+        "missing_percent": 97.943,
+        "unique_nonmissing": 198
+      },
+      {
+        "column": "s2q23_6",
+        "dtype": "float64",
+        "missing_count": 31922,
+        "missing_percent": 97.872,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_6",
+        "dtype": "string",
+        "missing_count": 32272,
+        "missing_percent": 98.945,
+        "unique_nonmissing": 57
+      },
+      {
+        "column": "s3_q21_1_o6",
+        "dtype": "string",
+        "missing_count": 32597,
+        "missing_percent": 99.942,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s3_q4_7",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s3q4_o7",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q4_7a",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 45
+      },
+      {
+        "column": "s3_q4_7b",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 47
+      },
+      {
+        "column": "s3_q5_7",
+        "dtype": "float64",
+        "missing_count": 32422,
+        "missing_percent": 99.405,
+        "unique_nonmissing": 83
+      },
+      {
+        "column": "s3_q6_7",
+        "dtype": "float64",
+        "missing_count": 32422,
+        "missing_percent": 99.405,
+        "unique_nonmissing": 35
+      },
+      {
+        "column": "s3_q7_7",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q7_7a",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q7_7b",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q8_7",
+        "dtype": "float64",
+        "missing_count": 32415,
+        "missing_percent": 99.384,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s3_q9_7",
+        "dtype": "float64",
+        "missing_count": 32460,
+        "missing_percent": 99.522,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3q10_7",
+        "dtype": "float64",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3q10_o7",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q11_7",
+        "dtype": "float64",
+        "missing_count": 32557,
+        "missing_percent": 99.819,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s3_q11b_7",
+        "dtype": "float64",
+        "missing_count": 32606,
+        "missing_percent": 99.969,
+        "unique_nonmissing": 10
+      },
+      {
+        "column": "s3_q12_7",
+        "dtype": "float64",
+        "missing_count": 32606,
+        "missing_percent": 99.969,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q13_7",
+        "dtype": "float64",
+        "missing_count": 32580,
+        "missing_percent": 99.89,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s3_q14_7",
+        "dtype": "float64",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q14b_7",
+        "dtype": "float64",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q15_7",
+        "dtype": "float64",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q16_7",
+        "dtype": "float64",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q17_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s3_q17_o_7",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s3_q18_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 75
+      },
+      {
+        "column": "s3q18_3_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 77
+      },
+      {
+        "column": "s3_q19_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s3q19_3_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 22
+      },
+      {
+        "column": "s3_q20_7",
+        "dtype": "float64",
+        "missing_count": 32467,
+        "missing_percent": 99.543,
+        "unique_nonmissing": 84
+      },
+      {
+        "column": "s2q23_7",
+        "dtype": "float64",
+        "missing_count": 32460,
+        "missing_percent": 99.522,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s3_q21_1_7",
+        "dtype": "string",
+        "missing_count": 32543,
+        "missing_percent": 99.776,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s3_q21_1_o7",
+        "dtype": "string",
+        "missing_count": 32613,
+        "missing_percent": 99.991,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4_q1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q2",
+        "dtype": "string",
+        "missing_count": 11651,
+        "missing_percent": 35.722,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s4_q2_1",
+        "dtype": "float64",
+        "missing_count": 11651,
+        "missing_percent": 35.722,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q2_2",
+        "dtype": "float64",
+        "missing_count": 32064,
+        "missing_percent": 98.308,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q2_3",
+        "dtype": "float64",
+        "missing_count": 32614,
+        "missing_percent": 99.994,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s4_q2_o",
+        "dtype": "string",
+        "missing_count": 32604,
+        "missing_percent": 99.963,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4_q3",
+        "dtype": "float64",
+        "missing_count": 30583,
+        "missing_percent": 93.767,
+        "unique_nonmissing": 140
+      },
+      {
+        "column": "s4_q4",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q5",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4_q5_o",
+        "dtype": "string",
+        "missing_count": 32530,
+        "missing_percent": 99.736,
+        "unique_nonmissing": 49
+      },
+      {
+        "column": "s4_q6",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4_q6_o",
+        "dtype": "string",
+        "missing_count": 32605,
+        "missing_percent": 99.966,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q7",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q8",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 121
+      },
+      {
+        "column": "s4_q9",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 111
+      },
+      {
+        "column": "s4_q10",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 190
+      },
+      {
+        "column": "s4_q11",
+        "dtype": "float64",
+        "missing_count": 23206,
+        "missing_percent": 71.149,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s4_q11_o",
+        "dtype": "string",
+        "missing_count": 32606,
+        "missing_percent": 99.969,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s4_q6_2",
+        "dtype": "float64",
+        "missing_count": 28048,
+        "missing_percent": 85.995,
+        "unique_nonmissing": 17
+      },
+      {
+        "column": "s4_q6_o2",
+        "dtype": "string",
+        "missing_count": 32589,
+        "missing_percent": 99.917,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s4_q7_2",
+        "dtype": "float64",
+        "missing_count": 28048,
+        "missing_percent": 85.995,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q8_2",
+        "dtype": "float64",
+        "missing_count": 28048,
+        "missing_percent": 85.995,
+        "unique_nonmissing": 103
+      },
+      {
+        "column": "s4_q9_2",
+        "dtype": "float64",
+        "missing_count": 28048,
+        "missing_percent": 85.995,
+        "unique_nonmissing": 102
+      },
+      {
+        "column": "s4_q10_2",
+        "dtype": "float64",
+        "missing_count": 28050,
+        "missing_percent": 86.001,
+        "unique_nonmissing": 151
+      },
+      {
+        "column": "s4_q11_2",
+        "dtype": "float64",
+        "missing_count": 28048,
+        "missing_percent": 85.995,
+        "unique_nonmissing": 39
+      },
+      {
+        "column": "s4_q11_o2",
+        "dtype": "string",
+        "missing_count": 32611,
+        "missing_percent": 99.985,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q6_3",
+        "dtype": "float64",
+        "missing_count": 32284,
+        "missing_percent": 98.982,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4_q6_o3",
+        "dtype": "string",
+        "missing_count": 32576,
+        "missing_percent": 99.877,
+        "unique_nonmissing": 14
+      },
+      {
+        "column": "s4_q7_3",
+        "dtype": "float64",
+        "missing_count": 32284,
+        "missing_percent": 98.982,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q8_3",
+        "dtype": "float64",
+        "missing_count": 32284,
+        "missing_percent": 98.982,
+        "unique_nonmissing": 52
+      },
+      {
+        "column": "s4_q9_3",
+        "dtype": "float64",
+        "missing_count": 32284,
+        "missing_percent": 98.982,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s4_q10_3",
+        "dtype": "float64",
+        "missing_count": 32290,
+        "missing_percent": 99.0,
+        "unique_nonmissing": 81
+      },
+      {
+        "column": "s4_q11_3",
+        "dtype": "float64",
+        "missing_count": 32284,
+        "missing_percent": 98.982,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s4_q11_o3",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s4_q6_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s4_q6_o4",
+        "dtype": "string",
+        "missing_count": 32599,
+        "missing_percent": 99.948,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q7_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q8_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 19
+      },
+      {
+        "column": "s4_q9_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 18
+      },
+      {
+        "column": "s4_q10_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 23
+      },
+      {
+        "column": "s4_q11_4",
+        "dtype": "float64",
+        "missing_count": 32577,
+        "missing_percent": 99.88,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q11_o4",
+        "dtype": "string",
+        "missing_count": 32616,
+        "missing_percent": 100.0,
+        "unique_nonmissing": 0
+      },
+      {
+        "column": "s4_q12",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q13",
+        "dtype": "float64",
+        "missing_count": 27632,
+        "missing_percent": 84.719,
+        "unique_nonmissing": 28
+      },
+      {
+        "column": "s4_q13_o",
+        "dtype": "string",
+        "missing_count": 32589,
+        "missing_percent": 99.917,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4_q14",
+        "dtype": "float64",
+        "missing_count": 27632,
+        "missing_percent": 84.719,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q15",
+        "dtype": "float64",
+        "missing_count": 27632,
+        "missing_percent": 84.719,
+        "unique_nonmissing": 150
+      },
+      {
+        "column": "s4_q16",
+        "dtype": "float64",
+        "missing_count": 27632,
+        "missing_percent": 84.719,
+        "unique_nonmissing": 147
+      },
+      {
+        "column": "s4_q17",
+        "dtype": "float64",
+        "missing_count": 27881,
+        "missing_percent": 85.483,
+        "unique_nonmissing": 319
+      },
+      {
+        "column": "s4_q13_2",
+        "dtype": "float64",
+        "missing_count": 31124,
+        "missing_percent": 95.426,
+        "unique_nonmissing": 25
+      },
+      {
+        "column": "s4_q13_o2",
+        "dtype": "string",
+        "missing_count": 32569,
+        "missing_percent": 99.856,
+        "unique_nonmissing": 29
+      },
+      {
+        "column": "s4_q14_2",
+        "dtype": "float64",
+        "missing_count": 31124,
+        "missing_percent": 95.426,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q15_2",
+        "dtype": "float64",
+        "missing_count": 31124,
+        "missing_percent": 95.426,
+        "unique_nonmissing": 103
+      },
+      {
+        "column": "s4_q16_2",
+        "dtype": "float64",
+        "missing_count": 31124,
+        "missing_percent": 95.426,
+        "unique_nonmissing": 103
+      },
+      {
+        "column": "s4_q17_2",
+        "dtype": "float64",
+        "missing_count": 31134,
+        "missing_percent": 95.456,
+        "unique_nonmissing": 183
+      },
+      {
+        "column": "s4_q13_3",
+        "dtype": "float64",
+        "missing_count": 32217,
+        "missing_percent": 98.777,
+        "unique_nonmissing": 20
+      },
+      {
+        "column": "s4_q13_o3",
+        "dtype": "string",
+        "missing_count": 32553,
+        "missing_percent": 99.807,
+        "unique_nonmissing": 37
+      },
+      {
+        "column": "s4_q14_3",
+        "dtype": "float64",
+        "missing_count": 32216,
+        "missing_percent": 98.774,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q15_3",
+        "dtype": "float64",
+        "missing_count": 32217,
+        "missing_percent": 98.777,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s4_q16_3",
+        "dtype": "float64",
+        "missing_count": 32217,
+        "missing_percent": 98.777,
+        "unique_nonmissing": 49
+      },
+      {
+        "column": "s4_q17_3",
+        "dtype": "float64",
+        "missing_count": 32217,
+        "missing_percent": 98.777,
+        "unique_nonmissing": 91
+      },
+      {
+        "column": "s4_q13_4",
+        "dtype": "float64",
+        "missing_count": 32525,
+        "missing_percent": 99.721,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4_q13_o4",
+        "dtype": "string",
+        "missing_count": 32586,
+        "missing_percent": 99.908,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4_q14_4",
+        "dtype": "float64",
+        "missing_count": 32525,
+        "missing_percent": 99.721,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q15_4",
+        "dtype": "float64",
+        "missing_count": 32525,
+        "missing_percent": 99.721,
+        "unique_nonmissing": 28
+      },
+      {
+        "column": "s4_q16_4",
+        "dtype": "float64",
+        "missing_count": 32525,
+        "missing_percent": 99.721,
+        "unique_nonmissing": 28
+      },
+      {
+        "column": "s4_q17_4",
+        "dtype": "float64",
+        "missing_count": 32525,
+        "missing_percent": 99.721,
+        "unique_nonmissing": 42
+      },
+      {
+        "column": "s4_q18",
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 26
+      },
+      {
+        "column": "s4_q18_1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q18_2",
+        "dtype": "float64",
+        "missing_count": 31834,
+        "missing_percent": 97.602,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4_q18_3",
+        "dtype": "float64",
+        "missing_count": 32537,
+        "missing_percent": 99.758,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q18_o",
+        "dtype": "string",
+        "missing_count": 32302,
+        "missing_percent": 99.037,
+        "unique_nonmissing": 120
+      },
+      {
+        "column": "s4_q19",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q19_a",
+        "dtype": "string",
+        "missing_count": 6459,
+        "missing_percent": 19.803,
+        "unique_nonmissing": 77
+      },
+      {
+        "column": "s4_q19_a_o",
+        "dtype": "string",
+        "missing_count": 32585,
+        "missing_percent": 99.905,
+        "unique_nonmissing": 13
+      },
+      {
+        "column": "s4_q19_a1",
+        "dtype": "float64",
+        "missing_count": 6447,
+        "missing_percent": 19.766,
+        "unique_nonmissing": 10
+      },
+      {
+        "column": "s4_q19_a2",
+        "dtype": "float64",
+        "missing_count": 24153,
+        "missing_percent": 74.053,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s4_q19_a3",
+        "dtype": "float64",
+        "missing_count": 31754,
+        "missing_percent": 97.357,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q20",
+        "dtype": "float64",
+        "missing_count": 5406,
+        "missing_percent": 16.575,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q21",
+        "dtype": "float64",
+        "missing_count": 30838,
+        "missing_percent": 94.549,
+        "unique_nonmissing": 52
+      },
+      {
+        "column": "s4_q22",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s4_q23",
+        "dtype": "float64",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s4_q24",
+        "dtype": "string",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4_q24_1",
+        "dtype": "float64",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q24_2",
+        "dtype": "float64",
+        "missing_count": 32531,
+        "missing_percent": 99.739,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4_q24_3",
+        "dtype": "float64",
+        "missing_count": 32612,
+        "missing_percent": 99.988,
+        "unique_nonmissing": 1
+      },
+      {
+        "column": "s4_q24_o",
+        "dtype": "string",
+        "missing_count": 32606,
+        "missing_percent": 99.969,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s4_q25",
+        "dtype": "string",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 20
+      },
+      {
+        "column": "s4_q25_1",
+        "dtype": "float64",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s4_q25_2",
+        "dtype": "float64",
+        "missing_count": 32422,
+        "missing_percent": 99.405,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4_q25_o",
+        "dtype": "string",
+        "missing_count": 32611,
+        "missing_percent": 99.985,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s4_q26",
+        "dtype": "float64",
+        "missing_count": 30933,
+        "missing_percent": 94.84,
+        "unique_nonmissing": 114
+      },
+      {
+        "column": "s4_q27",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q28",
+        "dtype": "float64",
+        "missing_count": 32605,
+        "missing_percent": 99.966,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q28_o",
+        "dtype": "string",
+        "missing_count": 32610,
+        "missing_percent": 99.982,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s4_q29",
+        "dtype": "float64",
+        "missing_count": 32605,
+        "missing_percent": 99.966,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "s4_q30",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 508
+      },
+      {
+        "column": "s4_q31",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s4_q32",
+        "dtype": "string",
+        "missing_count": 19711,
+        "missing_percent": 60.434,
+        "unique_nonmissing": 297
+      },
+      {
+        "column": "s4_q32_o",
+        "dtype": "string",
+        "missing_count": 32302,
+        "missing_percent": 99.037,
+        "unique_nonmissing": 112
+      },
+      {
+        "column": "s4_q33",
+        "dtype": "float64",
+        "missing_count": 19711,
+        "missing_percent": 60.434,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s4_q34",
+        "dtype": "float64",
+        "missing_count": 29204,
+        "missing_percent": 89.539,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s4_q35",
+        "dtype": "float64",
+        "missing_count": 31920,
+        "missing_percent": 97.866,
+        "unique_nonmissing": 9
+      },
+      {
+        "column": "s4_q36",
+        "dtype": "float64",
+        "missing_count": 32476,
+        "missing_percent": 99.571,
+        "unique_nonmissing": 8
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 616
+      }
+    ],
+    "source_file": "AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.dta",
+    "cleaned_file": "data/processed/AHS2024_Section3_4_CROP GROWN, SEEDS AND PRODUCTION & AGRICULTURAL INPUTS AND PRACTICES.csv.gz",
+    "source_shape": [
+      32616,
+      331
+    ]
+  },
+  "AHS2024_Section5_FRUITS PRODUCTION.dta": {
+    "rows_before": 9193,
+    "rows_after": 9193,
+    "columns": 16,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 19938,
+    "missing_percent_cells": 13.555,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "Cluster_ID",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "Season",
+        "dtype": "float32",
+        "missing_count": 127,
+        "missing_percent": 1.381,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s5_q1",
+        "dtype": "float64",
+        "missing_count": 127,
+        "missing_percent": 1.381,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s5_q2",
+        "dtype": "float32",
+        "missing_count": 768,
+        "missing_percent": 8.354,
+        "unique_nonmissing": 17
+      },
+      {
+        "column": "s5_q3",
+        "dtype": "float64",
+        "missing_count": 810,
+        "missing_percent": 8.811,
+        "unique_nonmissing": 82
+      },
+      {
+        "column": "s5_q4",
+        "dtype": "float64",
+        "missing_count": 810,
+        "missing_percent": 8.811,
+        "unique_nonmissing": 47
+      },
+      {
+        "column": "s5_q5",
+        "dtype": "float64",
+        "missing_count": 2304,
+        "missing_percent": 25.063,
+        "unique_nonmissing": 325
+      },
+      {
+        "column": "s5_q6",
+        "dtype": "float64",
+        "missing_count": 2368,
+        "missing_percent": 25.759,
+        "unique_nonmissing": 182
+      },
+      {
+        "column": "s5_q7",
+        "dtype": "float64",
+        "missing_count": 7888,
+        "missing_percent": 85.804,
+        "unique_nonmissing": 79
+      },
+      {
+        "column": "s5_q8",
+        "dtype": "float64",
+        "missing_count": 2368,
+        "missing_percent": 25.759,
+        "unique_nonmissing": 174
+      },
+      {
+        "column": "s6_q9",
+        "dtype": "float64",
+        "missing_count": 2368,
+        "missing_percent": 25.759,
+        "unique_nonmissing": 135
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 584
+      }
+    ],
+    "source_file": "AHS2024_Section5_FRUITS PRODUCTION.dta",
+    "cleaned_file": "data/processed/AHS2024_Section5_FRUITS PRODUCTION.csv.gz",
+    "source_shape": [
+      9193,
+      16
+    ]
+  },
+  "AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta": {
+    "rows_before": 9286,
+    "rows_after": 9286,
+    "columns": 30,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 100112,
+    "missing_percent_cells": 35.937,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s6q1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 16
+      },
+      {
+        "column": "s6q2",
+        "dtype": "string",
+        "missing_count": 1207,
+        "missing_percent": 12.998,
+        "unique_nonmissing": 34
+      },
+      {
+        "column": "s6q3",
+        "dtype": "string",
+        "missing_count": 1207,
+        "missing_percent": 12.998,
+        "unique_nonmissing": 39
+      },
+      {
+        "column": "s6q4",
+        "dtype": "string",
+        "missing_count": 1207,
+        "missing_percent": 12.998,
+        "unique_nonmissing": 167
+      },
+      {
+        "column": "s6q4_1",
+        "dtype": "float64",
+        "missing_count": 1207,
+        "missing_percent": 12.998,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s6q4_2",
+        "dtype": "float64",
+        "missing_count": 4640,
+        "missing_percent": 49.968,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s6q4_3",
+        "dtype": "float64",
+        "missing_count": 6642,
+        "missing_percent": 71.527,
+        "unique_nonmissing": 10
+      },
+      {
+        "column": "s6q5",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q5_a",
+        "dtype": "string",
+        "missing_count": 8577,
+        "missing_percent": 92.365,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s6q6",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q6_a",
+        "dtype": "string",
+        "missing_count": 8625,
+        "missing_percent": 92.882,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s6q7",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q7_a",
+        "dtype": "string",
+        "missing_count": 8964,
+        "missing_percent": 96.532,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s6q8",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q8_a",
+        "dtype": "string",
+        "missing_count": 8974,
+        "missing_percent": 96.64,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s6q9",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q9_a",
+        "dtype": "string",
+        "missing_count": 8952,
+        "missing_percent": 96.403,
+        "unique_nonmissing": 4
+      },
+      {
+        "column": "s6q10",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q10_a",
+        "dtype": "string",
+        "missing_count": 7570,
+        "missing_percent": 81.521,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s6q11",
+        "dtype": "string",
+        "missing_count": 7570,
+        "missing_percent": 81.521,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "s6q12",
+        "dtype": "string",
+        "missing_count": 7570,
+        "missing_percent": 81.521,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s6q13",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q14",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s6q15",
+        "dtype": "string",
+        "missing_count": 8600,
+        "missing_percent": 92.613,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s6q16",
+        "dtype": "string",
+        "missing_count": 8600,
+        "missing_percent": 92.613,
+        "unique_nonmissing": 7
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      }
+    ],
+    "source_file": "AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.dta",
+    "cleaned_file": "data/processed/AHS2024_Section6_EXTENSION SERVICES AND AGRICULTURAL PROGRAMMES.csv.gz",
+    "source_shape": [
+      9286,
+      30
+    ]
+  },
+  "AHS2024_Section7_AGRICULTURAL TOOLS.dta": {
+    "rows_before": 9981,
+    "rows_after": 9981,
+    "columns": 20,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 86839,
+    "missing_percent_cells": 43.502,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3701
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s7qa",
+        "dtype": "float64",
+        "missing_count": 258,
+        "missing_percent": 2.585,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s7q1",
+        "dtype": "float32",
+        "missing_count": 1242,
+        "missing_percent": 12.444,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s7q1_o",
+        "dtype": "string",
+        "missing_count": 9795,
+        "missing_percent": 98.136,
+        "unique_nonmissing": 82
+      },
+      {
+        "column": "s7q2",
+        "dtype": "float64",
+        "missing_count": 1242,
+        "missing_percent": 12.444,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s7q3",
+        "dtype": "float64",
+        "missing_count": 1242,
+        "missing_percent": 12.444,
+        "unique_nonmissing": 36
+      },
+      {
+        "column": "s7q4",
+        "dtype": "float64",
+        "missing_count": 1881,
+        "missing_percent": 18.846,
+        "unique_nonmissing": 124
+      },
+      {
+        "column": "s7q5",
+        "dtype": "float64",
+        "missing_count": 1265,
+        "missing_percent": 12.674,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s7q6",
+        "dtype": "float64",
+        "missing_count": 1271,
+        "missing_percent": 12.734,
+        "unique_nonmissing": 27
+      },
+      {
+        "column": "s7q7",
+        "dtype": "float32",
+        "missing_count": 9729,
+        "missing_percent": 97.475,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s7q7_o",
+        "dtype": "string",
+        "missing_count": 9978,
+        "missing_percent": 99.97,
+        "unique_nonmissing": 3
+      },
+      {
+        "column": "s7q8",
+        "dtype": "float64",
+        "missing_count": 9729,
+        "missing_percent": 97.475,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s7q9",
+        "dtype": "float64",
+        "missing_count": 9729,
+        "missing_percent": 97.475,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "s7q10",
+        "dtype": "float64",
+        "missing_count": 9819,
+        "missing_percent": 98.377,
+        "unique_nonmissing": 68
+      },
+      {
+        "column": "s7q11",
+        "dtype": "float64",
+        "missing_count": 9729,
+        "missing_percent": 97.475,
+        "unique_nonmissing": 6
+      },
+      {
+        "column": "s7q12",
+        "dtype": "float64",
+        "missing_count": 9930,
+        "missing_percent": 99.489,
+        "unique_nonmissing": 26
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      }
+    ],
+    "source_file": "AHS2024_Section7_AGRICULTURAL TOOLS.dta",
+    "cleaned_file": "data/processed/AHS2024_Section7_AGRICULTURAL TOOLS.csv.gz",
+    "source_shape": [
+      9981,
+      20
+    ]
+  },
+  "AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta": {
+    "rows_before": 3724,
+    "rows_after": 3724,
+    "columns": 11,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 11417,
+    "missing_percent_cells": 27.871,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 3724
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s8q1",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s8q2",
+        "dtype": "float64",
+        "missing_count": 2472,
+        "missing_percent": 66.38,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s8q3",
+        "dtype": "string",
+        "missing_count": 2700,
+        "missing_percent": 72.503,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s8q4",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s8q5",
+        "dtype": "string",
+        "missing_count": 3098,
+        "missing_percent": 83.19,
+        "unique_nonmissing": 12
+      },
+      {
+        "column": "s8q6",
+        "dtype": "string",
+        "missing_count": 3147,
+        "missing_percent": 84.506,
+        "unique_nonmissing": 47
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 581
+      }
+    ],
+    "source_file": "AHS2024_Section8_SUSTAINABLE AGRICULTURE.dta",
+    "cleaned_file": "data/processed/AHS2024_Section8_SUSTAINABLE AGRICULTURE.csv.gz",
+    "source_shape": [
+      3724,
+      11
+    ]
+  },
+  "AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta": {
+    "rows_before": 9947,
+    "rows_after": 9947,
+    "columns": 54,
+    "exact_duplicate_rows_flagged_not_removed": 0,
+    "missing_cells_after_cleaning": 108657,
+    "missing_percent_cells": 20.229,
+    "column_details": [
+      {
+        "column": "hhid",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5663
+      },
+      {
+        "column": "clust",
+        "dtype": "float32",
+        "missing_count": 2055,
+        "missing_percent": 20.659,
+        "unique_nonmissing": 581
+      },
+      {
+        "column": "province",
+        "dtype": "int16",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 5
+      },
+      {
+        "column": "district",
+        "dtype": "float32",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s9q1",
+        "dtype": "float64",
+        "missing_count": 801,
+        "missing_percent": 8.053,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "s9q2",
+        "dtype": "float64",
+        "missing_count": 1103,
+        "missing_percent": 11.089,
+        "unique_nonmissing": 23
+      },
+      {
+        "column": "s9q4_male",
+        "dtype": "float32",
+        "missing_count": 801,
+        "missing_percent": 8.053,
+        "unique_nonmissing": 167
+      },
+      {
+        "column": "s9q4_female",
+        "dtype": "float32",
+        "missing_count": 801,
+        "missing_percent": 8.053,
+        "unique_nonmissing": 330
+      },
+      {
+        "column": "s9q4",
+        "dtype": "float64",
+        "missing_count": 1231,
+        "missing_percent": 12.376,
+        "unique_nonmissing": 354
+      },
+      {
+        "column": "s9q5_1",
+        "dtype": "float64",
+        "missing_count": 2019,
+        "missing_percent": 20.298,
+        "unique_nonmissing": 138
+      },
+      {
+        "column": "s9q5_2",
+        "dtype": "float64",
+        "missing_count": 2019,
+        "missing_percent": 20.298,
+        "unique_nonmissing": 227
+      },
+      {
+        "column": "s9q5_3",
+        "dtype": "float64",
+        "missing_count": 2019,
+        "missing_percent": 20.298,
+        "unique_nonmissing": 50
+      },
+      {
+        "column": "s9q5_4",
+        "dtype": "float64",
+        "missing_count": 2019,
+        "missing_percent": 20.298,
+        "unique_nonmissing": 104
+      },
+      {
+        "column": "s9q5_5",
+        "dtype": "float64",
+        "missing_count": 2449,
+        "missing_percent": 24.62,
+        "unique_nonmissing": 31
+      },
+      {
+        "column": "s9q5_6",
+        "dtype": "float64",
+        "missing_count": 2449,
+        "missing_percent": 24.62,
+        "unique_nonmissing": 62
+      },
+      {
+        "column": "s9q5_7",
+        "dtype": "float64",
+        "missing_count": 2449,
+        "missing_percent": 24.62,
+        "unique_nonmissing": 21
+      },
+      {
+        "column": "s9q5_8",
+        "dtype": "float64",
+        "missing_count": 2449,
+        "missing_percent": 24.62,
+        "unique_nonmissing": 91
+      },
+      {
+        "column": "s10q2_1",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 100
+      },
+      {
+        "column": "s10q2_2",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 111
+      },
+      {
+        "column": "s10q3_1",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 73
+      },
+      {
+        "column": "s10q3_2",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 132
+      },
+      {
+        "column": "s10q4",
+        "dtype": "float64",
+        "missing_count": 6726,
+        "missing_percent": 67.618,
+        "unique_nonmissing": 477
+      },
+      {
+        "column": "s10q5_1",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 17
+      },
+      {
+        "column": "s10q5_2",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 21
+      },
+      {
+        "column": "s10q6_1",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 72
+      },
+      {
+        "column": "s10q6_2",
+        "dtype": "float64",
+        "missing_count": 1452,
+        "missing_percent": 14.597,
+        "unique_nonmissing": 106
+      },
+      {
+        "column": "s10q7",
+        "dtype": "float64",
+        "missing_count": 8189,
+        "missing_percent": 82.326,
+        "unique_nonmissing": 429
+      },
+      {
+        "column": "s10q8_1",
+        "dtype": "float64",
+        "missing_count": 1453,
+        "missing_percent": 14.607,
+        "unique_nonmissing": 92
+      },
+      {
+        "column": "s10q8_2",
+        "dtype": "float64",
+        "missing_count": 1453,
+        "missing_percent": 14.607,
+        "unique_nonmissing": 105
+      },
+      {
+        "column": "s10q9",
+        "dtype": "float64",
+        "missing_count": 7925,
+        "missing_percent": 79.672,
+        "unique_nonmissing": 479
+      },
+      {
+        "column": "s10q10_1",
+        "dtype": "float64",
+        "missing_count": 1453,
+        "missing_percent": 14.607,
+        "unique_nonmissing": 29
+      },
+      {
+        "column": "s10q10_2",
+        "dtype": "float64",
+        "missing_count": 1453,
+        "missing_percent": 14.607,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s10q11_1",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 20
+      },
+      {
+        "column": "s10q11_2",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 30
+      },
+      {
+        "column": "s10q12_1",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 11
+      },
+      {
+        "column": "s10q12_2",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 20
+      },
+      {
+        "column": "s10q13_1",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 63
+      },
+      {
+        "column": "s10q13_2",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 110
+      },
+      {
+        "column": "s10q14_1",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 15
+      },
+      {
+        "column": "s10q14_2",
+        "dtype": "float64",
+        "missing_count": 1454,
+        "missing_percent": 14.617,
+        "unique_nonmissing": 24
+      },
+      {
+        "column": "s12q2",
+        "dtype": "float64",
+        "missing_count": 1913,
+        "missing_percent": 19.232,
+        "unique_nonmissing": 99
+      },
+      {
+        "column": "s12q3",
+        "dtype": "float64",
+        "missing_count": 5296,
+        "missing_percent": 53.242,
+        "unique_nonmissing": 153
+      },
+      {
+        "column": "s12q4",
+        "dtype": "float64",
+        "missing_count": 1913,
+        "missing_percent": 19.232,
+        "unique_nonmissing": 614
+      },
+      {
+        "column": "s12q5",
+        "dtype": "float64",
+        "missing_count": 4467,
+        "missing_percent": 44.908,
+        "unique_nonmissing": 302
+      },
+      {
+        "column": "s12q6",
+        "dtype": "float64",
+        "missing_count": 4467,
+        "missing_percent": 44.908,
+        "unique_nonmissing": 61
+      },
+      {
+        "column": "s12q7",
+        "dtype": "float64",
+        "missing_count": 1913,
+        "missing_percent": 19.232,
+        "unique_nonmissing": 704
+      },
+      {
+        "column": "s12q8",
+        "dtype": "float64",
+        "missing_count": 1914,
+        "missing_percent": 19.242,
+        "unique_nonmissing": 179
+      },
+      {
+        "column": "s12q9",
+        "dtype": "float64",
+        "missing_count": 1914,
+        "missing_percent": 19.242,
+        "unique_nonmissing": 312
+      },
+      {
+        "column": "s12q10",
+        "dtype": "float64",
+        "missing_count": 4468,
+        "missing_percent": 44.918,
+        "unique_nonmissing": 148
+      },
+      {
+        "column": "s12q11",
+        "dtype": "float64",
+        "missing_count": 1914,
+        "missing_percent": 19.242,
+        "unique_nonmissing": 259
+      },
+      {
+        "column": "s12q12",
+        "dtype": "float64",
+        "missing_count": 1914,
+        "missing_percent": 19.242,
+        "unique_nonmissing": 299
+      },
+      {
+        "column": "weight",
+        "dtype": "float64",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 589
+      },
+      {
+        "column": "owner",
+        "dtype": "string",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      },
+      {
+        "column": "_merge",
+        "dtype": "int8",
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unique_nonmissing": 2
+      }
+    ],
+    "source_file": "AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.dta",
+    "cleaned_file": "data/processed/AHS2024_Section9_10_12_LIVESTOCK AND ANIMAL INPUTS EXPENDITURES,.csv.gz",
+    "source_shape": [
+      9947,
+      54
+    ]
+  }
+}
