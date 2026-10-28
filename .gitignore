@@ -7,3 +7,6 @@ __pycache__/
 # NISR microdata and anything derived at household/plot level must not be published.
 data/raw/
 data/processed/
+
+# Archives can smuggle microdata or duplicate files into the repo.
+*.zip
