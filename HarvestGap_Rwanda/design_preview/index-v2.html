@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HarvestGap Rwanda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Website layout: flat top menu, light hero strip, two-column overview grid. NISR-inspired blues. */
+:root {
+  --blue: #0a5ca8;       /* NISR primary blue: buttons, active menu, bars */
+  --navy: #123b7a;       /* headings, footer */
+  --sky: #4aa8e0;        /* accents */
+  --mist: #eef4fa;       /* page background */
+  --tint: #f3f8fd;       /* inner panels */
+  --line: #dbe5f0;
+  --ink: #1c2b3d;
+  --muted: #5b6d82;
+  --good: #1d7a46; --good-bg: #e2f3e8;
+  --warn: #8a5300; --warn-bg: #fdecc8;
+  --info-bg: #e3eef9;
+  --orange: #e07a2f; --orange-bg: #fdeee2;
+  --green: #2f9a5c; --green-bg: #e3f4ea;
+  --map-0: #d6e7f7; --map-1: #9cc6ec; --map-2: #5d9fdc; --map-3: #2a76c0; --map-4: #0b4f94; --map-none: #e9edf2;
+  --display: "Lexend", "Segoe UI", system-ui, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --radius: 14px;
+  --shadow: 0 4px 18px rgba(18, 59, 122, .06);
+  --wrap: 1400px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--mist); color: var(--ink); font: 16px/1.5 var(--body); }
+h1, h2, h3 { font-family: var(--display); color: var(--navy); margin: 0; text-wrap: balance; }
+a { color: var(--blue); }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left)); padding-right: max(24px, env(safe-area-inset-right)); }
+:focus-visible { outline: 3px solid var(--sky); outline-offset: 2px; border-radius: 6px; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: 0 0 auto; }
+
+/* ---------- Top menu ---------- */
+.nav { position: sticky; top: 0; z-index: 20; background: #fff; border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 32px; height: 72px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; flex: 0 0 auto; }
+.brand b { display: block; font: 700 22px/1 var(--display); color: var(--navy); }
+.brand small { display: block; font: 600 12px/1 var(--body); letter-spacing: .32em; color: var(--muted); margin-top: 5px; }
+.menu { display: flex; align-items: stretch; gap: 4px; list-style: none; margin: 0 0 0 auto; padding: 0; height: 100%; }
+.menu li { display: flex; }
+.menu a { display: flex; align-items: center; padding: 0 12px; font: 600 15px var(--body); color: #33475e; text-decoration: none; border-bottom: 3px solid transparent; white-space: nowrap; }
+.menu a:hover { color: var(--blue); }
+.menu a[aria-current="page"] { color: var(--blue); border-bottom-color: var(--blue); }
+.burger { display: none; margin-left: auto; border: 1px solid var(--line); background: #fff; border-radius: 10px; width: 44px; height: 44px; color: var(--navy); cursor: pointer; align-items: center; justify-content: center; }
+
+/* ---------- Hero strip ---------- */
+.hero { position: relative; overflow: hidden; background: linear-gradient(100deg, #f5f9fd 0%, #eaf3fb 45%, #dbeaf7 100%); border-bottom: 1px solid var(--line); }
+.hero .wrap { position: relative; z-index: 2; padding-block: 38px 42px; }
+.hero-copy { max-width: 640px; }
+.eyebrow { font: 600 14px/1 var(--body); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.hero h1 { font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; margin: 12px 0 10px; }
+.hero .lead { font-size: 19px; color: #2e4560; margin: 0 0 12px; }
+.hero p { margin: 0; color: var(--muted); font-size: 16.5px; }
+.hills { position: absolute; right: 0; top: 0; height: 100%; width: 58%; z-index: 1; }
+
+/* ---------- Grid ---------- */
+main.wrap { padding-block: 24px 40px; display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 20px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; min-width: 0; }
+.card-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+.card-head .icon { width: 28px; height: 28px; color: var(--blue); margin-top: 2px; }
+.card-head h2 { font-size: 21px; }
+.card-head p { margin: 3px 0 0; color: var(--muted); font-size: 15.5px; }
+
+/* ---------- Farm tool ---------- */
+.form-row { display: grid; grid-template-columns: 1fr 1fr .8fr; gap: 16px; }
+.field label { display: block; font-weight: 700; font-size: 15px; color: var(--navy); margin-bottom: 6px; }
+.field select, .field input { width: 100%; height: 44px; padding: 0 12px; border: 1px solid #c7d5e5; border-radius: 9px; font: 16px var(--body); color: var(--ink); background: #fff; }
+.field .unit { position: relative; }
+.field .unit input { padding-right: 40px; }
+.field .unit span { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 15px; pointer-events: none; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; margin-top: 16px; }
+.form-actions legend { font-weight: 700; font-size: 15px; color: var(--navy); padding: 0; margin-bottom: 6px; width: 100%; }
+.checks { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 22px; flex: 1; }
+.check { display: inline-flex; align-items: center; gap: 8px; font-size: 15.5px; cursor: pointer; }
+.check input { width: 18px; height: 18px; accent-color: var(--blue); }
+.btn { display: inline-flex; align-items: center; gap: 10px; height: 46px; padding: 0 22px; border-radius: 9px; border: 0; background: var(--blue); color: #fff; font: 700 16px var(--body); cursor: pointer; margin-left: auto; }
+.btn:hover { background: #094f90; }
+.result { margin-top: 22px; background: var(--tint); border: 1px solid #e1ebf6; border-radius: 12px; padding: 22px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px; }
+.result-left { border-right: 1px solid var(--line); padding-right: 26px; }
+.label { font-weight: 700; font-size: 15px; color: var(--navy); }
+.big { font: 700 48px/1.1 var(--display); color: var(--navy); font-variant-numeric: tabular-nums; margin: 6px 0 10px; }
+.big small { font-size: 22px; font-weight: 500; }
+.pill { display: inline-block; padding: 5px 13px; border-radius: 8px; font-weight: 700; font-size: 15px; }
+.pill.warn { background: var(--warn-bg); color: var(--warn); } .pill.good { background: var(--good-bg); color: var(--good); } .pill.info { background: var(--info-bg); color: var(--blue); }
+.facts { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 15.5px; color: #2e4560; }
+.facts b { font-variant-numeric: tabular-nums; }
+.goal { margin-top: 14px; padding: 12px 14px; background: #fff; border: 1px solid #d2e3f4; border-radius: 10px; font-size: 15px; color: #2e4560; }
+.goal b { color: var(--blue); }
+.bars h3 { font: 700 15px var(--body); color: var(--navy); margin-bottom: 12px; }
+.bar-row { display: grid; grid-template-columns: minmax(120px, 160px) 1fr 50px; gap: 12px; align-items: center; font-size: 15.5px; margin: 12px 0; }
+.bar-row .track { height: 10px; background: #dfe8f2; border-radius: 99px; overflow: hidden; }
+.bar-row .fill { height: 100%; background: var(--blue); border-radius: 99px; }
+.bar-row b { text-align: right; color: var(--blue); font-variant-numeric: tabular-nums; }
+.bar-row.faint { opacity: .45; }
+.bar-row.used span::after { content: " ✓"; color: var(--good); font-weight: 700; }
+.note { font-size: 13.5px; color: var(--muted); margin: 12px 0 0; }
+
+/* ---------- Key findings ---------- */
+.findings { display: grid; gap: 12px; }
+.finding { display: grid; grid-template-columns: 52px minmax(0, 1fr) 20px; gap: 14px; align-items: center; padding: 14px 14px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); transition: box-shadow .15s ease, border-color .15s ease; }
+.finding:hover { border-color: #b9d1ea; box-shadow: 0 6px 16px rgba(18,59,122,.08); }
+.badge { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+.badge .icon { width: 26px; height: 26px; }
+.badge.blue { background: var(--info-bg); color: var(--blue); } .badge.green { background: var(--green-bg); color: var(--green); } .badge.orange { background: var(--orange-bg); color: var(--orange); }
+.finding b { display: block; font: 600 16.5px var(--display); color: var(--navy); }
+.finding div span { display: block; font-size: 15px; color: var(--muted); margin-top: 2px; }
+.finding .arrow { color: var(--blue); width: 20px; height: 20px; }
+
+/* ---------- Topics ---------- */
+.topics { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.topic { display: flex; flex-direction: column; gap: 8px; padding: 18px 16px 14px; border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--ink); transition: box-shadow .15s ease, border-color .15s ease; }
+.topic:hover { border-color: #b9d1ea; box-shadow: 0 6px 16px rgba(18,59,122,.08); }
+.topic .badge { width: 46px; height: 46px; }
+.topic b { font: 600 16px var(--display); color: var(--navy); }
+.topic .desc { font-size: 14.5px; color: var(--muted); flex: 1; }
+.topic .arrow { align-self: flex-end; color: var(--blue); width: 20px; height: 20px; }
+.topic .soon { font-size: 12.5px; font-weight: 700; color: var(--warn); }
+
+/* ---------- Map ---------- */
+.map-card { position: relative; }
+.map-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: center; }
+#map { width: 100%; height: auto; display: block; }
+#map path { stroke: #fff; stroke-width: 1.1; cursor: pointer; }
+#map path:hover { stroke: var(--navy); stroke-width: 2; }
+#map path.sel { stroke: var(--navy); stroke-width: 2.4; }
+.legend { display: grid; gap: 10px; font-size: 14.5px; color: #2e4560; font-variant-numeric: tabular-nums; }
+.legend i { display: inline-block; width: 18px; height: 18px; border-radius: 4px; vertical-align: -4px; margin-right: 10px; }
+.map-tag { position: absolute; transform: translate(-50%, -100%); background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; padding: 3px 8px; border-radius: 6px; pointer-events: none; white-space: nowrap; }
+.tip { position: absolute; pointer-events: none; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: 8px 12px; font-size: 14.5px; white-space: nowrap; z-index: 3; }
+.tip b { color: var(--navy); display: block; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--navy); color: #c8d7eb; font-size: 15px; }
+footer .wrap { padding-block: 28px; display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; }
+footer a { color: #a9d4f4; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1240px) {
+  .burger { display: inline-flex; }
+  .menu { display: none; position: absolute; top: 72px; left: 0; right: 0; height: auto; flex-direction: column; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); padding: 8px 24px 16px; }
+  .menu.open { display: flex; }
+  .menu a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+  .menu a[aria-current="page"] { border-bottom-color: var(--line); box-shadow: inset 3px 0 var(--blue); padding-left: 12px; }
+}
+@media (max-width: 1100px) {
+  main.wrap { grid-template-columns: 1fr; }
+  .topics { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .hills { display: none; }
+  .bar-row { grid-template-columns: minmax(0, 1fr) auto; gap: 6px 12px; }
+  .bar-row .track { grid-column: 1 / -1; order: 3; }
+  .form-row, .result { grid-template-columns: 1fr; }
+  .result-left { border-right: 0; padding-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 20px; }
+  .topics { grid-template-columns: 1fr 1fr; }
+  .map-body { grid-template-columns: 1fr; }
+  .legend { grid-template-columns: 1fr 1fr; }
+  .btn { width: 100%; justify-content: center; margin-left: 0; }
+  .big { font-size: 42px; }
+  .card { padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6.5 6.8 6.5 11.2A6.5 6.5 0 0 1 5.5 14.2C5.5 9.8 12 3 12 3Z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C11 4 5 8.5 5 15c0 2 .6 3.6 1.5 5"/><path d="M20 4c0 9-4.5 15-11 15-1.2 0-2.2-.2-3-.5"/><path d="M6.5 20C9 15 12 11 16 8"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20h16"/><path d="M6 16v-3M10 16v-6M14 16v-4M18 16V8"/><path d="m5 10 4-4 4 3 6-5"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z"/><path d="m4 7 8 4 8-4M12 11v10"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3Z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3Z"/><path d="M12 1v0M4 4l1 1M20 4l-1 1M2 11h1M21 11h1"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5 5-2Z"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 13C7 13 4 10 4 5c5 0 8 3 8 8Z"/><path d="M12 11c0-4.5 3-7 8-7 0 4.5-3 7-8 7Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+</svg>
+
+<!-- ===== Top menu ===== -->
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="HarvestGap Rwanda home">
+      <svg width="40" height="44" viewBox="0 0 40 44" aria-hidden="true">
+        <path d="M20 2C11 2 4 9 4 18c0 11 16 24 16 24s16-13 16-24C36 9 29 2 20 2Z" fill="#0a5ca8"/>
+        <path d="M20 31c0-7-4-11-11-11 0 7 4 11 11 11Z" fill="#7fc493"/>
+        <path d="M20 31c0-8 4-13 12-13 0 8-4 13-12 13Z" fill="#2f9a5c"/>
+        <circle cx="20" cy="14" r="5" fill="#fff"/>
+      </svg>
+      <div><b>HarvestGap</b><small>RWANDA</small></div>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <ul class="menu" id="menu">
+      <li><a href="#" aria-current="page">Overview</a></li>
+      <li><a href="#farm">My Farm</a></li>
+      <li><a href="#topics">Irrigation</a></li>
+      <li><a href="#topics">Soil &amp; Fertility</a></li>
+      <li><a href="#topics">Productivity</a></li>
+      <li><a href="#topics">Post-harvest &amp; Value</a></li>
+      <li><a href="#topics">Exports</a></li>
+      <li><a href="#map-card">Districts</a></li>
+      <li><a href="#about">About &amp; Method</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== Hero strip ===== -->
+<div class="hero">
+  <svg class="hills" viewBox="0 0 800 240" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" x2="1"><stop offset="0" stop-color="#eaf3fb" stop-opacity="1"/><stop offset=".35" stop-color="#eaf3fb" stop-opacity="0"/></linearGradient>
+    </defs>
+    <path d="M120 150 C 220 70 320 60 420 100 S 600 40 700 70 S 790 60 800 64 V240 H120Z" fill="#b9d4ea"/>
+    <path d="M180 180 C 280 120 360 110 460 140 S 620 80 720 110 S 790 100 800 104 V240 H180Z" fill="#8fc49a"/>
+    <path d="M300 200 C 400 140 480 135 560 160 S 700 110 800 120 V240 H300Z" fill="#5fae73"/>
+    <path d="M420 240 C 480 180 560 170 640 185 S 760 150 800 150 V240Z" fill="#3c8f57"/>
+    <g fill="none" stroke="#e8f5ea" stroke-opacity=".55" stroke-width="1.4">
+      <path d="M470 150 C 520 132 570 130 620 140"/><path d="M455 160 C 510 142 575 140 630 151"/><path d="M445 171 C 505 152 580 150 640 162"/>
+      <path d="M600 120 C 650 104 700 100 750 106"/><path d="M590 130 C 645 113 705 110 760 116"/><path d="M585 141 C 640 124 710 121 770 127"/>
+      <path d="M520 205 C 570 188 630 184 690 192"/><path d="M510 216 C 565 199 635 195 700 203"/>
+    </g>
+    <g fill="#2c7a46"><circle cx="705" cy="96" r="6"/><circle cx="716" cy="98" r="5"/><circle cx="560" cy="150" r="5"/><circle cx="760" cy="140" r="6"/><circle cx="660" cy="176" r="5"/></g>
+    <rect width="800" height="240" fill="url(#sky)"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow">Data for better harvests</div>
+      <h1>What Rwanda’s farms tell us</h1>
+      <p class="lead">Insights from 3,700 farming households in all 30 districts (AHS 2024).</p>
+      <p>HarvestGap compares your harvest with similar farms, and helps planners decide where to invest in irrigation, soil fertility, post-harvest handling and markets.</p>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <!-- ===== Farm tool ===== -->
+  <section class="card" id="farm" aria-labelledby="farm-title">
+    <div class="card-head">
+      <svg class="icon"><use href="#i-leaf"/></svg>
+      <div><h2 id="farm-title">Find out how your farm compares</h2><p>See how your farm performs compared with similar farms in Rwanda.</p></div>
+    </div>
+    <form id="farm-form">
+      <div class="form-row">
+        <div class="field"><label for="district">District</label><select id="district"></select></div>
+        <div class="field"><label for="crop">Crop</label><select id="crop"></select></div>
+        <div class="field"><label for="area">Land size</label><div class="unit"><input id="area" type="number" min="0.01" max="100" step="0.05" value="0.5" inputmode="decimal"><span>ha</span></div></div>
+      </div>
+      <div class="form-actions">
+        <fieldset class="checks">
+          <legend>What do you already use?</legend>
+          <label class="check"><input type="checkbox" value="improved_seed" checked> Improved seed</label>
+          <label class="check"><input type="checkbox" value="inorganic_fertilizer" checked> Fertilizer</label>
+          <label class="check"><input type="checkbox" value="organic_fertilizer"> Manure or compost</label>
+          <label class="check"><input type="checkbox" value="pesticide"> Pesticide</label>
+        </fieldset>
+        <button class="btn" type="submit">See my result <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+    </form>
+    <div class="result" id="result" aria-live="polite"></div>
+  </section>
+
+  <!-- ===== Key findings ===== -->
+  <aside class="card" aria-labelledby="findings-title">
+    <div class="card-head">
+      <svg class="icon"><use href="#i-bulb"/></svg>
+      <div><h2 id="findings-title">Key findings</h2></div>
+    </div>
+    <div class="findings" id="findings"></div>
+  </aside>
+
+  <!-- ===== Topics ===== -->
+  <section class="card" id="topics" aria-labelledby="topics-title">
+    <div class="card-head">
+      <svg class="icon"><use href="#i-compass"/></svg>
+      <div><h2 id="topics-title">Explore by topic</h2><p>Dive deeper into the topics that matter for better harvests and stronger rural economies.</p></div>
+    </div>
+    <div class="topics">
+      <a class="topic" href="#"><span class="badge blue"><svg class="icon"><use href="#i-drop"/></svg></span><b>Irrigation</b><span class="desc">Where water is missing, and where money for equipment is.</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+      <a class="topic" href="#"><span class="badge blue"><svg class="icon"><use href="#i-leaf"/></svg></span><b>Soil &amp; Fertility</b><span class="desc">Fertilizer, erosion and their link to harvests.</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+      <a class="topic" href="#"><span class="badge blue"><svg class="icon"><use href="#i-chart"/></svg></span><b>Productivity</b><span class="desc">Which crops and districts are furthest behind.</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+      <a class="topic" href="#"><span class="badge blue"><svg class="icon"><use href="#i-box"/></svg></span><b>Post-harvest &amp; Value</b><span class="desc">What gets sold, what stays home: room for processing.</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+      <a class="topic" href="#"><span class="badge blue"><svg class="icon"><use href="#i-globe"/></svg></span><b>Exports</b><span class="desc">Rwanda’s farm exports and where they are grown.</span><span class="soon">Needs NISR trade data</span><svg class="icon arrow"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
+
+  <!-- ===== Map ===== -->
+  <section class="card map-card" id="map-card" aria-labelledby="map-title">
+    <div class="card-head">
+      <svg class="icon"><use href="#i-pin"/></svg>
+      <div><h2 id="map-title"></h2><p>Rwanda’s 30 districts (kg/ha). Hover a district for details.</p></div>
+    </div>
+    <div class="map-body">
+      <svg id="map" viewBox="0 0 420 360" role="img" aria-label="Map of typical yield by district"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="tip" id="tip" hidden></div>
+  </section>
+</main>
+
+<footer id="about">
+  <div class="wrap">
+    <span>Built with NISR Agricultural Household Survey (AHS) 2024 data · Findings are links seen in survey data, not guarantees.</span>
+    <span>District boundaries: geoBoundaries / Open Data Rwanda (CC BY 4.0)</span>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const D = window.HG_DATA;
+  const $ = (id) => document.getElementById(id);
+  const fmt = (v) => Math.round(v).toLocaleString("en-US");
+  const pct = (v, sign = false) => (sign && v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(Math.round(v * 100)) + "%";
+  const cropText = (c) => (c.startsWith("Irish") ? c : c.toLowerCase());
+  const NAMES = { improved_seed: "Improved seed", inorganic_fertilizer: "Fertilizer", organic_fertilizer: "Manure or compost", pesticide: "Pesticide", anti_erosion: "Anti-erosion measures", agroforestry: "Trees on the plot" };
+  const FARM_PRACTICES = ["improved_seed", "inorganic_fertilizer", "organic_fertilizer", "pesticide"];
+
+  /* ---------- Menu ---------- */
+  $("burger").addEventListener("click", () => {
+    const open = $("menu").classList.toggle("open");
+    $("burger").setAttribute("aria-expanded", open);
+  });
+
+  /* ---------- Farm tool ---------- */
+  const districts = Object.keys(D.indicators).sort();
+  $("district").innerHTML = districts.map((d) => `<option${d === "Musanze" ? " selected" : ""}>${d}</option>`).join("");
+  $("crop").innerHTML = D.crops.map((c) => `<option${c === "Maize" ? " selected" : ""}>${c}</option>`).join("");
+
+  function renderResult() {
+    const district = $("district").value, crop = $("crop").value;
+    const area = Math.max(0.01, parseFloat($("area").value) || 0.5);
+    const used = new Set([...document.querySelectorAll(".check input:checked")].map((i) => i.value));
+    const nat = D.national[crop];
+    const loc = D.district[`${district}|${crop}`];
+    const src = loc || nat;
+    const diff = src.median / nat.median - 1;
+    const pill = diff >= 0.05 ? "good" : diff <= -0.05 ? "warn" : "info";
+    const basis = loc ? `${loc.n.toLocaleString()} ${cropText(crop)} plots in ${district}` : `${nat.n.toLocaleString()} plots nationally (too few in ${district})`;
+
+    const effects = (D.effects[crop] || []).filter((e) => FARM_PRACTICES.includes(e.practice) && e.effect > 0)
+      .sort((a, b) => (b.sig - a.sig) || (b.effect - a.effect));
+    const notYet = effects.filter((e) => e.sig && !used.has(e.practice)).map((e) => NAMES[e.practice].toLowerCase());
+    const top = Math.max(...effects.map((e) => e.effect), 0.01);
+
+    $("result").innerHTML = `
+      <div class="result-left">
+        <div class="label">Typical harvest for farms like yours</div>
+        <div class="big">${fmt(src.median)} <small>kg/ha</small></div>
+        <span class="pill ${pill}">${pct(diff, true)} vs Rwanda typical</span>
+        <ul class="facts">
+          <li>Middle half of farms: <b>${fmt(src.p25)} – ${fmt(src.p75)} kg/ha</b></li>
+          <li>On ${area} ha: about <b>${fmt(src.median * area)} kg</b></li>
+        </ul>
+        <div class="goal">The best quarter of these farms harvest <b>${fmt(src.p75)} kg/ha or more</b>.${notYet.length ? ` Linked to bigger harvests, not used yet: <b>${notYet.join(", ")}</b>.` : " You already use the practices most linked to bigger harvests."}</div>
+      </div>
+      <div class="bars">
+        <h3>Linked to higher ${cropText(crop)} yield</h3>
+        ${effects.length ? effects.map((e) => `<div class="bar-row${e.sig ? "" : " faint"}${used.has(e.practice) ? " used" : ""}"><span>${NAMES[e.practice]}</span><div class="track"><div class="fill" style="width:${(100 * e.effect / top).toFixed(0)}%"></div></div><b>${pct(e.effect, true)}</b></div>`).join("")
+          : `<p class="note">No clear links measured for this crop yet.</p>`}
+        <p class="note">Yield on plots using each practice vs similar plots that don’t (same district and season). Faded: not statistically clear. ✓ you use it. Based on ${basis}, AHS 2024.</p>
+      </div>`;
+    drawMap(crop, district);
+  }
+  $("farm-form").addEventListener("submit", (e) => { e.preventDefault(); renderResult(); });
+  ["district", "crop"].forEach((id) => $(id).addEventListener("change", renderResult));
+  document.querySelectorAll(".check input").forEach((i) => i.addEventListener("change", renderResult));
+
+  /* ---------- Key findings ---------- */
+  const ind = Object.entries(D.indicators).filter(([, v]) => !v.lowSample);
+  const worstWater = ind.slice().sort((a, b) => b[1].noWater - a[1].noWater)[0];
+  const maizeFert = (D.effects.Maize || []).find((e) => e.practice === "inorganic_fertilizer");
+  const lowMaize = Object.entries(D.district).filter(([k]) => k.endsWith("|Maize")).sort((a, b) => a[1].median - b[1].median)[0];
+  const mango = D.fruit.find((f) => f.fruit === "Mango");
+  $("findings").innerHTML = [
+    ["blue", "i-drop", "Irrigation", `Only ${pct(D.nationalIrrigated)} of plots are irrigated; in ${worstWater[0]} ${pct(worstWater[1].noWater)} have no water.`],
+    ["green", "i-leaf", "Soil & Fertility", `Maize plots using fertilizer yield ${pct(maizeFert.effect)} more than similar plots.`],
+    ["blue", "i-chart", "Productivity", `Typical maize yield in ${lowMaize[0].split("|")[0]} is ${fmt(lowMaize[1].median)} kg/ha, far below Rwanda’s better farms (${fmt(D.national.Maize.p75)}).`],
+    ["orange", "i-box", "Post-harvest & Value", `Only ${pct(mango.sold)} of mangoes are sold; most are eaten at home.`],
+  ].map(([tone, icon, title, text]) => `<a class="finding" href="#topics"><span class="badge ${tone}"><svg class="icon"><use href="#${icon}"/></svg></span><div><b>${title}</b><span>${text}</span></div><svg class="icon arrow"><use href="#i-arrow"/></svg></a>`).join("");
+
+  /* ---------- Map ---------- */
+  const feats = D.geo.features;
+  const pts = feats.flatMap((f) => f.geometry.coordinates.flat());
+  const [x0, x1] = [Math.min(...pts.map((p) => p[0])), Math.max(...pts.map((p) => p[0]))];
+  const [y0, y1] = [Math.min(...pts.map((p) => p[1])), Math.max(...pts.map((p) => p[1]))];
+  const k = Math.cos(((y0 + y1) / 2) * Math.PI / 180);
+  const s = Math.min(400 / ((x1 - x0) * k), 340 / (y1 - y0));
+  const ox = (420 - (x1 - x0) * k * s) / 2, oy = (360 - (y1 - y0) * s) / 2;
+  const proj = ([lon, lat]) => [ox + (lon - x0) * k * s, oy + (y1 - lat) * s];
+  const pathOf = (g) => g.coordinates.map((r) => "M" + r.map((p) => proj(p).map((v) => v.toFixed(1)).join(",")).join("L") + "Z").join("");
+  const centroid = (g) => { const r = g.coordinates[0].map(proj); return [r.reduce((a, p) => a + p[0], 0) / r.length, r.reduce((a, p) => a + p[1], 0) / r.length]; };
+  const shades = [0, 1, 2, 3, 4].map((i) => getComputedStyle(document.documentElement).getPropertyValue(`--map-${i}`).trim());
+  const tip = $("tip"), card = $("map-card");
+
+  function niceCuts(vals) {
+    const step = vals[vals.length - 1] < 3000 ? 100 : vals[vals.length - 1] < 15000 ? 500 : 1000;
+    const q = (p) => vals[Math.min(vals.length - 1, Math.floor(p * vals.length))];
+    return [...new Set([.2, .4, .6, .8].map((p) => Math.round(q(p) / step) * step))].filter((c) => c > 0);
+  }
+  function drawMap(crop, district) {
+    $("map-title").textContent = `${crop} typical yield by district`;
+    const val = (d) => D.district[`${d}|${crop}`]?.median;
+    const vals = feats.map((f) => val(f.properties.district)).filter((v) => v != null).sort((a, b) => a - b);
+    const cuts = vals.length ? niceCuts(vals) : [];
+    const colors = shades.slice(-(cuts.length + 1));
+    const bin = (v) => cuts.filter((c) => v >= c).length;
+    $("map").innerHTML = feats.map((f) => {
+      const d = f.properties.district, v = val(d);
+      return `<path d="${pathOf(f.geometry)}" fill="${v == null ? "var(--map-none)" : colors[bin(v)]}" data-d="${d}"${d === district ? ' class="sel"' : ""}></path>`;
+    }).join("");
+    const sel = feats.find((f) => f.properties.district === district);
+    card.querySelector(".map-tag")?.remove();
+    if (sel) {
+      const [cx, cy] = centroid(sel.geometry);
+      const svgBox = $("map").getBoundingClientRect(), cardBox = card.getBoundingClientRect();
+      const tag = document.createElement("div");
+      tag.className = "map-tag";
+      tag.textContent = district;
+      tag.style.left = (svgBox.left - cardBox.left + cx * svgBox.width / 420) + "px";
+      tag.style.top = (svgBox.top - cardBox.top + cy * svgBox.height / 360 - 6) + "px";
+      card.appendChild(tag);
+    }
+    const labels = cuts.length ? [`< ${fmt(cuts[0])}`, ...cuts.slice(0, -1).map((c, i) => `${fmt(c)} – ${fmt(cuts[i + 1])}`), `> ${fmt(cuts[cuts.length - 1])} kg/ha`] : [];
+    $("legend").innerHTML = labels.map((l, i) => `<div><i style="background:${colors[i]}"></i>${l}</div>`).join("") + `<div><i style="background:var(--map-none)"></i>Too few farms</div>`;
+    $("map").onmousemove = (e) => {
+      const p = e.target.closest("path"); if (!p) { tip.hidden = true; return; }
+      const d = p.dataset.d, row = D.district[`${d}|${crop}`];
+      tip.innerHTML = `<b>${d}</b>${row ? `${fmt(row.median)} kg/ha typical · ${row.n} plots` : "Too few farms surveyed"}`;
+      const box = card.getBoundingClientRect();
+      tip.hidden = false;
+      tip.style.left = Math.min(e.clientX - box.left + 14, box.width - tip.offsetWidth - 8) + "px";
+      tip.style.top = (e.clientY - box.top + 14) + "px";
+    };
+    $("map").onmouseleave = () => { tip.hidden = true; };
+  }
+  window.addEventListener("resize", () => drawMap($("crop").value, $("district").value));
+  renderResult();
+})();
+</script>
+</body>
+</html>

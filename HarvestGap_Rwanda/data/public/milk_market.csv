@@ -1,0 +1,5 @@
+province,n_households,sold_share,consumed_share,price_median_rwf_l
+East,138,0.6026,0.3553,300.0
+North,153,0.6231,0.3173,300.0
+South,240,0.4287,0.4839,300.0
+West,127,0.5161,0.4101,279.0704

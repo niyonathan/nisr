@@ -26,7 +26,7 @@ MODELS = ROOT / "models"; PUBLIC = ROOT / "data" / "public"; REPORTS = ROOT / "r
 for p in (MODELS,PUBLIC,REPORTS): p.mkdir(parents=True, exist_ok=True)
 
 
-from nisr.HarvestGap_Rwanda.src.harvestgap.statistics import bh_adjust
+from src.harvestgap.statistics import bh_adjust
 
 
 def feature_pipeline(frame, feature_cols, categorical_cols):

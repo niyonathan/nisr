@@ -2,7 +2,7 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from nisr.HarvestGap_Rwanda.src.harvestgap.statistics import bh_adjust
+from src.harvestgap.statistics import bh_adjust
 
 def test_bh_adjust_monotonic_and_bounded():
     values = [0.01, 0.04, 0.03, 0.50]

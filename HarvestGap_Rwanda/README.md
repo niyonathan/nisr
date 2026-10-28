@@ -218,3 +218,33 @@ streamlit run app/streamlit_app.py
 ```
 
 The dashboard requires internet access only to load the optional Google Fonts stylesheet; it remains usable without the custom font if that request is blocked.
+
+## Home dashboard data
+
+The home page uses survey-weighted aggregates of the AHS 2024 data in `data/public/`, with any group of fewer than 30 plots left out:
+
+- `crop_yields_district.csv`, `crop_yields_national.csv`: typical (median) yield and the middle-half range (25th–75th percentile) by crop and district.
+- `district_indicators.csv`: irrigation status, erosion threats, post-harvest advice coverage and other indicators by district.
+- `practice_effects.csv`: per crop, the yield difference on plots using each practice compared with similar plots (same district and season, similar plot size), with 95% confidence intervals.
+- `rwanda_districts.geojson`: district boundaries from [geoBoundaries](https://www.geoboundaries.org) (Runfola et al. 2020; source: Open Data Rwanda), licensed CC BY 4.0.
+
+The "Quick Harvest Estimate" shows the typical yield that surveyed farms of the same crop reach in the same district. It does not use the crop-yield model, because with default inputs that model currently underestimates yields by about half.
+
+## Website (React + Tailwind)
+
+The public website lives in `web/`. It is a static React app (Vite, Tailwind CSS, Recharts) that reads one JSON file of survey-weighted summaries, so it needs no server or database.
+
+```bash
+# 1. Rebuild the website data from data/public/ (only after the summaries change)
+.venv/bin/python analysis/04_export_web_data.py
+
+# 2. Run the site locally (Node 18+)
+cd web
+npm install
+npm run dev          # http://localhost:5173
+
+# 3. Production build (output in web/dist/)
+npm run build
+```
+
+Pages: Overview, My Farm, Irrigation, Soil & Fertility, Productivity, Post-harvest & Value, Exports, Districts (with a profile for each of the 30 districts) and About & Method. `web/vercel.json` lets the site be deployed on Vercel with working page links.

@@ -1,0 +1,15 @@
+{
+  "n_obs": 57506,
+  "n_crops": 20,
+  "folds": 5,
+  "model": {
+    "r2_log": 0.5445919889235451,
+    "mae_log": 0.6936331869269389,
+    "median_abs_pct_error": 0.5062321135139403
+  },
+  "baseline_crop_district_median": {
+    "r2_log": 0.42707576754945586,
+    "mae_log": 0.7717659905560993,
+    "median_abs_pct_error": 0.5532657385688435
+  }
+}

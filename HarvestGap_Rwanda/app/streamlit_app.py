@@ -1,4 +1,4 @@
-﻿﻿"""Interactive, farmer-first HarvestGap Rwanda dashboard.
+"""Interactive, farmer-first HarvestGap Rwanda dashboard.
 
 Run from project root: streamlit run app/streamlit_app.py
 The interface intentionally asks farmers for a short set of understandable inputs.
@@ -9,6 +9,7 @@ until the official questionnaire has been mapped.
 import sys
 import json
 import base64
+import html
 from urllib.parse import quote
 from pathlib import Path
 
@@ -17,11 +18,12 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import pandas as pd
+import plotly.graph_objects as go
 import streamlit as st
-from nisr.HarvestGap_Rwanda.src.harvestgap.config import PUBLIC_DIR, MODEL_DIR
-from nisr.HarvestGap_Rwanda.src.harvestgap.predict import MODEL_FILES, predict_one, load_model
+from src.harvestgap.config import PUBLIC_DIR, MODEL_DIR
+from src.harvestgap.predict import MODEL_FILES, predict_one, load_model
 
-st.set_page_config(page_title="HarvestGap Rwanda | Farmer Dashboard", page_icon="ðŸŒ±", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="HarvestGap Rwanda | Farmer Dashboard", page_icon="🌱", layout="wide", initial_sidebar_state="expanded")
 
 # ---------- Visual system ----------
 st.markdown("""
@@ -133,7 +135,7 @@ footer {visibility:hidden;}
 .right-panel { border:1px solid #dce8e1; background:#fff; border-radius:14px; padding:14px; margin-bottom:12px; }
 .advice-row { display:flex; gap:10px; align-items:flex-start; border:1px solid #e2ece5; border-radius:10px; padding:10px; margin:8px 0; background:#fff; }
 .advice-symbol { min-width:34px; height:34px; display:flex; align-items:center; justify-content:center; border-radius:9px; background:#e4f5e9; font-size:0; }
-.advice-symbol:after { content:'âœ“'; font-size:16px; color:#087452; font-weight:800; }
+.advice-symbol:after { content:'✓'; font-size:16px; color:#087452; font-weight:800; }
 .stButton button, .stDownloadButton button { border-radius:9px; font-weight:700; }
 div.stButton > button[kind="primary"] { background:#087452; border:1px solid #087452; box-shadow:0 2px 4px rgba(8,116,82,.13); }
 div.stButton > button[kind="primary"]:hover { background:#065e43; border-color:#065e43; }
@@ -187,6 +189,84 @@ div.stButton > button[kind="primary"]:hover { background:#065e43; border-color:#
 @media(max-width:700px){.home-feature-grid{grid-template-columns:repeat(2,1fr)}.home-estimate-grid{grid-template-columns:1fr}.impact-strip{grid-template-columns:1fr 1fr}.home-hero{min-height:160px}}
 @media(max-width:950px){.dashboard-grid,.predict-layout{grid-template-columns:1fr}.home-hero{background-image:linear-gradient(90deg,rgba(233,246,238,.96),rgba(233,246,238,.72)),url('/app/static/rwanda_highlands_hero.jpg')}}
 
+/* Home dashboard v2: photo hero, task cards, estimate, map, recommendations */
+.home-hero { min-height:200px; align-items:center; background-image:linear-gradient(90deg,rgba(236,247,240,.98) 0%,rgba(236,247,240,.93) 38%,rgba(236,247,240,0) 62%),url('/app/static/rwanda_highlands_hero.jpg'); background-size:cover; background-position:center right; }
+.home-hero .hero-copy { width:62%; }
+.home-hero h1 { font-size:30px; margin:0 0 10px; }
+.home-hero p { font-size:13px; max-width:440px; color:#2f5446; }
+.hero-meta { display:flex; align-items:center; gap:14px; margin-top:16px; flex-wrap:wrap; }
+.hero-place { font-size:13px; font-weight:700; color:#163d30; }
+.hero-pill { background:#0b6b3a; color:#fff; font-size:11px; font-weight:700; padding:6px 12px; border-radius:20px; }
+a.task-card { display:flex; align-items:flex-start; gap:12px; position:relative; min-height:108px; padding:16px 14px 30px; background:#fff; border:1px solid #dce8e1; border-radius:12px; text-decoration:none !important; box-shadow:0 2px 7px rgba(25,67,48,.03); transition:transform .15s ease, box-shadow .15s ease; }
+a.task-card:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(25,67,48,.08); }
+a.task-card:focus-visible { outline:2px solid #0b6b3a; outline-offset:2px; }
+a.task-card .action-icon { flex:0 0 42px; width:42px; height:42px; margin:0; }
+a.task-card .action-icon { display:flex; }
+.task-text { display:flex; flex-direction:column; min-width:0; }
+.task-title { font-size:13px; font-weight:800; color:#163d30; margin:2px 0 6px; line-height:1.3; }
+.task-desc { font-size:11px; color:#6f8279; line-height:1.45; }
+.task-arrow { position:absolute; right:12px; bottom:10px; width:22px; height:22px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; font-weight:800; }
+.task-arrow.green { background:#e0f5e8; color:#087452; } .task-arrow.blue { background:#e4f0ff; color:#2876ce; } .task-arrow.amber { background:#fff1d9; color:#b9770e; } .task-arrow.purple { background:#eee8ff; color:#7652c8; }
+.card-head { display:flex; align-items:flex-start; gap:11px; margin-bottom:6px; }
+.card-head .section-title { font-size:16px; margin-top:0; }
+.card-head .section-sub { margin-bottom:6px; }
+.card-head-icon { flex:0 0 34px; width:34px; height:34px; border-radius:9px; display:flex; align-items:center; justify-content:center; background:#e0f5e8; color:#087452; font-size:16px; }
+.card-head-icon.blue { background:#e4f0ff; color:#2876ce; }
+.estimate-box { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:16px; background:#f1f9f4; border:1px solid #d9eee1; border-radius:12px; padding:16px; margin:6px 0 14px; }
+.estimate-main { display:flex; gap:12px; align-items:flex-start; }
+.estimate-icon { flex:0 0 42px; width:42px; height:42px; border-radius:50%; background:#d7f0df; color:#087452; display:flex; align-items:center; justify-content:center; }
+.estimate-value { font-family:Manrope,sans-serif; font-size:32px; font-weight:800; color:#123e30; line-height:1.15; font-variant-numeric:tabular-nums; }
+.estimate-value span { font-size:15px; font-weight:700; }
+.estimate-pill { display:inline-block; margin-top:6px; font-size:10px; font-weight:800; padding:3px 9px; border-radius:20px; }
+.estimate-pill.up { background:#d7f0df; color:#0b6b3a; } .estimate-pill.down { background:#fff1d9; color:#9a5d00; }
+.estimate-side { border-left:1px solid #d3e6da; padding-left:16px; }
+.estimate-diff { font-size:12px; font-weight:800; }
+.estimate-diff.up { color:#0b6b3a; } .estimate-diff.down { color:#b35c00; }
+.estimate-side p { font-size:11px; color:#5b7368; line-height:1.5; margin:6px 0 0; }
+.factor-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px; font-size:13px; color:#163d30; margin:4px 0 6px; }
+.factor-head a { font-size:11px; font-weight:700; color:#2876ce !important; text-decoration:none !important; white-space:nowrap; }
+.factor-row { grid-template-columns:minmax(110px,150px) 1fr 44px; font-size:12px; margin:9px 0; }
+.factor-row b { text-align:right; color:#173b30; font-variant-numeric:tabular-nums; }
+.factor-row.faint { opacity:.45; }
+.factor-note { font-size:10px; color:#7a8d84; line-height:1.45; margin-top:6px; }
+.rec-panel,.ask-panel { background:#f3faf6; border:1px solid #d9ece1; border-radius:14px; padding:16px; margin-bottom:14px; }
+.ask-panel { background:#fff; }
+a.rec-card { display:grid; grid-template-columns:44px minmax(0,1fr) 12px; gap:12px; align-items:center; background:#fff; border:1px solid #e1ece6; border-radius:12px; padding:14px 12px; margin-top:10px; text-decoration:none !important; transition:box-shadow .15s ease; }
+a.rec-card:hover { box-shadow:0 6px 16px rgba(25,67,48,.08); }
+a.rec-card:focus-visible { outline:2px solid #0b6b3a; outline-offset:2px; }
+.rec-icon { width:44px; height:44px; border-radius:11px; display:flex; align-items:center; justify-content:center; font-size:21px; }
+.rec-icon.blue { background:#e4f0ff; } .rec-icon.green { background:#e0f5e8; } .rec-icon.orange { background:#ffeedd; }
+.rec-body b { display:block; font-size:13px; color:#163d30; }
+.rec-body span { display:block; font-size:11px; color:#5f766b; line-height:1.45; margin:4px 0 7px; }
+.badge { display:inline-block; font-style:normal; font-size:10px; font-weight:800; padding:3px 9px; border-radius:20px; }
+.badge.green { background:#d7f0df; color:#0b6b3a; } .badge.amber { background:#fff1d9; color:#9a5d00; } .badge.red { background:#fde4e1; color:#b3261e; } .badge.grey { background:#edf1ef; color:#5b6d65; }
+.rec-chevron { color:#8aa096; font-size:20px; }
+.ask-chips { display:flex; flex-direction:column; align-items:flex-start; gap:9px; margin-top:8px; }
+a.ask-chip { display:inline-block; padding:8px 13px; border:1px solid #cfe0f2; border-radius:20px; background:#f7fbff; color:#1d5fa8 !important; font-size:12px; text-decoration:none !important; }
+a.ask-chip:hover { background:#e8f2fd; }
+.impact-strip { grid-template-columns:1.4fr repeat(4,1fr); align-items:center; padding:16px 18px; margin-top:14px; }
+.impact-lead b { display:block; font-size:13px; color:#163d30; } .impact-lead span { font-size:10px; color:#6c8176; }
+.impact-item { display:flex; flex-direction:column; gap:3px; }
+.impact-icon { color:#0b6b3a; margin-bottom:4px; }
+@media(max-width:1100px){ .estimate-box{grid-template-columns:1fr} .estimate-side{border-left:0;padding-left:0;border-top:1px solid #d3e6da;padding-top:10px} .home-hero .hero-copy{width:75%} }
+@media(max-width:760px){ .home-hero{background-image:linear-gradient(90deg,rgba(236,247,240,.96),rgba(236,247,240,.85)),url('/app/static/rwanda_highlands_hero.jpg')} .home-hero .hero-copy{width:100%} .impact-strip{grid-template-columns:1fr 1fr} }
+/* Layout frame matched to the design reference (1536 px wide) */
+/* Keep Streamlit's header (it holds the button that reopens a collapsed sidebar) but make it invisible. */
+header[data-testid="stHeader"] { background:transparent; pointer-events:none; }
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"] { pointer-events:auto; background:#073a32; color:#fff; border-radius:9px; box-shadow:0 2px 8px rgba(0,0,0,.18); }
+header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"] * { color:#fff !important; fill:#fff !important; }
+[data-testid="stToolbarActions"], [data-testid="stAppDeployButton"], [data-testid="stMainMenu"], [data-testid="stDecoration"] { display:none !important; }
+.block-container { max-width:none !important; padding:1.1rem 1.4rem 2rem !important; }
+section[data-testid="stSidebar"][data-collapsed="false"] { width:252px !important; min-width:252px !important; max-width:252px !important; }
+section[data-testid="stSidebar"] > div:first-child { padding-top:.6rem; }
+.home-hero { min-height:185px; padding:22px 28px; }
+.home-hero h1 { font-size:28px; }
+.home-hero p { font-size:13px; }
+a.task-card { min-height:100px; padding:14px 14px 26px; }
+.map-legend { display:flex; flex-direction:column; gap:9px; font-size:11px; color:#40594f; font-variant-numeric:tabular-nums; }
+.legend-unit { font-weight:700; color:#173b30; margin-bottom:2px; }
+.legend-item { display:flex; align-items:center; gap:8px; white-space:nowrap; }
+.legend-item i { width:14px; height:14px; border-radius:3px; flex:0 0 14px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -294,6 +374,161 @@ def svg_icon(name, css_class="icon-svg"):
     svg = ICON_SVG.get(name, ICON_SVG["Farm advice"])
     return svg.replace('<svg ', f'<svg class="{css_class}" aria-hidden="true" ', 1)
 
+# ---------- Home dashboard data (survey-weighted AHS 2024 aggregates) ----------
+GREEN_SCALE = ["#e3f3e6", "#b9e0c1", "#7fc493", "#3f9a63", "#16683f"]
+FACTOR_COLORS = ["#0b6b3a", "#2a7fd4", "#f2b632", "#7b4fc9", "#14a3a3", "#e07a2f"]
+
+@st.cache_data
+def home_tables():
+    """District × crop yield ranges, district indicators and per-crop practice effects."""
+    def load(name):
+        path = PUBLIC_DIR / name
+        return pd.read_csv(path) if path.exists() else pd.DataFrame()
+    return (load("crop_yields_district.csv"), load("crop_yields_national.csv"),
+            load("district_indicators.csv"), load("practice_effects.csv"))
+
+@st.cache_data
+def district_geojson():
+    return read_json(PUBLIC_DIR / "rwanda_districts.geojson", None)
+
+def crop_text(crop):
+    """Crop name for use mid-sentence: 'maize', but keep proper nouns like 'Irish potato'."""
+    return crop if crop.split()[0] in {"Irish"} else crop.lower()
+
+def yield_estimate(yields_d, yields_n, district, crop):
+    """Typical yield for this crop in this district, falling back to Rwanda when too few farms."""
+    nat = yields_n[yields_n["crop"] == crop]
+    if nat.empty:
+        return None
+    nat = nat.iloc[0]
+    row = yields_d[(yields_d["district"] == district) & (yields_d["crop"] == crop)]
+    src, level = (row.iloc[0], "district") if not row.empty else (nat, "national")
+    return {"median": src["yield_median_kg_ha"], "p25": src["yield_p25_kg_ha"], "p75": src["yield_p75_kg_ha"],
+            "n_obs": int(src["n_obs"]), "level": level, "national_median": nat["yield_median_kg_ha"]}
+
+def practice_factors(effects, crop, limit=5):
+    """Practices with the largest yield differences for a crop; clear findings first."""
+    rows = effects[(effects["crop"] == crop) & (effects["effect_pct"] > 0)]
+    if rows.empty:
+        return []
+    rows = rows.sort_values(["significant", "effect_pct"], ascending=[False, False]).head(limit)
+    top = rows["effect_pct"].max()
+    return [{"label": r.practice_label.replace(" (manure/compost)", ""), "effect": r.effect_pct,
+             "significant": bool(r.significant), "width": 100 * r.effect_pct / top,
+             "color": FACTOR_COLORS[i % len(FACTOR_COLORS)]}
+            for i, r in enumerate(rows.itertuples())]
+
+def district_map(yields_d, crop, selected_district):
+    geo = district_geojson()
+    if not geo:
+        return None
+    data = yields_d[yields_d["crop"] == crop][["district", "yield_median_kg_ha", "n_obs"]]
+    all_districts = pd.DataFrame({"district": [f["properties"]["district"] for f in geo["features"]]})
+    fig = go.Figure()
+    # Grey base layer: districts with fewer than 30 surveyed plots of this crop have no estimate.
+    fig.add_trace(go.Choropleth(geojson=geo, featureidkey="properties.district", locations=all_districts["district"],
+                                z=[0] * len(all_districts), colorscale=[[0, "#eef2f0"], [1, "#eef2f0"]], showscale=False,
+                                marker_line_color="#ffffff", marker_line_width=0.8,
+                                hovertemplate="<b>%{location}</b><br>Not enough farms surveyed<extra></extra>"))
+    legend = []
+    if not data.empty:
+        cuts = yield_bins(data["yield_median_kg_ha"])
+        level = data["yield_median_kg_ha"].map(lambda v: sum(v >= c for c in cuts))
+        colors = GREEN_SCALE[-(len(cuts) + 1):]
+        # Step colour scale: one flat band per bin, so each district takes its bin's colour.
+        n = len(colors)
+        scale = [[min(1, max(0, (i + s) / n)), c] for i, c in enumerate(colors) for s in (0, 1)]
+        fig.add_trace(go.Choropleth(geojson=geo, featureidkey="properties.district", locations=data["district"],
+                                    z=level, zmin=-0.5, zmax=n - 0.5, colorscale=scale, showscale=False,
+                                    customdata=data[["yield_median_kg_ha", "n_obs"]],
+                                    marker_line_color=["#0b3d2a" if d == selected_district else "#ffffff" for d in data["district"]],
+                                    marker_line_width=[2.4 if d == selected_district else 0.8 for d in data["district"]],
+                                    hovertemplate="<b>%{location}</b><br>%{customdata[0]:,.0f} kg/ha typical<br>%{customdata[1]:,} plots surveyed<extra></extra>"))
+        labels = [f"< {cuts[0]:,.0f}"] + [f"{a:,.0f} – {b:,.0f}" for a, b in zip(cuts, cuts[1:])] + [f"> {cuts[-1]:,.0f}"]
+        legend = list(zip(colors, labels))[::-1]
+    fig.update_geos(fitbounds="locations", visible=False, bgcolor="rgba(0,0,0,0)", projection_type="mercator")
+    fig.update_layout(height=290, margin=dict(l=0, r=0, t=0, b=0), paper_bgcolor="rgba(0,0,0,0)",
+                      font=dict(family="DM Sans, sans-serif", color="#173b30"))
+    return fig, legend
+
+def yield_bins(values, n_bins=5):
+    """Rounded cut points that split districts into roughly equal groups for the map legend."""
+    top = values.max()
+    step = 100 if top < 3000 else 500 if top < 15000 else 1000
+    cuts = sorted({round(values.quantile(q) / step) * step for q in [i / n_bins for i in range(1, n_bins)]})
+    return [c for c in cuts if c > 0] or [round(values.median() / step) * step or step]
+
+def yield_range_chart(yields_d, yields_n, district, crop):
+    nat = yields_n[yields_n["crop"] == crop]
+    if nat.empty:
+        return None
+    rows = [("Rwanda", nat.iloc[0], "#9cc9ab")]
+    dist = yields_d[(yields_d["district"] == district) & (yields_d["crop"] == crop)]
+    if not dist.empty:
+        rows.insert(0, (district, dist.iloc[0], "#16683f"))
+    fig = go.Figure()
+    for name, r, color in rows:
+        fig.add_trace(go.Bar(y=[name], x=[r["yield_p75_kg_ha"] - r["yield_p25_kg_ha"]], base=[r["yield_p25_kg_ha"]],
+                             orientation="h", marker=dict(color=color, cornerradius=6), width=0.5, showlegend=False,
+                             hovertemplate=f"<b>{name}</b><br>Middle half: {r['yield_p25_kg_ha']:,.0f}–{r['yield_p75_kg_ha']:,.0f} kg/ha<br>Typical: {r['yield_median_kg_ha']:,.0f} kg/ha<extra></extra>"))
+        fig.add_trace(go.Scatter(y=[name], x=[r["yield_median_kg_ha"]], mode="markers+text", showlegend=False,
+                                 marker=dict(symbol="line-ns", size=22, line=dict(width=3, color="#0b2e22")),
+                                 text=[f"{r['yield_median_kg_ha']:,.0f}"], textposition="top center",
+                                 textfont=dict(size=11, color="#173b30"), hoverinfo="skip", cliponaxis=False))
+    fig.update_layout(height=170, margin=dict(l=0, r=10, t=26, b=0), paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+                      font=dict(family="DM Sans, sans-serif", size=11, color="#4a665b"), bargap=0.45,
+                      xaxis=dict(title="kg/ha", tickformat=",.0f", gridcolor="#e6eeea", zeroline=False, rangemode="tozero"),
+                      yaxis=dict(autorange="reversed"))
+    return fig
+
+def _evidence_badge(effect):
+    """Badge for a practice's yield link on this crop."""
+    if effect is None:
+        return "Not measured for this crop", "grey"
+    if effect["significant"] and effect["effect_pct"] >= 0.15:
+        return "Strong evidence", "green"
+    if effect["significant"] and effect["effect_pct"] > 0:
+        return "Some evidence", "amber"
+    return "Unclear link", "grey"
+
+def recommendations(yields_d, indicators, effects, district, crop):
+    ind = indicators[indicators["district"] == district]
+    ind = ind.iloc[0] if not ind.empty else None
+    crop_row = yields_d[(yields_d["district"] == district) & (yields_d["crop"] == crop)]
+    crop_row = crop_row.iloc[0] if not crop_row.empty else None
+
+    def effect(practice):
+        r = effects[(effects["crop"] == crop) & (effects["practice"] == practice)]
+        return r.iloc[0] if not r.empty else None
+
+    recs = []
+    if ind is not None:
+        need = ind["no_water_rate"] + ind["cannot_afford_irrigation_rate"]
+        badge = ("High need", "red") if need >= 0.4 else ("Medium need", "amber") if need >= 0.15 else ("Low need", "green")
+        recs.append({"title": "Improve Irrigation", "icon": "💧", "tone": "blue", "page": "District insights",
+                     "text": f"Only {ind['irrigated_rate']:.0%} of plots in {district} are irrigated; {ind['no_water_rate']:.0%} have no water and {ind['cannot_afford_irrigation_rate']:.0%} can't afford it. Ask about small-scale or shared irrigation.",
+                     "badge": badge[0], "badge_tone": badge[1]})
+    fert = effect("inorganic_fertilizer")
+    use = f" {crop_row['inorganic_fertilizer_rate']:.0%} of {crop_text(crop)} plots here use it." if crop_row is not None else ""
+    badge = _evidence_badge(fert)
+    recs.append({"title": "Use Balanced Fertilizer", "icon": "🌿", "tone": "green", "page": "Practice evidence",
+                 "text": (f"{crop} plots using mineral fertilizer yield {fert['effect_pct']:+.0%} compared with similar plots.{use}" if fert is not None
+                          else f"Ask an extension officer which fertilizer suits {crop_text(crop)} on your soil.{use}"),
+                 "badge": badge[0], "badge_tone": badge[1]})
+    soil = effect("anti_erosion")
+    threat = f" {ind['erosion_threat_rate']:.0%} of plots in {district} report erosion." if ind is not None else ""
+    badge = _evidence_badge(soil)
+    recs.append({"title": "Soil Conservation", "icon": "🌱", "tone": "green", "page": "Farm advice",
+                 "text": (f"Plots with terraces, ditches or cover grasses yield {soil['effect_pct']:+.0%} for {crop_text(crop)}.{threat}" if soil is not None
+                          else f"Terraces, ditches and cover grasses protect topsoil on slopes.{threat}"),
+                 "badge": badge[0], "badge_tone": badge[1]})
+    if ind is not None:
+        recs.append({"title": "Post-Harvest Storage", "icon": "📦", "tone": "orange", "page": "Farm advice",
+                     "text": f"Only {ind['extension_post_harvest_rate']:.0%} of farm households in {district} got post-harvest advice this season. Dry produce well and store it in sealed bags.",
+                     "badge": "General advice", "badge_tone": "grey"})
+    return recs
+
+
 # ---------- Link-based navigation ----------
 PAGES = [
     ("Home", "Home"),
@@ -321,99 +556,111 @@ with st.sidebar:
         active = " active" if label == page else ""
         links.append(f'<a class="sidebar-link{active}" href="?page={quote(label)}">{svg_icon(icon_name, "nav-icon")}<span>{label}</span></a>')
     st.markdown('<nav class="sidebar-nav">' + ''.join(links) + '</nav>', unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-bottom"><div class="sidebar-bottom-title">Made for Rwandaâ€™s farmers</div><div class="sidebar-bottom-copy">Simple insights to support better farm decisions.</div><div class="sidebar-version">RESEARCH PROTOTYPE Â· AHS2024</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="sidebar-bottom"><div class="sidebar-bottom-title">Made for Rwanda’s farmers</div><div class="sidebar-bottom-copy">Simple insights to support better farm decisions.</div><div class="sidebar-version">RESEARCH PROTOTYPE · AHS2024</div></div>', unsafe_allow_html=True)
     st.markdown('<div class="sidebar-promo"><b>🌱 &nbsp; Better Decisions<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for Higher Yields</b><span>Data-driven solutions for Rwanda’s farmers.</span></div><div class="sidebar-quick"><div class="nav-section-label">QUICK ACTIONS</div><a href="?page=Practice%20evidence">▤ &nbsp; Practice Evidence</a><a href="?page=Other%20production">♧ &nbsp; Other Production Models</a><a href="?page=About%20HarvestGap">ⓘ &nbsp; About &amp; Help</a></div>', unsafe_allow_html=True)
 
 # ---------- Home dashboard ----------
 if page == "Home":
-    st.markdown('<div class="home-appbar"><div class="home-search">⌕ &nbsp; Search for information...</div><div class="user-chip"><span class="user-avatar">JD</span><span>Farmer workspace<br/><span style="font-weight:400;color:#71867e">Rwanda</span></span></div></div>', unsafe_allow_html=True)
-    left_col, advice_col = st.columns([2.15, .95], gap="medium")
+    yields_d, yields_n, indicators, effects = home_tables()
+    home_crops = yields_n.sort_values("n_obs", ascending=False)["crop"].tolist() if not yields_n.empty else []
+    home_districts = sorted(indicators["district"].tolist()) if not indicators.empty else sorted(district_names.values())
+    sel = st.session_state.setdefault("home_selection", {"district": "Musanze" if "Musanze" in home_districts else home_districts[0],
+                                                          "crop": "Maize" if "Maize" in home_crops else (home_crops[0] if home_crops else ""),
+                                                          "area": 0.5})
+
+    left_col, advice_col = st.columns([2.35, 1], gap="medium")
     with left_col:
-        st.markdown('''<div class="home-hero"><div class="hero-copy"><div class="eyebrow">YOUR FARM Â· YOUR NEXT STEP</div><h1>Empowering Rwandan Farmers<br/>with Data-Driven Insights</h1><p>Estimate your harvest, explore district productivity, and find practical next steps for your farm.</p><span class="hero-chip"><span class="hero-chip-dot"></span> Better farms · Brighter future</span></div><div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="crop-line crop-one"></div><div class="crop-line crop-two"></div><div class="crop-line crop-three"></div></div></div>''', unsafe_allow_html=True)
+        st.markdown('''<div class="home-hero"><div class="hero-copy"><h1>Empowering Rwandan Farmers<br/>with Data-Driven Insights</h1><p>See what farms like yours harvest, explore district productivity, and find practical steps to improve your harvest.</p><div class="hero-meta"><span class="hero-place">📍 Rwanda</span><span class="hero-pill">Better Farms · Brighter Future</span></div></div></div>''', unsafe_allow_html=True)
         st.write("")
-        # Four primary tasks match the shortcut row in the design reference.
-        q1,q2,q3,q4 = st.columns(4, gap="small")
+        q1, q2, q3, q4 = st.columns(4, gap="small")
         cards = [
-            (q1, "Predict my harvest", "Predict Your Harvest", "Get an estimate for your crop and location.", "Predict my harvest", "green"),
-            (q2, "District insights", "Explore District Data", "Compare observed productivity by district.", "District insights", "blue"),
-            (q3, "Farm advice", "Get Farm Advice", "Find practical next steps for your farm.", "Farm advice", "amber"),
-            (q4, "Other production", "Other Production", "Explore fruit, eggs, honey and milk.", "Other production", "purple"),
+            (q1, "Predict my harvest", "Predict Your Harvest", "Get estimated yield for your crop and location.", "Predict my harvest", "green"),
+            (q2, "District insights", "Explore District Data", "Compare productivity across districts and crops.", "District insights", "blue"),
+            (q3, "Farm advice", "Get Farm Advice", "Receive recommendations for better practices.", "Farm advice", "amber"),
+            (q4, "Other production", "Other Production", "Explore fruit, eggs, honey, milk and more.", "Other production", "purple"),
         ]
         for col, icon_name, title, desc, target, tone in cards:
             with col:
-                st.markdown(f'<div class="action-card"><div class="action-icon {tone}">{svg_icon(icon_name, "card-icon")}</div><h4>{title}</h4><p>{desc}</p><a class="card-link" href="?page={quote(target)}">Open task <span>â†’</span></a></div>', unsafe_allow_html=True)
+                st.markdown(f'<a class="task-card" href="?page={quote(target)}" target="_self"><span class="action-icon {tone}">{svg_icon(icon_name, "card-icon")}</span><span class="task-text"><span class="task-title">{title}</span><span class="task-desc">{desc}</span></span><span class="task-arrow {tone}">→</span></a>', unsafe_allow_html=True)
         st.write("")
-        estimate_col, district_col = st.columns([1.12,1], gap="small")
+
+        estimate_col, district_col = st.columns([1.1, 1], gap="small")
         with estimate_col:
-            st.markdown('<div class="home-split-panel"><div class="section-title">🌱 &nbsp; Quick Harvest Prediction</div><div class="section-sub">Fill in a few details about your farm to get an estimate.</div>', unsafe_allow_html=True)
-            model_file = MODEL_DIR / MODEL_FILES["crop_yield_kg_ha"]
-            if model_file.exists():
-                bundle = load_model("crop_yield_kg_ha")
-                all_values = model_default_values(bundle)
-                districts = district_options()
-                crop_codes = crop_options()
-                with st.form("home_quick_yield_form", clear_on_submit=False):
-                    a,b,c = st.columns([1.1,1.1,0.8])
-                    district_labels = [x[0] for x in districts] or ["District not listed"]
+            with st.container(border=True):
+                st.markdown(f'<div class="card-head"><div class="card-head-icon">{svg_icon("Farm advice", "card-icon")}</div><div><div class="section-title">Quick Harvest Estimate</div><div class="section-sub">Fill in a few details about your farm to see what similar farms harvest.</div></div></div>', unsafe_allow_html=True)
+                with st.form("home_quick_yield_form", clear_on_submit=False, border=False):
+                    a, b = st.columns(2)
                     with a:
-                        selected_district = st.selectbox("District", district_labels, key="home_district")
+                        district_in = st.selectbox("District", home_districts, index=home_districts.index(sel["district"]))
                     with b:
-                        selected_crop = st.selectbox("Crop", crop_codes, format_func=lambda code: CROP_NAMES.get(str(code), f"Crop {code}"), key="home_crop")
+                        crop_in = st.selectbox("Crop", home_crops, index=home_crops.index(sel["crop"]) if sel["crop"] in home_crops else 0)
+                    c, d = st.columns(2, vertical_alignment="bottom")
                     with c:
-                        area = st.number_input("Land size (ha)", min_value=0.001, max_value=10000.0, value=0.25, step=0.05, key="home_area")
-                    go = st.form_submit_button("✦  Get Prediction", type="primary", use_container_width=True)
-                if go:
-                    try:
-                        district_code = districts[district_labels.index(selected_district)][1] if districts else str(all_values.get("district", "11"))
-                        all_values["district"] = str(district_code)
-                        all_values["crop_code"] = str(selected_crop)
-                        all_values["crop_area_ha"] = float(area)
-                        try:
-                            dnum = int(float(district_code)); all_values["province"] = str({1:1,2:2,3:3,4:4,5:5}.get(dnum // 10, all_values.get("province", "1")))
-                        except (TypeError, ValueError):
-                            pass
-                        result = predict_one("crop_yield_kg_ha", all_values)
-                        yield_value = max(0.0, float(result["prediction"]))
-                        st.session_state["last_prediction"] = {"yield_kg_ha":yield_value,"area_ha":float(area),"total_kg":yield_value*float(area),"district":selected_district,"crop":selected_crop,"season":"Selected from model defaults","concern":"Harvest quantity","metrics":result.get("metrics",{})}
-                    except Exception as exc:
-                        st.error(f"Prediction could not be completed: {exc}")
-            else:
-                st.warning("The crop-yield model is not available. Follow the model setup steps in README.md.")
-            pred = st.session_state.get("last_prediction")
-            if pred:
-                st.markdown(f'<div class="result-highlight"><div class="metric-label">Estimated Yield</div><div class="metric-value">{pred["yield_kg_ha"]:,.0f} <span style="font-size:14px">kg/ha</span></div><div class="metric-note">{pred["total_kg"]:,.0f} kg estimated total harvest · exploratory estimate</div></div>', unsafe_allow_html=True)
-            st.markdown('</div>', unsafe_allow_html=True)
+                        area_in = st.number_input("Land size (ha)", min_value=0.01, max_value=100.0, value=float(sel["area"]), step=0.05)
+                    with d:
+                        if st.form_submit_button("↗ Get Estimate", type="primary", width="stretch"):
+                            sel.update({"district": district_in, "crop": crop_in, "area": float(area_in)})
+                est = yield_estimate(yields_d, yields_n, sel["district"], sel["crop"])
+                if est:
+                    total = est["median"] * sel["area"]
+                    diff = est["median"] / est["national_median"] - 1 if est["national_median"] else 0
+                    tone = "up" if diff >= 0 else "down"
+                    where = f'{sel["district"]} farms' if est["level"] == "district" else "farms nationally (too few in this district)"
+                    potential = "Good potential" if diff >= 0 else "Room to improve"
+                    st.markdown(f'''<div class="estimate-box"><div class="estimate-main"><div class="estimate-icon">{svg_icon("Farm advice", "card-icon")}</div><div><div class="metric-label">Typical yield</div><div class="estimate-value">{est["median"]:,.0f} <span>kg/ha</span></div><span class="estimate-pill {tone}">{"↗" if diff >= 0 else "↘"} {potential}</span></div></div><div class="estimate-side"><div class="estimate-diff {tone}">{"↗" if diff >= 0 else "↘"} {diff:+.0%} vs. Rwanda typical</div><p>Based on {est["n_obs"]:,} {crop_text(sel["crop"])} plots from {where}. Middle half of farms: {est["p25"]:,.0f}–{est["p75"]:,.0f} kg/ha. About <b>{total:,.0f} kg</b> from {sel["area"]:g} ha.</p></div></div>''', unsafe_allow_html=True)
+                    factors = practice_factors(effects, sel["crop"])
+                    if factors:
+                        rows = "".join(
+                            f'<div class="factor-row{"" if f["significant"] else " faint"}"><span>{f["label"]}</span><div class="factor-track"><div class="factor-fill" style="width:{f["width"]:.0f}%;background:{f["color"]}"></div></div><b>{f["effect"]:+.0%}</b></div>'
+                            for f in factors)
+                        st.markdown(f'<div class="factor-head"><b>Key Factors Linked to Higher Yield</b><a href="?page=Practice%20evidence" target="_self">View detailed analysis →</a></div>{rows}<div class="factor-note">Yield difference on {crop_text(sel["crop"])} plots that use each practice vs. similar plots that don\'t. Faded bars: not statistically clear.</div>', unsafe_allow_html=True)
+                else:
+                    st.info("There isn't enough survey data for this crop yet. Try another crop.")
+
         with district_col:
-            st.markdown('<div class="home-split-panel"><div class="section-title">▥ &nbsp; District Productivity</div><div class="section-sub">Explore observed productivity across Rwanda.</div>', unsafe_allow_html=True)
-            if summary_path.exists():
-                try:
-                    summary = pd.read_csv(summary_path, low_memory=False)
-                    if not summary.empty and "median_yield_kg_ha" in summary:
-                        chart_data = summary.copy()
-                        if "district" in chart_data:
-                            chart_data["district_name"] = chart_data["district"].map(lambda x: district_names.get(str(int(float(x))), f"District {x}") if pd.notna(x) else "Unknown")
-                            chart = chart_data.groupby("district_name")["median_yield_kg_ha"].median().sort_values(ascending=False).head(8)
-                            st.image(str(ROOT / "assets" / "rwanda_yield_districts.png"), use_container_width=True)
-                        st.caption("District medians summarize observed crop-specific medians. They are not survey-weighted district estimates.")
-                    else:
-                        st.info("District summary has no rows to display yet.")
-                except Exception:
-                    st.info("District analytics could not be loaded. Open District insights for details.")
-            else:
-                st.info("District analytics will appear after the data pipeline has generated its summary.")
-            st.markdown('</div>', unsafe_allow_html=True)
-        st.markdown('<div class="impact-strip"><div><b>Our Impact</b><span>Supporting Rwanda’s agricultural transformation</span></div><div class="impact-item">Better yields<span>More food, more income</span></div><div class="impact-item">Informed farmers<span>Data for better decisions</span></div><div class="impact-item">Sustainable farming<span>Healthy soil, healthy future</span></div><div class="impact-item">Stronger Rwanda<span>Agriculture drives growth</span></div></div>', unsafe_allow_html=True)
+            with st.container(border=True):
+                h1, h2 = st.columns([1.6, 1], vertical_alignment="center")
+                with h1:
+                    st.markdown(f'<div class="card-head"><div class="card-head-icon blue">{svg_icon("District insights", "card-icon")}</div><div><div class="section-title">District Productivity</div><div class="section-sub">Typical yield (kg/ha) by district</div></div></div>', unsafe_allow_html=True)
+                with h2:
+                    if st.session_state.get("home_map_synced") != sel["crop"]:
+                        st.session_state["home_map_crop"] = sel["crop"]
+                        st.session_state["home_map_synced"] = sel["crop"]
+                    map_crop = st.selectbox("Crop for map", home_crops, label_visibility="collapsed", key="home_map_crop")
+                mapped = district_map(yields_d, map_crop, sel["district"])
+                if mapped is not None:
+                    fig, legend = mapped
+                    m1, m2 = st.columns([2.6, 1], vertical_alignment="center")
+                    with m1:
+                        st.plotly_chart(fig, width="stretch", config={"displayModeBar": False})
+                    with m2:
+                        items = "".join(f'<div class="legend-item"><i style="background:{c}"></i>{html.escape(label)}</div>' for c, label in legend)
+                        st.markdown(f'<div class="map-legend"><div class="legend-unit">kg/ha</div>{items}<div class="legend-item"><i style="background:#eef2f0"></i>Too few farms</div></div>', unsafe_allow_html=True)
+                range_fig = yield_range_chart(yields_d, yields_n, sel["district"], sel["crop"])
+                if range_fig is not None:
+                    st.markdown(f'<div class="factor-head" style="margin-top:2px"><b>Your District vs Rwanda · {sel["crop"]}</b></div>', unsafe_allow_html=True)
+                    st.plotly_chart(range_fig, width="stretch", config={"displayModeBar": False})
+                    st.markdown('<div class="factor-note">Bars show the middle half of farms; the line marks the typical (median) farm. Survey-weighted, AHS 2024. Grey districts have fewer than 30 surveyed plots. Boundaries: geoBoundaries / Open Data Rwanda, CC BY 4.0.</div>', unsafe_allow_html=True)
+
+        impact = [("Better yields", "More food, more income", "Farm advice"), ("Informed farmers", "Data for better decisions", "Practice evidence"),
+                  ("Sustainable farming", "Healthy soil, healthy future", "Water"), ("Stronger Rwanda", "Agriculture drives growth", "District insights")]
+        items = "".join(f'<div class="impact-item"><div class="impact-icon">{svg_icon(icon, "card-icon")}</div><b>{t}</b><span>{s}</span></div>' for t, s, icon in impact)
+        st.markdown(f'<div class="impact-strip"><div class="impact-lead"><b>Our Impact</b><span>Supporting Rwanda’s agricultural transformation</span></div>{items}</div>', unsafe_allow_html=True)
+
     with advice_col:
-        st.markdown('<div class="topline"><span>FARM SUPPORT</span><span>ðŸŒ¿</span></div>', unsafe_allow_html=True)
-        st.markdown('<div class="right-panel"><div class="section-title">Farm recommendations</div><div class="section-sub">Useful starting points, not guaranteed outcomes.</div><div class="advice-row"><div class="advice-symbol">ðŸŒ±</div><div><strong>Choose suitable seed</strong><span>Ask a local extension officer about varieties suited to your crop and district.</span></div></div><div class="advice-row"><div class="advice-symbol">ðŸ’§</div><div><strong>Plan water use</strong><span>Check crop stage, water access and feasible irrigation options before investing.</span></div></div><div class="advice-row"><div class="advice-symbol">ðŸŒ¾</div><div><strong>Protect harvested produce</strong><span>Plan drying, clean storage and transport before harvest time.</span></div></div><a href="?page=Farm%20advice" style="font-size:12px;color:#087452;font-weight:800;text-decoration:none">View all farm advice â†’</a></div>', unsafe_allow_html=True)
-        st.markdown('<div class="right-panel" style="background:#edf6ff;border-color:#d8e9f7"><div class="section-title">Ask HarvestGap</div><div class="section-sub">Choose a question to get a simple starting point.</div></div>', unsafe_allow_html=True)
-        ask = st.selectbox("What do you need help with?", ["How can I improve crop yield?", "What should I do about water shortage?", "How can I protect produce after harvest?", "How should I compare buyers?"], label_visibility="collapsed", key="home_ask")
-        ask_map = {"How can I improve crop yield?":"Improving crop yield","What should I do about water shortage?":"Water and irrigation","How can I protect produce after harvest?":"Post-harvest storage","How should I compare buyers?":"Selling my produce"}
-        if st.button("Get guidance â†’", type="primary", use_container_width=True, key="home_ask_button"):
-            st.session_state["selected_advice_topic"] = ask_map[ask]
-            st.query_params["page"] = "Farm advice"
-            st.rerun()
-        st.markdown('<div class="warning-note"><b>Remember:</b> HarvestGap is a research prototype. Confirm crop-specific decisions with your local agricultural extension officer.</div>', unsafe_allow_html=True)
+        recs = recommendations(yields_d, indicators, effects, sel["district"], sel["crop"])
+        cards_html = "".join(
+            f'<a class="rec-card" href="?page={quote(r["page"])}" target="_self"><div class="rec-icon {r["tone"]}">{r["icon"]}</div><div class="rec-body"><b>{r["title"]}</b><span>{r["text"]}</span><em class="badge {r["badge_tone"]}">{r["badge"]}</em></div><div class="rec-chevron">›</div></a>'
+            for r in recs)
+        st.markdown(f'<div class="rec-panel"><div class="card-head"><div class="card-head-icon">{svg_icon("Farm advice", "card-icon")}</div><div><div class="section-title">Personalized Recommendations</div><div class="section-sub">For {crop_text(sel["crop"])} in {sel["district"]}, from AHS 2024 survey data</div></div></div>{cards_html}</div>', unsafe_allow_html=True)
+        questions = [
+            (f"How can I improve my {crop_text(sel['crop'])} yield?", "Practice evidence"),
+            (f"How does {sel['district']} compare with other districts?", "District insights"),
+            ("How can I store my harvest better?", "Farm advice"),
+            ("Where can I sell my produce?", "Farm advice"),
+        ]
+        chips = "".join(f'<a class="ask-chip" href="?page={quote(p)}" target="_self">{q}</a>' for q, p in questions)
+        st.markdown(f'<div class="ask-panel"><div class="card-head"><div class="card-head-icon">💬</div><div><div class="section-title">Ask HarvestGap</div><div class="section-sub">Pick a question to open the page that answers it.</div></div></div><div class="ask-chips">{chips}</div></div>', unsafe_allow_html=True)
 
 # ---------- Farmer-first yield prediction ----------
 elif page == "Predict my harvest":
@@ -518,7 +765,7 @@ elif page == "Farm advice":
             else:
                 sig = pd.DataFrame()
             st.caption(f"The current analysis contains {len(assoc):,} tested associations; {len(sig):,} meet the FDR-adjusted q < 0.05 threshold. These results require crop-code and questionnaire interpretation before farmer-facing practice claims.")
-            if st.button("Review evidence table â†’"):
+            if st.button("Review evidence table →"):
                 st.session_state["nav_target"] = "Practice evidence"
                 st.rerun()
 
@@ -550,9 +797,9 @@ elif page == "District insights":
                 selected_code = district_pairs[[x[0] for x in district_pairs].index(district_choice)][1]
                 view = view[view[district_col].map(lambda x: str(x) == selected_code or str(int(float(x))) == str(int(float(selected_code)) if pd.notna(x) else ""))]
             m1,m2,m3 = st.columns(3)
-            with m1: st.metric("Cropâ€“district rows", f"{len(view):,}")
+            with m1: st.metric("Crop–district rows", f"{len(view):,}")
             with m2: st.metric("Crop codes", f"{view[crop_col].nunique():,}" if crop_col and len(view) else "0")
-            with m3: st.metric("Median yield", f"{view['median_yield_kg_ha'].median():,.0f} kg/ha" if "median_yield_kg_ha" in view and len(view) else "â€”")
+            with m3: st.metric("Median yield", f"{view['median_yield_kg_ha'].median():,.0f} kg/ha" if "median_yield_kg_ha" in view and len(view) else "—")
             if len(view) and "median_yield_kg_ha" in view:
                 st.markdown("**Observed median yield by district**")
                 chart_data = view.copy()
@@ -627,4 +874,4 @@ elif page == "About HarvestGap":
     else:
         st.info("No model metrics file found. Run the model training pipeline first.")
 
-st.markdown("<div style='text-align:center;color:#80948a;font-size:11px;padding:22px 0 5px'>HarvestGap Rwanda Â· Better data. Better harvests. Â· Research prototype</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align:center;color:#80948a;font-size:11px;padding:22px 0 5px'>HarvestGap Rwanda · Better data. Better harvests. · Research prototype</div>", unsafe_allow_html=True)

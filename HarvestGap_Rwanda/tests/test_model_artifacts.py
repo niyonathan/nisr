@@ -2,7 +2,7 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from nisr.HarvestGap_Rwanda.src.harvestgap.predict import MODEL_FILES, load_model, predict_one
+from src.harvestgap.predict import MODEL_FILES, load_model, predict_one
 
 
 def test_saved_models():

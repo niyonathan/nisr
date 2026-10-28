@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-white font-sans text-[17px] leading-relaxed text-nisr-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-display text-nisr-navy; text-wrap: balance; }
+  :focus-visible { @apply outline outline-[3px] outline-offset-2 outline-nisr-sky rounded-md; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[1200px] px-5 sm:px-6; }
+  .card { @apply rounded-2xl border border-nisr-line bg-white shadow-card; }
+  .eyebrow { @apply text-xs font-bold uppercase tracking-[0.12em] text-nisr-blue; }
+  .btn { @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 font-bold transition-colors; }
+  .btn-primary { @apply btn bg-nisr-blue text-white hover:bg-[#094f90]; }
+  .field { @apply w-full rounded-xl border border-[#c8d6e6] bg-white px-3.5 py-3 text-base text-nisr-ink; }
+  .label { @apply mb-1.5 block text-sm font-bold text-nisr-navy; }
+  .num { font-variant-numeric: tabular-nums; }
+}
