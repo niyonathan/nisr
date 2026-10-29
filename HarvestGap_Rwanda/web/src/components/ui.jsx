@@ -4,12 +4,15 @@ import { ArrowRight, ArrowUpDown, Download, Info } from "lucide-react";
 import { downloadCsv } from "../format";
 
 /** Blue page header used on every page; children render on the right (stats). */
-export function PageHero({ eyebrow, title, intro, children, compact = false }) {
+export function PageHero({ eyebrow, challenge, title, intro, children, compact = false }) {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-[#0b63b4] via-nisr-blue to-[#0a4f94] text-white">
       <div className={`wrap relative z-10 grid items-center gap-10 ${compact ? "pb-24 pt-12" : "pb-28 pt-16"} ${children ? "lg:grid-cols-[1.1fr_0.9fr]" : ""}`}>
         <div>
-          <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#9fd3f5]">{eyebrow}</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#9fd3f5]">{eyebrow}</span>
+            {challenge && <span className="rounded-full bg-white/15 px-2.5 py-1 text-xs text-white ring-1 ring-white/25">Challenge area: {challenge}</span>}
+          </div>
           <h1 className={`mt-4 text-white ${compact ? "text-3xl sm:text-4xl" : "text-4xl sm:text-5xl"} leading-[1.08]`}>{title}</h1>
           {intro && <p className="mt-5 max-w-xl text-lg text-[#d8e8f8]">{intro}</p>}
         </div>

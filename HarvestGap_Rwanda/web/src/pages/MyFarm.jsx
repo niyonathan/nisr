@@ -1,5 +1,8 @@
-import { Link, useSearchParams } from "react-router-dom";
-import { Check, Droplets, Package, Sprout, Mountain, TrendingUp } from "lucide-react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { Check, Droplets, Package, Pencil, Sprout, Mountain, TrendingUp } from "lucide-react";
+import { useFarm } from "../farm";
+import HarvestWizard, { CONCERNS } from "../components/HarvestWizard";
+import { Rich } from "../components/AskBox";
 import { useData } from "../data";
 import { cropText, fmt, pct } from "../format";
 import { BarList, Card, Note, PageHero, Pill, Section } from "../components/ui";
@@ -35,13 +38,36 @@ function RangeBar({ local, national, place }) {
 export default function MyFarm() {
   const D = useData();
   const [params, setParams] = useSearchParams();
+  const { farm, setFarm } = useFarm();
+  const navigate = useNavigate();
+
+  if (!params.get("district") || !params.get("crop")) {
+    return (
+      <>
+        <PageHero compact eyebrow="Estimate my harvest" challenge="Agricultural productivity" title="How much will my field produce?"
+          intro="Answer five quick questions. We'll compare your field with similar farms in the 2024 survey and write you a short report." />
+        <div className="wrap relative z-10 -mt-16 pb-16">
+          <HarvestWizard initial={farm} onDone={(a) => {
+            setFarm({ district: a.district, crop: a.crop });
+            setParams({ district: a.district, crop: a.crop, area: a.area, uses: a.uses.join(","), concern: a.concern }, { replace: true });
+          }} />
+        </div>
+      </>
+    );
+  }
+  return <Report D={D} params={params} setParams={setParams} setFarm={setFarm} navigate={navigate} />;
+}
+
+function Report({ D, params, setParams, setFarm, navigate }) {
   const district = D.districtNames.includes(params.get("district")) ? params.get("district") : "Musanze";
   const crop = D.farmCrops.includes(params.get("crop")) ? params.get("crop") : "Maize";
   const area = Math.max(0.01, parseFloat(params.get("area")) || 0.5);
   const used = new Set((params.get("uses") || "").split(",").filter(Boolean));
+  const concern = CONCERNS.some(([c]) => c === params.get("concern")) ? params.get("concern") : "harvest";
 
   const update = (patch) => {
-    const next = { district, crop, area: String(area), uses: [...used].join(","), ...patch };
+    const next = { district, crop, area: String(area), uses: [...used].join(","), concern, ...patch };
+    if (patch.district || patch.crop) setFarm({ district: next.district, crop: next.crop });
     setParams(Object.fromEntries(Object.entries(next).filter(([, v]) => v !== "")), { replace: true });
   };
   const toggle = (p) => {
@@ -63,35 +89,69 @@ export default function MyFarm() {
   const others = D.districtsForCrop(crop).sort((a, b) => b.median - a.median)
     .map((r) => ({ label: r.district, value: r.median, display: `${fmt(r.median)} kg/ha`, highlight: r.district === district, to: `/districts/${encodeURIComponent(r.district)}` }));
 
-  const advice = [
+  const adviceList = [
     {
-      icon: Droplets, title: "Water",
+      key: "water", icon: Droplets, title: "Water",
       text: `${pct(info.irrigated_rate)} of plots in ${district} are irrigated. ${pct(info.no_water_rate)} have no water nearby and ${pct(info.cannot_afford_irrigation_rate)} can't afford equipment. Ask your sector agronomist about rainwater harvesting or shared irrigation.`,
       tone: info.no_water_rate + info.cannot_afford_irrigation_rate >= 0.4 ? ["red", "High need"] : info.no_water_rate + info.cannot_afford_irrigation_rate >= 0.15 ? ["amber", "Medium need"] : ["green", "Low need"],
     },
     {
-      icon: Sprout, title: "Soil fertility",
+      key: "soil", icon: Sprout, title: "Soil fertility",
       text: `${pct(info.inorganic_fertilizer_rate)} of plots here use mineral fertilizer and ${pct(info.organic_fertilizer_rate)} use manure or compost.${local ? ` For ${cropText(crop)} in ${district}, ${pct(local.fert)} use mineral fertilizer.` : ""}`,
       tone: ["blue", "Survey data"],
     },
     {
-      icon: Mountain, title: "Soil conservation",
+      key: "erosion", icon: Mountain, title: "Soil conservation",
       text: `${pct(info.anti_erosion_rate)} of plots have terraces, ditches or grass strips; ${pct(info.erosion_threat_rate)} report erosion. Keep slopes covered and maintain terraces before the rains.`,
       tone: ["blue", "Survey data"],
     },
     {
-      icon: Package, title: "After harvest",
+      key: "store", icon: Package, title: "After harvest",
       text: `Only ${pct(info.extension_post_harvest_rate)} of farm households in ${district} received post-harvest advice this season. Dry produce well, store it in sealed bags, and compare buyers before selling.`,
       tone: ["grey", "General advice"],
     },
   ];
+  const advice = [...adviceList].sort((x, y) => (y.key === concern) - (x.key === concern));
+
+  // Written summary, ordered by what the farmer said worries them most.
+  const helps = effects.filter((e) => e.sig);
+  const summary = [
+    `Farms like yours usually harvest about **${fmt(src.median)} kg per hectare**, so roughly **${fmt(src.median * area)} kg** from your ${area} ha${local ? "" : ` (figures for all of Rwanda: too few ${cropText(crop)} farms were surveyed in ${district})`}.`,
+    local ? `That is ${diff >= 0 ? `**${pct(diff)} above**` : `**${pct(-diff)} below**`} the average ${cropText(crop)} farm in Rwanda. The best quarter of similar farms reach **${fmt(src.p75)} kg per hectare** or more.` : `The best quarter of ${cropText(crop)} farms reach **${fmt(src.p75)} kg per hectare** or more.`,
+    notYet.length
+      ? `Your best next step: ${notYet.slice(0, 2).map((e) => `**${e.label.toLowerCase()}** (${pct(e.effect, true)} on similar plots)`).join(" and ")}, which you don't use yet.`
+      : helps.length ? "You already use the practices most linked to bigger harvests. Focus on timing, spacing and protecting the harvest." : `No single practice shows a clear link to bigger ${cropText(crop)} harvests yet; ask your sector agronomist about the best varieties.`,
+    concern === "water" ? `You said water worries you most: in ${district}, ${pct(info.no_water_rate)} of plots have no water nearby and ${pct(info.cannot_afford_irrigation_rate)} can't afford equipment.`
+      : concern === "soil" ? `You said soil worries you most: ${pct(info.inorganic_fertilizer_rate)} of plots in ${district} use fertilizer and ${pct(info.erosion_threat_rate)} report erosion.`
+      : concern === "store" ? `You said storage and selling worry you most: only ${pct(info.extension_post_harvest_rate)} of households in ${district} got advice on storing their harvest this season.`
+      : null,
+  ].filter(Boolean);
+  const followUps = [`Water for crops in ${district}`, `Is fertilizer worth it for ${cropText(crop)}?`, `Where is ${cropText(crop)} harvest highest?`];
 
   return (
     <>
-      <PageHero compact eyebrow="My Farm" title="How does my harvest compare?"
-        intro="Choose your district, crop and land size. See what similar farms harvested in the 2024 survey, and what was linked to bigger harvests." />
+      <PageHero compact eyebrow="Your harvest report" challenge="Agricultural productivity" title={`${crop} in ${district}`}
+        intro={`What the 2024 survey found on farms like yours, and what could help you harvest more.`} />
 
-      <div className="wrap relative z-10 -mt-16 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+      <div className="wrap relative z-10 -mt-16 mb-6">
+        <div className="card border-l-4 border-l-nisr-blue p-6 sm:p-7">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <h2 className="text-xl">Here's what we found</h2>
+            <button onClick={() => navigate("/my-farm")} className="inline-flex items-center gap-2 rounded-xl border border-nisr-line px-3.5 py-2 text-sm font-semibold text-nisr-blue hover:bg-nisr-mist">
+              <Pencil size={15} /> Change my answers
+            </button>
+          </div>
+          <div className="mt-3 grid gap-2.5 text-[17px] leading-relaxed">{summary.map((s) => <p key={s}><Rich text={s} /></p>)}</div>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <span className="self-center text-sm font-semibold text-nisr-navy">Ask next:</span>
+            {followUps.map((q) => (
+              <Link key={q} to={`/?q=${encodeURIComponent(q)}`} className="rounded-full border border-[#cfe0f2] bg-[#f7fbff] px-3.5 py-2 text-sm text-nisr-blue hover:bg-[#e8f2fd]">{q}</Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="wrap relative z-10 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
         <form className="card grid content-start gap-4 p-6" onSubmit={(e) => e.preventDefault()}>
           <div className="grid gap-4 sm:grid-cols-2">
             <div><label className="label" htmlFor="district">District</label>
@@ -112,7 +172,7 @@ export default function MyFarm() {
               ))}
             </div>
           </fieldset>
-          <Note>Results update as you change your answers. Your answers stay in this page's link, so you can share it.</Note>
+          <Note>Change anything here and the report updates. Your answers stay in this page's link, so you can share it.</Note>
         </form>
 
         <div className="card grid content-start gap-6 p-6">
@@ -175,8 +235,8 @@ export default function MyFarm() {
 
       <Section title={`Advice for farms in ${district}`} intro="Based on what the survey recorded in your district. Confirm crop-specific choices with your sector agronomist.">
         <div className="grid gap-5 md:grid-cols-2">
-          {advice.map(({ icon: Icon, title, text, tone }) => (
-            <div key={title} className="card flex gap-4 p-6">
+          {advice.map(({ key, icon: Icon, title, text, tone }) => (
+            <div key={title} className={`card flex gap-4 p-6 ${key === concern && concern !== "harvest" ? "ring-2 ring-nisr-blue" : ""}`}>
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e3eef9] text-nisr-blue"><Icon size={24} /></span>
               <div>
                 <div className="flex flex-wrap items-center gap-2"><h3 className="text-lg">{title}</h3><Pill tone={tone[0]}>{tone[1]}</Pill></div>

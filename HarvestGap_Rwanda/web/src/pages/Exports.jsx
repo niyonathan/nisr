@@ -16,7 +16,7 @@ export default function Exports() {
 
   return (
     <>
-      <PageHero compact eyebrow="Topic · Export market opportunities" title="Where Rwanda's export crops are grown"
+      <PageHero compact eyebrow="Crops for export" challenge="Export market opportunities" title="Where Rwanda's export crops are grown"
         intro="The farm survey shows where export crops are grown, how well they yield and how much reaches the market. Export values and destinations come from separate trade statistics." />
 
       <div className="wrap"><Headline>

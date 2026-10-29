@@ -49,7 +49,7 @@ export default function Overview() {
 
   return (
     <>
-      <PageHero eyebrow="NISR Agricultural Household Survey 2024" title="What Rwanda's farms tell us"
+      <PageHero eyebrow="Rwanda at a glance" challenge="All five Track 1 areas" title="What Rwanda's farms tell us"
         intro="See how your harvest compares with farms like yours, which practices go with bigger harvests, and where Rwanda should invest in water, soil, storage and markets.">
         <div className="grid grid-cols-2 gap-3.5">
           <HeroStat value={fmt(D.survey.households)} label="farming households surveyed" />
@@ -93,7 +93,7 @@ export default function Overview() {
         </div>
       </Section>
 
-      <Section alt eyebrow="Districts" title="Where should we act first?" intro="Pick a topic to colour the map. Click any district to open its full profile.">
+      <Section id="where-to-act" alt eyebrow="Where to invest" title="Where should we act first?" intro="Pick a topic to colour the map. Click any district to open its full profile.">
         <div className="grid gap-6 lg:grid-cols-[1.3fr_0.7fr]">
           <div className="card p-6">
             <Tabs label="Map topic" value={topic} onChange={setTopic} options={Object.entries(MAP_TOPICS).map(([value, o]) => ({ value, label: o.label }))} />

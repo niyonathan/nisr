@@ -30,7 +30,7 @@ export default function PostHarvest() {
 
   return (
     <>
-      <PageHero compact eyebrow="Topic · Post-harvest, processing & value addition" title="What happens after the harvest"
+      <PageHero compact eyebrow="Store and sell my harvest" challenge="Post-harvest storage, processing & value addition" title="What happens after the harvest"
         intro="How much fruit and milk reaches the market, where most of it stays at home, and where farmers get the least advice on handling and storage." />
 
       <div className="wrap"><Headline>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useData } from "../data";
 import { fmt, pct } from "../format";
 import { Card, DataTable, PageHero, Section } from "../components/ui";
@@ -16,10 +17,36 @@ export default function About() {
   const M = D.model.overall;
   return (
     <>
-      <PageHero compact eyebrow="About & Method" title="How HarvestGap works"
+      <PageHero compact eyebrow="Where the numbers come from" title="How HarvestGap works"
         intro="The data behind every number on this site, how it was analysed, and what it can and can't tell you." />
 
-      <Section title="The data">
+      <Section title="How HarvestGap covers Track 1" intro="The site uses everyday words for farmers. This is how each part maps to the challenge areas of NISR Big Data Hackathon 2026, Track 1: Agricultural Productivity.">
+        <div className="overflow-x-auto rounded-xl border border-nisr-line">
+          <table className="w-full min-w-[640px] text-[15px]">
+            <thead className="bg-nisr-mist text-left text-nisr-navy">
+              <tr><th className="px-4 py-3 font-semibold">Challenge area</th><th className="px-4 py-3 font-semibold">Where on the site</th><th className="px-4 py-3 font-semibold">What it answers</th></tr>
+            </thead>
+            <tbody>
+              {[
+                ["Agricultural productivity", [["Estimate my harvest", "/my-farm"], ["Compare harvests", "/productivity"]], "Usual harvest for each crop and district, the gap to the best farms, the practices linked to bigger harvests, and model 'what if' estimates."],
+                ["Small-scale irrigation", [["Water for my crops", "/irrigation"]], "Where plots have no water versus where farmers can't afford equipment, so water sources and finance go where each is needed."],
+                ["Soil conservation & fertility management", [["Improve my soil", "/soil-fertility"]], "Fertilizer and manure use, erosion and soil-fertility loss by district, and how each practice relates to harvests by crop."],
+                ["Post-harvest storage, processing & value addition", [["Store and sell my harvest", "/post-harvest"]], "How much fruit and milk is sold versus kept at home, prices, and where advice on storage is missing."],
+                ["Export market opportunities", [["Crops for export", "/exports"]], "Where coffee, avocado and other export crops are grown and how well they yield."],
+                ["Planning for farmers, planners and policymakers", [["Ask a question", "/"], ["Where to invest", "/rwanda#where-to-act"], ["My district", "/districts"]], "Plain-language answers to typed questions, and the districts that need water, inputs or training first."],
+              ].map(([area, links, text]) => (
+                <tr key={area} className="border-t border-nisr-line align-top">
+                  <td className="px-4 py-3 font-semibold text-nisr-navy">{area}</td>
+                  <td className="px-4 py-3">{links.map(([l, to], i) => <span key={l}>{i > 0 && ", "}<Link className="text-nisr-blue hover:underline" to={to}>{l}</Link></span>)}</td>
+                  <td className="px-4 py-3 text-nisr-muted">{text}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section alt title="The data">
         <div className="grid gap-5 md:grid-cols-2">
           <Card title="Agricultural Household Survey 2024">
             <p className="text-[15px] text-nisr-muted">

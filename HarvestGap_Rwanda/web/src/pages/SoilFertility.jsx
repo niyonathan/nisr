@@ -52,7 +52,7 @@ export default function SoilFertility() {
 
   return (
     <>
-      <PageHero compact eyebrow="Topic · Soil conservation & fertility" title="Feeding the soil, and keeping it in place"
+      <PageHero compact eyebrow="Improve my soil" challenge="Soil conservation & fertility management" title="Feeding the soil, and keeping it in place"
         intro="Which soil practices go with bigger harvests, which districts use them least, and where soil is most at risk." />
 
       <div className="wrap"><Headline>

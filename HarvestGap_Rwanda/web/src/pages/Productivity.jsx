@@ -20,7 +20,7 @@ export default function Productivity() {
 
   return (
     <>
-      <PageHero compact eyebrow="Topic · Agricultural productivity" title="How much each district harvests, and why"
+      <PageHero compact eyebrow="Compare harvests" challenge="Agricultural productivity" title="How much each district harvests, and why"
         intro="Typical yields for every crop and district, the gap to Rwanda's better farms, and the practices linked to closing it." />
 
       <div className="wrap relative z-10 -mt-14">

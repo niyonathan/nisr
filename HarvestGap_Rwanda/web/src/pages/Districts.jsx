@@ -29,7 +29,7 @@ export default function Districts() {
 
   return (
     <>
-      <PageHero compact eyebrow="Districts" title="Rwanda's 30 districts, side by side"
+      <PageHero compact eyebrow="My district" title="Rwanda's 30 districts, side by side"
         intro="Open any district for its full profile: crops and yields, irrigation, soil, advice coverage and priorities.">
         <div className="grid grid-cols-2 gap-3.5">
           <HeroStat value={30} label="districts" />

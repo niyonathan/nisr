@@ -45,7 +45,7 @@ export default function Irrigation() {
 
   return (
     <>
-      <PageHero compact eyebrow="Topic · Small-scale irrigation" title="Where water is missing, and where money is"
+      <PageHero compact eyebrow="Water for my crops" challenge="Small-scale irrigation" title="Where water is missing, and where money is"
         intro="Farmers told the survey whether each plot was irrigated, and if not, why. The answer separates two different problems with two different solutions." />
 
       <div className="wrap"><Headline>
