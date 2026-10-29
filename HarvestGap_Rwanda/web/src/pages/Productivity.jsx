@@ -53,7 +53,7 @@ export default function Productivity() {
       <Section alt title={`${crop} yield across Rwanda`} intro="Typical yield in each district. Click a district for its profile.">
         <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
           <div className="card p-6"><RwandaMap values={Object.fromEntries(rows.map((r) => [r.district, r.median]))} format={(v) => `${fmt(v)} kg/ha`} caption={`${crop} yield`} /></div>
-          <Card title="Furthest behind" subtitle={`Gap between the district's typical farm and Rwanda's best quarter (${fmt(c.p75)} kg/ha).`}>
+          <Card title="Furthest behind" subtitle={`Gap between the district's typical farm and the best quarter of farms nationally (${fmt(c.p75)} kg/ha).`}>
             {gaps.length ? <RankList rows={gaps.slice(0, 6).map((g) => ({ label: g.district, value: g.gap, display: `−${pct(g.gap)}` }))} /> : <p className="text-nisr-muted">Not enough district data.</p>}
           </Card>
         </div>

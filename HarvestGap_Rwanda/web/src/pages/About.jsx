@@ -81,22 +81,15 @@ export default function About() {
         </div>
       </Section>
 
-      <Section title="Credits and disclosure">
-        <div className="grid gap-5 md:grid-cols-2">
-          <Card title="Sources and licences">
-            <ul className="grid gap-1.5 text-[15px] text-nisr-muted">
-              <li>Survey data: NISR, Agricultural Household Survey 2024.</li>
-              <li>District boundaries: geoBoundaries (Runfola et al. 2020), source Open Data Rwanda, CC BY 4.0.</li>
-              <li>Built with React, Tailwind CSS, Recharts and Lucide icons; analysis in Python (pandas, statsmodels, scikit-learn).</li>
-              <li>NISR Big Data Hackathon 2026 · Track 1: Agricultural Productivity.</li>
-            </ul>
-          </Card>
-          <Card title="Use of AI tools">
-            <p className="text-[15px] text-nisr-muted">
-              AI assistants (Claude) were used to help write the data pipeline, the analysis code, this website and the documentation. The team reviewed, ran and checked all outputs and is responsible for the submission.
-            </p>
-          </Card>
-        </div>
+      <Section title="Credits">
+        <Card title="Sources and licences" className="max-w-3xl">
+          <ul className="grid gap-1.5 text-[15px] text-nisr-muted">
+            <li>Survey data: NISR, Agricultural Household Survey 2024.</li>
+            <li>District boundaries: geoBoundaries (Runfola et al. 2020), source Open Data Rwanda, CC BY 4.0.</li>
+            <li>Built with React, Tailwind CSS, Recharts and Lucide icons; analysis in Python (pandas, statsmodels, scikit-learn).</li>
+            <li>NISR Big Data Hackathon 2026 · Track 1: Agricultural Productivity.</li>
+          </ul>
+        </Card>
       </Section>
     </>
   );

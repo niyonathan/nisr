@@ -11,7 +11,7 @@ const FARM_PRACTICES = [
   ["pesticide", "Pesticide or fungicide"],
 ];
 
-/** Where this farm's district sits against Rwanda: middle-half band plus two markers. */
+/** Where this farm's district sits against the national average: middle-half band plus two markers. */
 function RangeBar({ local, national, place }) {
   const max = Math.max(local.p75, national.p75) * 1.2;
   const pos = (v) => `${(100 * v) / max}%`;
@@ -19,13 +19,13 @@ function RangeBar({ local, national, place }) {
     <div>
       <div className="relative mt-8 h-3 rounded-full bg-[#e6edf5]">
         <div className="absolute inset-y-0 rounded-full bg-[#a9cbee]" style={{ left: pos(local.p25), width: `calc(${pos(local.p75)} - ${pos(local.p25)})` }} />
-        {[[national.median, `Rwanda ${fmt(national.median)}`, "-top-7", "#123b7a"], [local.median, `${place} ${fmt(local.median)}`, "top-5", "#0a5ca8"]].map(([v, label, at, color]) => (
+        {[[national.median, `National ${fmt(national.median)}`, "-top-7", "#123b7a"], ...(place === "National" ? [] : [[local.median, `${place} ${fmt(local.median)}`, "top-5", "#0a5ca8"]])].map(([v, label, at, color]) => (
           <span key={label} className={`absolute ${at} -translate-x-1/2 whitespace-nowrap text-xs font-bold`} style={{ left: pos(v), color }}>
             {label}
           </span>
         ))}
         <span className="absolute -top-1 h-5 w-[3px] -translate-x-1/2 rounded bg-nisr-navy" style={{ left: pos(national.median) }} />
-        <span className="absolute -top-1 h-5 w-[3px] -translate-x-1/2 rounded bg-nisr-blue" style={{ left: pos(local.median) }} />
+        {place !== "National" && <span className="absolute -top-1 h-5 w-[3px] -translate-x-1/2 rounded bg-nisr-blue" style={{ left: pos(local.median) }} />}
       </div>
       <p className="mt-10 text-sm text-nisr-muted">Shaded band: the middle half of farms, {fmt(local.p25)}–{fmt(local.p75)} kg/ha.</p>
     </div>
@@ -53,7 +53,7 @@ export default function MyFarm() {
   const national = D.getCrop(crop);
   const local = D.getDistrictCrop(district, crop);
   const src = local || national;
-  const place = local ? district : "Rwanda";
+  const place = local ? district : "National";
   const diff = src.median / national.median - 1;
   const effects = D.getEffects(crop).filter((e) => FARM_PRACTICES.some(([p]) => p === e.practice) && e.effect > 0).sort((a, b) => b.sig - a.sig || b.effect - a.effect);
   const notYet = effects.filter((e) => e.sig && !used.has(e.practice));
@@ -120,7 +120,11 @@ export default function MyFarm() {
             <div>
               <span className="text-sm font-bold text-nisr-muted">Farms like yours harvest about</span>
               <b className="num block font-display text-5xl text-nisr-navy">{fmt(src.median)} <small className="text-lg font-semibold text-nisr-muted">kg/ha</small></b>
-              <div className="mt-2.5"><Pill tone={diff >= 0.05 ? "green" : diff <= -0.05 ? "amber" : "blue"}>{pct(diff, true)} vs Rwanda's typical {cropText(crop)} farm</Pill></div>
+              <div className="mt-2.5">
+                {local
+                  ? <Pill tone={diff >= 0.05 ? "green" : diff <= -0.05 ? "amber" : "blue"}>{pct(diff, true)} vs the national typical {cropText(crop)} farm</Pill>
+                  : <Pill tone="grey">National figures: too few {cropText(crop)} farms surveyed in {district}</Pill>}
+              </div>
             </div>
             <div>
               <span className="text-sm font-bold text-nisr-muted">On {area} ha that is roughly</span>
@@ -133,7 +137,11 @@ export default function MyFarm() {
             <b className="num font-display text-2xl text-nisr-blue">{fmt(src.p75)} kg/ha or more</b>
             <p className="mt-1 text-[15px] text-nisr-muted">
               is what the best quarter of these farms harvest.{" "}
-              {notYet.length ? <>Linked to bigger harvests, not used yet: <b className="text-nisr-navy">{notYet.map((e) => e.label.toLowerCase()).join(", ")}</b>.</> : "You already use the practices most linked to bigger harvests."}
+              {notYet.length
+                ? <>Linked to bigger harvests, not used yet: <b className="text-nisr-navy">{notYet.map((e) => e.label.toLowerCase()).join(", ")}</b>.</>
+                : effects.some((e) => e.sig)
+                  ? "You already use the practices most linked to bigger harvests."
+                  : `No practice shows a clear link to bigger ${cropText(crop)} harvests in the survey yet. Ask your sector agronomist about varieties and spacing.`}
             </p>
           </div>
           <div>

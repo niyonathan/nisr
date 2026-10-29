@@ -12,6 +12,8 @@ export default {
         sans: ['"Source Sans 3"', '"Segoe UI"', "system-ui", "sans-serif"],
       },
       boxShadow: { card: "0 6px 22px rgba(18, 59, 122, 0.07)" },
+      // Light weight scale: text 400, labels/titles/buttons 500, key numbers 600.
+      fontWeight: { semibold: "500", bold: "500" },
     },
   },
   plugins: [],

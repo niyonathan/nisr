@@ -13,12 +13,12 @@ const MAP_OPTIONS = {
   extension_this_season_rate: "Extension advice",
 };
 
-/** Compares a district rate to the national rate and returns a short verdict. */
+/** Compares a district rate with the national average. A gap under 5 percentage points counts as similar. */
 function versus(value, national, higherIsBetter = true) {
-  const ratio = value / national;
-  if (ratio >= 1.25) return higherIsBetter ? ["green", "Above Rwanda"] : ["red", "Above Rwanda"];
-  if (ratio <= 0.75) return higherIsBetter ? ["amber", "Below Rwanda"] : ["green", "Below Rwanda"];
-  return ["blue", "Close to Rwanda"];
+  const gap = value - national;
+  if (Math.abs(gap) < 0.05) return ["blue", "Similar"];
+  const better = higherIsBetter ? gap > 0 : gap < 0;
+  return better ? ["green", "Better than average"] : [higherIsBetter ? "amber" : "red", "Needs attention"];
 }
 
 export default function DistrictProfile() {
@@ -45,13 +45,13 @@ export default function DistrictProfile() {
 
   // Priorities: indicators clearly worse than the national picture.
   const priorities = [
-    d.no_water_rate > N.no_water * 1.3 && [Droplets, "Water sources", `${pct(d.no_water_rate)} of plots have no water for irrigation (Rwanda: ${pct(N.no_water)}). Valley dams and rainwater harvesting would help most.`],
-    d.cannot_afford_irrigation_rate > N.cannot_afford_irrigation * 1.3 && [Droplets, "Irrigation finance", `${pct(d.cannot_afford_irrigation_rate)} of plots could be irrigated but farmers can't afford equipment (Rwanda: ${pct(N.cannot_afford_irrigation)}).`],
-    d.inorganic_fertilizer_rate < N.inorganic_fertilizer * 0.75 && [Sprout, "Access to fertilizer", `Only ${pct(d.inorganic_fertilizer_rate)} of plots use mineral fertilizer (Rwanda: ${pct(N.inorganic_fertilizer)}).`],
-    d.improved_seed_rate < N.improved_seed * 0.75 && [Lightbulb, "Improved seed", `Only ${pct(d.improved_seed_rate)} of crops are grown from improved seed (Rwanda: ${pct(N.improved_seed)}).`],
-    d.erosion_threat_rate > N.erosion_threat * 1.3 && [Mountain, "Erosion control", `${pct(d.erosion_threat_rate)} of plots report erosion (Rwanda: ${pct(N.erosion_threat)}).`],
-    d.extension_post_harvest_rate < N.extension_post_harvest * 0.75 && [Package, "Post-harvest training", `Only ${pct(d.extension_post_harvest_rate)} of households got post-harvest advice (Rwanda: ${pct(N.extension_post_harvest)}).`],
-    d.extension_this_season_rate < N.extension_this_season * 0.75 && [Users, "Extension reach", `${pct(d.extension_this_season_rate)} of households got any extension advice this season (Rwanda: ${pct(N.extension_this_season)}).`],
+    d.no_water_rate > N.no_water * 1.3 && [Droplets, "Water sources", `${pct(d.no_water_rate)} of plots have no water for irrigation (national average: ${pct(N.no_water)}). Valley dams and rainwater harvesting would help most.`],
+    d.cannot_afford_irrigation_rate > N.cannot_afford_irrigation * 1.3 && [Droplets, "Irrigation finance", `${pct(d.cannot_afford_irrigation_rate)} of plots could be irrigated but farmers can't afford equipment (national average: ${pct(N.cannot_afford_irrigation)}).`],
+    d.inorganic_fertilizer_rate < N.inorganic_fertilizer * 0.75 && [Sprout, "Access to fertilizer", `Only ${pct(d.inorganic_fertilizer_rate)} of plots use mineral fertilizer (national average: ${pct(N.inorganic_fertilizer)}).`],
+    d.improved_seed_rate < N.improved_seed * 0.75 && [Lightbulb, "Improved seed", `Only ${pct(d.improved_seed_rate)} of crops are grown from improved seed (national average: ${pct(N.improved_seed)}).`],
+    d.erosion_threat_rate > N.erosion_threat * 1.3 && [Mountain, "Erosion control", `${pct(d.erosion_threat_rate)} of plots report erosion (national average: ${pct(N.erosion_threat)}).`],
+    d.extension_post_harvest_rate < N.extension_post_harvest * 0.75 && [Package, "Post-harvest training", `Only ${pct(d.extension_post_harvest_rate)} of households got post-harvest advice (national average: ${pct(N.extension_post_harvest)}).`],
+    d.extension_this_season_rate < N.extension_this_season * 0.75 && [Users, "Extension reach", `${pct(d.extension_this_season_rate)} of households got any extension advice this season (national average: ${pct(N.extension_this_season)}).`],
   ].filter(Boolean);
 
   const comparisons = [
@@ -103,15 +103,15 @@ export default function DistrictProfile() {
         ) : <p className="text-nisr-muted">No indicator is far behind the national picture. Compare the details below.</p>}
       </Section>
 
-      <Section alt title="Crops and yields" intro={`Typical yield of each crop with at least 30 surveyed plots in ${d.district}, compared with Rwanda.`}>
+      <Section alt title="Crops and yields" intro={`Typical yield of each crop with at least 30 surveyed plots in ${d.district}, compared with the national average.`}>
         <div className="card p-5">
           <DataTable rows={crops} filename={`harvestgap_${d.district.toLowerCase()}_crops.csv`} initialSort={{ key: "n", dir: -1 }}
             columns={[
               { key: "crop", label: "Crop" },
               { key: "n", label: "Plots surveyed", numeric: true },
               { key: "median", label: "Typical kg/ha", numeric: true, render: (r) => fmt(r.median) },
-              { key: "national", label: "Rwanda kg/ha", numeric: true, render: (r) => fmt(r.national) },
-              { key: "vsNational", label: "vs Rwanda", numeric: true, render: (r) => <span className={r.vsNational >= 0 ? "text-[#1d7a46]" : "text-[#b3261e]"}>{pct(r.vsNational, true)}</span> },
+              { key: "national", label: "National kg/ha", numeric: true, render: (r) => fmt(r.national) },
+              { key: "vsNational", label: "vs national", numeric: true, render: (r) => <span className={r.vsNational >= 0 ? "text-[#1d7a46]" : "text-[#b3261e]"}>{pct(r.vsNational, true)}</span> },
               { key: "p75", label: "Best quarter from", numeric: true, render: (r) => fmt(r.p75) },
               { key: "seed", label: "Improved seed", numeric: true, render: (r) => pct(r.seed) },
               { key: "fert", label: "Fertilizer", numeric: true, render: (r) => pct(r.fert) },
@@ -119,17 +119,21 @@ export default function DistrictProfile() {
         </div>
       </Section>
 
-      <Section title={`${d.district} compared with Rwanda`}>
+      <Section title={`${d.district} compared with the national average`}>
         <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <Card title="Practices and services" subtitle="Share of plots or households; badge compares with the national rate.">
+          <Card title="Practices and services" subtitle="Share of plots or households in the district, next to the average for all of Rwanda.">
+            <div className="num mb-2 grid grid-cols-[minmax(0,1fr)_56px_64px] sm:grid-cols-[minmax(0,1fr)_64px_64px_150px] gap-3 text-xs font-bold uppercase tracking-wide text-nisr-muted">
+              <span /> <span className="text-right">{d.district}</span><span className="text-right">National</span><span className="hidden sm:block" />
+            </div>
             <ul className="grid gap-2.5">
               {comparisons.map(([label, v, n, good]) => {
                 const [tone, text] = versus(v, n, good);
                 return (
-                  <li key={label} className="num grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-3 border-t border-nisr-line pt-2.5 text-[15px] first:border-t-0 first:pt-0">
+                  <li key={label} className="num grid grid-cols-[minmax(0,1fr)_56px_64px] sm:grid-cols-[minmax(0,1fr)_64px_64px_150px] items-center gap-3 border-t border-nisr-line pt-2.5 text-[15px]">
                     <span>{label}</span>
-                    <span><b className="text-nisr-navy">{pct(v)}</b> <span className="text-nisr-muted">/ {pct(n)}</span></span>
-                    <Pill tone={tone}>{text}</Pill>
+                    <b className="text-right text-nisr-navy">{pct(v)}</b>
+                    <span className="text-right text-nisr-muted">{pct(n)}</span>
+                    <span className="col-span-3 sm:col-span-1 sm:text-right"><Pill tone={tone}>{text}</Pill></span>
                   </li>
                 );
               })}
