@@ -78,7 +78,7 @@ export default function Districts() {
       </Section>
 
       <Section alt title="Compare all districts" intro="Shares of farm plots or farming households. Sort any column, or download the table.">
-        <div className="card p-5"><DataTable rows={D.districts} columns={columns} filename="harvestgap_districts.csv" initialSort={{ key: "district", dir: 1 }} /></div>
+        <div className="card p-5"><DataTable rows={D.districts} columns={columns} filename="agrilens_districts.csv" initialSort={{ key: "district", dir: 1 }} /></div>
       </Section>
     </>
   );

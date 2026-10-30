@@ -86,7 +86,7 @@ export default function Productivity() {
 
       <Section alt title="All crops compared" intro="National typical yields and input use for every crop with 30+ surveyed plots.">
         <div className="card p-5">
-          <DataTable rows={D.crops} filename="harvestgap_crop_yields.csv" initialSort={{ key: "n", dir: -1 }}
+          <DataTable rows={D.crops} filename="agrilens_crop_yields.csv" initialSort={{ key: "n", dir: -1 }}
             columns={[
               { key: "crop", label: "Crop", render: (r) => <button className="font-semibold text-nisr-blue hover:underline" onClick={() => D.farmCrops.includes(r.crop) && setCrop(r.crop)}>{r.crop}</button> },
               { key: "group", label: "Group" },

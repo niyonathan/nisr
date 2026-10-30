@@ -49,7 +49,7 @@ export default function MyFarm() {
         <div className="wrap relative z-10 -mt-16 pb-16">
           <HarvestWizard initial={farm} onDone={(a) => {
             setFarm({ district: a.district, crop: a.crop });
-            setParams({ district: a.district, crop: a.crop, area: a.area, uses: a.uses.join(","), concern: a.concern }, { replace: true });
+            setParams({ district: a.district, crop: a.crop, area: a.area, uses: a.uses.join(","), concern: a.concerns.join(",") }, { replace: true });
           }} />
         </div>
       </>
@@ -63,10 +63,12 @@ function Report({ D, params, setParams, setFarm, navigate }) {
   const crop = D.farmCrops.includes(params.get("crop")) ? params.get("crop") : "Maize";
   const area = Math.max(0.01, parseFloat(params.get("area")) || 0.5);
   const used = new Set((params.get("uses") || "").split(",").filter(Boolean));
-  const concern = CONCERNS.some(([c]) => c === params.get("concern")) ? params.get("concern") : "harvest";
+  // One or more worries, in the order the farmer chose them.
+  const concerns = (params.get("concern") || "harvest").split(",").filter((c) => CONCERNS.some(([k]) => k === c));
+  if (!concerns.length) concerns.push("harvest");
 
   const update = (patch) => {
-    const next = { district, crop, area: String(area), uses: [...used].join(","), concern, ...patch };
+    const next = { district, crop, area: String(area), uses: [...used].join(","), concern: concerns.join(","), ...patch };
     if (patch.district || patch.crop) setFarm({ district: next.district, crop: next.crop });
     setParams(Object.fromEntries(Object.entries(next).filter(([, v]) => v !== "")), { replace: true });
   };
@@ -111,7 +113,8 @@ function Report({ D, params, setParams, setFarm, navigate }) {
       tone: ["grey", "General advice"],
     },
   ];
-  const advice = [...adviceList].sort((x, y) => (y.key === concern) - (x.key === concern));
+  const rank = (k) => (concerns.includes(k) ? concerns.indexOf(k) : concerns.length);
+  const advice = [...adviceList].sort((x, y) => rank(x.key) - rank(y.key));
 
   // Written summary, ordered by what the farmer said worries them most.
   const helps = effects.filter((e) => e.sig);
@@ -121,10 +124,11 @@ function Report({ D, params, setParams, setFarm, navigate }) {
     notYet.length
       ? `Your best next step: ${notYet.slice(0, 2).map((e) => `**${e.label.toLowerCase()}** (${pct(e.effect, true)} on similar plots)`).join(" and ")}, which you don't use yet.`
       : helps.length ? "You already use the practices most linked to bigger harvests. Focus on timing, spacing and protecting the harvest." : `No single practice shows a clear link to bigger ${cropText(crop)} harvests yet; ask your sector agronomist about the best varieties.`,
-    concern === "water" ? `You said water worries you most: in ${district}, ${pct(info.no_water_rate)} of plots have no water nearby and ${pct(info.cannot_afford_irrigation_rate)} can't afford equipment.`
-      : concern === "soil" ? `You said soil worries you most: ${pct(info.inorganic_fertilizer_rate)} of plots in ${district} use fertilizer and ${pct(info.erosion_threat_rate)} report erosion.`
-      : concern === "store" ? `You said storage and selling worry you most: only ${pct(info.extension_post_harvest_rate)} of households in ${district} got advice on storing their harvest this season.`
-      : null,
+    ...concerns.map((c) => ({
+      water: `**Water:** in ${district}, ${pct(info.no_water_rate)} of plots have no water nearby and ${pct(info.cannot_afford_irrigation_rate)} can't afford irrigation equipment.`,
+      soil: `**Soil:** ${pct(info.inorganic_fertilizer_rate)} of plots in ${district} use fertilizer, ${pct(info.organic_fertilizer_rate)} use manure, and ${pct(info.erosion_threat_rate)} report erosion.`,
+      store: `**Storing and selling:** only ${pct(info.extension_post_harvest_rate)} of households in ${district} got advice on storing their harvest this season.`,
+    })[c] || null),
   ].filter(Boolean);
   const followUps = [`Water for crops in ${district}`, `Is fertilizer worth it for ${cropText(crop)}?`, `Where is ${cropText(crop)} harvest highest?`];
 
@@ -236,7 +240,7 @@ function Report({ D, params, setParams, setFarm, navigate }) {
       <Section title={`Advice for farms in ${district}`} intro="Based on what the survey recorded in your district. Confirm crop-specific choices with your sector agronomist.">
         <div className="grid gap-5 md:grid-cols-2">
           {advice.map(({ key, icon: Icon, title, text, tone }) => (
-            <div key={title} className={`card flex gap-4 p-6 ${key === concern && concern !== "harvest" ? "ring-2 ring-nisr-blue" : ""}`}>
+            <div key={title} className={`card flex gap-4 p-6 ${concerns.includes(key) ? "ring-2 ring-nisr-blue" : ""}`}>
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#e3eef9] text-nisr-blue"><Icon size={24} /></span>
               <div>
                 <div className="flex flex-wrap items-center gap-2"><h3 className="text-lg">{title}</h3><Pill tone={tone[0]}>{tone[1]}</Pill></div>

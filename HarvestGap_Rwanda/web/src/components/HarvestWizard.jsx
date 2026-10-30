@@ -22,7 +22,7 @@ const choice = (on) => `rounded-xl border px-4 py-3 text-left text-[16px] transi
 export default function HarvestWizard({ initial = {}, onDone }) {
   const D = useData();
   const [step, setStep] = useState(0);
-  const [a, setA] = useState({ district: initial.district || "", crop: initial.crop || "", area: "0.5", uses: [], concern: "harvest" });
+  const [a, setA] = useState({ district: initial.district || "", crop: initial.crop || "", area: "0.5", uses: [], concerns: ["harvest"] });
   const [search, setSearch] = useState("");
   const [working, setWorking] = useState(-1);
   // Always hand over the latest answers, even if the last tap and "Create" happen together.
@@ -87,10 +87,18 @@ export default function HarvestWizard({ initial = {}, onDone }) {
       ),
     },
     {
-      q: "What worries you most?", hint: "Your report will start with this.", ok: true,
+      q: "What worries you most?", hint: "Choose all that apply. Your report will start with these.", ok: a.concerns.length > 0,
       body: (
         <div className="grid gap-2 sm:grid-cols-2">
-          {CONCERNS.map(([v, l]) => <button key={v} className={choice(a.concern === v)} onClick={() => set({ concern: v })}>{l}</button>)}
+          {CONCERNS.map(([v, l]) => {
+            const on = a.concerns.includes(v);
+            return (
+              <button key={v} aria-pressed={on} className={`${choice(on)} flex items-center gap-3`}
+                onClick={() => set({ concerns: on ? a.concerns.filter((x) => x !== v) : [...a.concerns, v] })}>
+                <span className={`flex h-5 w-5 items-center justify-center rounded border ${on ? "border-nisr-blue bg-nisr-blue text-white" : "border-[#b9c8da]"}`}>{on && <Check size={14} />}</span>{l}
+              </button>
+            );
+          })}
         </div>
       ),
     },

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { BarChart3, ChevronDown, Compass, Droplets, Globe2, Home, Info, Landmark, MapPin, MapPinned, MessageCircle, Package, Pencil, Sprout, Wheat, X } from "lucide-react";
 import { useFarm } from "../farm";
+import logoUrl from "../assets/agrilens-logo.png";
 
 /** Plain-language entries; each also names the Track 1 challenge area it covers. */
 export const HELP_TOPICS = [
@@ -18,22 +19,10 @@ export const PLACES = [
   { to: "/about", icon: Info, label: "Where the numbers come from", text: "The NISR survey and how we used it" },
 ];
 
-export function Logo({ light = false }) {
-  return (
-    <span className="flex items-center gap-2.5">
-      <svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true">
-        <rect width="40" height="40" rx="11" fill={light ? "#ffffff" : "#0a5ca8"} />
-        <path d="M11 29V20M17 29V14M23 29V18M29 29V11" stroke={light ? "#0a5ca8" : "#fff"} strokeWidth="3.2" strokeLinecap="round" />
-        <path d="M29 11c-4 0-7 2-7 6 4 0 7-2 7-6Z" fill={light ? "#4aa8e0" : "#9fd3f5"} />
-      </svg>
-      <span>
-        <b className={`block font-display text-[19px] leading-none ${light ? "text-white" : "text-nisr-navy"}`}>
-          Harvest<span className={light ? "text-[#9fd3f5]" : "text-nisr-blue"}>Gap</span>
-        </b>
-        <small className={`mt-1 text-[11px] tracking-wide ${light ? "block text-[#c9d8ec]" : "hidden text-nisr-muted sm:block"}`}>RWANDA · NISR AHS 2024</small>
-      </span>
-    </span>
-  );
+export function Logo({ light = false, className = "h-11" }) {
+  const img = <img src={logoUrl} alt="AgriLens: Better Data. Stronger Agriculture." className={`${className} w-auto`} />;
+  // On the dark footer the blue-and-green logo sits on a white badge so it stays readable.
+  return light ? <span className="inline-flex rounded-xl bg-white px-3 py-2">{img}</span> : img;
 }
 
 /** "📍 Musanze · Maize ✎": the remembered farm, or an invitation to set it. */
@@ -89,7 +78,7 @@ function Header({ panelOpen, setPanelOpen }) {
   return (
     <header className="sticky top-0 z-30 border-b border-nisr-line bg-white/95 backdrop-blur">
       <div className="wrap flex h-[70px] items-center gap-4">
-        <Link to="/" aria-label="HarvestGap Rwanda home"><Logo /></Link>
+        <Link to="/" aria-label="AgriLens home" className="shrink-0"><Logo className="h-9 sm:h-11" /></Link>
         <nav className="ml-6 hidden items-center gap-1 lg:flex" aria-label="Main">
           <NavLink to="/" end className={link}><MessageCircle size={18} /> Ask a question</NavLink>
           <NavLink to="/my-farm" className={link}><Wheat size={18} /> Estimate my harvest</NavLink>

@@ -64,7 +64,7 @@ export default function PostHarvest() {
           </div>
         </div>
         <div className="mt-6 card p-5">
-          <DataTable rows={fruit} filename="harvestgap_fruit_market.csv" initialSort={{ key: "tonnes", dir: -1 }}
+          <DataTable rows={fruit} filename="agrilens_fruit_market.csv" initialSort={{ key: "tonnes", dir: -1 }}
             columns={[
               { key: "fruit", label: "Fruit" },
               { key: "n", label: "Households", numeric: true, render: (r) => fmt(r.n) },

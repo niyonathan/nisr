@@ -32,7 +32,7 @@ function index(raw) {
 export function DataProvider({ children }) {
   const [state, setState] = useState({ data: null, error: null });
   useEffect(() => {
-    fetch("/data/harvestgap.json")
+    fetch("/data/agrilens.json")
       .then((r) => {
         if (!r.ok) throw new Error(`Could not load the survey data (HTTP ${r.status}).`);
         return r.json();

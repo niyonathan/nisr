@@ -17,10 +17,10 @@ export default function About() {
   const M = D.model.overall;
   return (
     <>
-      <PageHero compact eyebrow="Where the numbers come from" title="How HarvestGap works"
+      <PageHero compact eyebrow="Where the numbers come from" title="How AgriLens works"
         intro="The data behind every number on this site, how it was analysed, and what it can and can't tell you." />
 
-      <Section title="How HarvestGap covers Track 1" intro="The site uses everyday words for farmers. This is how each part maps to the challenge areas of NISR Big Data Hackathon 2026, Track 1: Agricultural Productivity.">
+      <Section title="How AgriLens covers Track 1" intro="The site uses everyday words for farmers. This is how each part maps to the challenge areas of NISR Big Data Hackathon 2026, Track 1: Agricultural Productivity.">
         <div className="overflow-x-auto rounded-xl border border-nisr-line">
           <table className="w-full min-w-[640px] text-[15px]">
             <thead className="bg-nisr-mist text-left text-nisr-navy">

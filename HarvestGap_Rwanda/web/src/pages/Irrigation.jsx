@@ -119,7 +119,7 @@ export default function Irrigation() {
 
       <Section title="Full district table">
         <div className="card p-5">
-          <DataTable rows={D.districts} filename="harvestgap_irrigation_by_district.csv" initialSort={{ key: "no_water_rate", dir: -1 }}
+          <DataTable rows={D.districts} filename="agrilens_irrigation_by_district.csv" initialSort={{ key: "no_water_rate", dir: -1 }}
             columns={[
               { key: "district", label: "District" },
               { key: "province", label: "Province" },

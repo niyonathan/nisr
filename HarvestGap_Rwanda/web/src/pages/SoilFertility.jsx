@@ -113,7 +113,7 @@ export default function SoilFertility() {
 
       <Section title="Full district table">
         <div className="card p-5">
-          <DataTable rows={D.districts} filename="harvestgap_soil_fertility_by_district.csv" initialSort={{ key: "inorganic_fertilizer_rate", dir: 1 }}
+          <DataTable rows={D.districts} filename="agrilens_soil_fertility_by_district.csv" initialSort={{ key: "inorganic_fertilizer_rate", dir: 1 }}
             columns={[
               { key: "district", label: "District" },
               { key: "inorganic_fertilizer_rate", label: "Mineral fertilizer", numeric: true, render: (r) => pct(r.inorganic_fertilizer_rate) },

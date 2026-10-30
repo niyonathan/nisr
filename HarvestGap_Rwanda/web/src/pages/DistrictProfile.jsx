@@ -105,7 +105,7 @@ export default function DistrictProfile() {
 
       <Section alt title="Crops and yields" intro={`Typical yield of each crop with at least 30 surveyed plots in ${d.district}, compared with the national average.`}>
         <div className="card p-5">
-          <DataTable rows={crops} filename={`harvestgap_${d.district.toLowerCase()}_crops.csv`} initialSort={{ key: "n", dir: -1 }}
+          <DataTable rows={crops} filename={`agrilens_${d.district.toLowerCase()}_crops.csv`} initialSort={{ key: "n", dir: -1 }}
             columns={[
               { key: "crop", label: "Crop" },
               { key: "n", label: "Plots surveyed", numeric: true },
